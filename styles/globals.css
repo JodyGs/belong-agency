@@ -1,3 +1,13 @@
+*, :hover {
+  cursor: url('../public/iconmonstr-cat-5.svg'), auto;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+	.overlayButton {
+		@apply m-1.5 px-5 py-1 bg-white rounded-full uppercase text-belorange border-2 border-belorange;
+	}
+}
