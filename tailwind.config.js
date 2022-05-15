@@ -10,6 +10,9 @@ module.exports = {
         belvert: '#23EB83',
         belrose: '#F19CAE',
         belviolet: '#4E4898',
+      },
+      cursor: {
+        'belcustom': 'url("../public/iconmonstr-cat-5.svg"), pointer',
       }
     },
   },
