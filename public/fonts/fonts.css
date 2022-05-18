@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Sweet Sans Pro';
+  src: url('SweetSansPro-Medium.woff2') format('woff2'),
+      url('SweetSansPro-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sweet Sans Pro';
+  src: url('SweetSansPro-Italic.woff2') format('woff2'),
+      url('SweetSansPro-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sweet Sans Pro';
+  src: url('SweetSansPro-MediumItalic.woff2') format('woff2'),
+      url('SweetSansPro-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sweet Sans Pro';
+  src: url('SweetSansPro-Regular.woff2') format('woff2'),
+      url('SweetSansPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Messapia';
+  src: url('Messapia-Bold.woff2') format('woff2'),
+      url('Messapia-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Agrandir Grand';
+  src: url('Agrandir-GrandHeavy.woff2') format('woff2'),
+      url('Agrandir-GrandHeavy.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+

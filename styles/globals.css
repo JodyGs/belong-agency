@@ -3,13 +3,25 @@
 @tailwind utilities;
 
 @layer base {
-	body {
+	/* * {
 		@apply cursor-belcustom
+	} */
+	body {
+		@apply bg-[#FCF9F4] font-sweet-sans-pro
 	}
 }
 
 @layer components {
-	.overlayButton {
-		@apply m-1.5 px-5 py-1 bg-white rounded-full uppercase text-belorange border-2 border-belorange cursor-belcustom;
+	.txtstroke {
+		-webkit-text-stroke: 3px black;
 	}
+	.txtstroke-thin {
+		-webkit-text-stroke: 1px black;
+	}
+	.overlayButton {
+		@apply m-1.5 px-5 py-1 bg-[#FDF9F3] rounded-full uppercase text-belorange border-2 border-belorange hover:bg-belorange;
+	}
+	/* .info{
+		@apply font-agrandir-grand font-bold uppercase text-8xl
+	} */
 }
