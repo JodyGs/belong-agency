@@ -3,7 +3,7 @@ import React from 'react'
 
 function Pills() {
   return (
-    <div className='uppercase flex flex-col items-center space-y-3 m-32 w-2/5 mx-auto'>
+    <div className='uppercase flex flex-col items-center space-y-3 m-32 w-2/5 mx-auto font-bold text-sm'>
       <div className='pills hover:bg-belvert'><Link href={'/contact'}>Press Relations</Link></div>
       <div className='pills'><Link href={'/contact'}>Influencer Marketing</Link></div>
       <div className='pills'><Link href={'/contact'}>360˚ Strategy</Link></div>
