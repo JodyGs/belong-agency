@@ -24,4 +24,7 @@
 	/* .info{
 		@apply font-agrandir-grand font-bold uppercase text-8xl
 	} */
+	.pills {
+		@apply border-2 border-black rounded-full w-full px-4
+	}
 }

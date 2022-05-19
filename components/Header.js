@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Overlay from './Overlay';
 
+
 function Header() {
 	React.useEffect(() => {
 		// localstorage?
@@ -9,19 +10,19 @@ function Header() {
 
 	return (
 		<>
-			<Overlay/>
+			{/* <Overlay/> */}
 
 			{/* TODO: font bold messapie absente!! */}
 			<header className='px-6 border-b-2 border-black grid grid-cols-12 justify-between items-center text-sm font-messapia font-bold'>
-				<nav className='space-x-5 col-span-1 font-bold'>
+				<nav className='space-x-5 col-span-1 font-bold uppercase'>
 					<Link href={'/'}>
-						<a className='hover:text-belorange'>WORK</a>
+						<a className='hover:text-belorange'>work</a>
 					</Link>
 					<Link href={'/about'}>
-						<a className='hover:text-belorange'>ABOUT</a>
+						<a className='hover:text-belorange'>about</a>
 					</Link>
 					<Link href={'/presse'}>
-						<a className='hover:text-belorange'>PRESSE</a>
+						<a className='hover:text-belorange'>presse</a>
 					</Link>
 				</nav>
 				<div className='col-span-10 mx-auto'>
