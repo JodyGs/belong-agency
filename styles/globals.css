@@ -27,4 +27,7 @@
 	.pills {
 		@apply border-2 border-black rounded-full w-full px-4
 	}
+	.sticker {
+		@apply border-4 border-black lg:rounded-[60px] py-0 px-16
+	}
 }
