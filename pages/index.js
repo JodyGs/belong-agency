@@ -130,7 +130,7 @@ export default function Home() {
 									</g>
 								</g>
 							</svg>
-							<button className='rounded-full text-white bg-belrose w-full uppercase text-md hover:text-belvert'>
+							<button className='rounded-full text-belorange border-2 border-belorange bg-transparent w-full uppercase text-md hover:text-belvert hover:bg-belviolet hover:border-transparent'>
 								work
 							</button>
 						</div>
@@ -140,7 +140,7 @@ export default function Home() {
 					</div>
 				</div>
 				<Marquee
-					className='w-full bg-belorange py-4 fill-belrose'
+					className='w-full bg-belorange py-8 fill-belrose'
 					speed={60}
 					gradient={false}
 					direction='right'

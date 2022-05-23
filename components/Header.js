@@ -27,7 +27,7 @@ function Header() {
 				</nav>
 				<div className='col-span-10 mx-auto'>
 					<svg
-						className='py-3 h-[94px] w-[100px]'
+						className=' h-[94px] w-[100px]'
 						xmlns='http://www.w3.org/2000/svg'
 						viewBox='0 0 392 174.8'
 					>
