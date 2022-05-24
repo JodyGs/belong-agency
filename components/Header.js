@@ -11,8 +11,7 @@ function Header() {
 	return (
 		<>
 			{/* <Overlay/> */}
-
-			{/* FIXME: font bold messapie absente!! */}
+			
 			<header className='px-6 border-b-2 border-black grid grid-cols-12 justify-between items-center text-sm font-messapia font-bold'>
 				<nav className='space-x-5 col-span-1 font-bold uppercase'>
 					<Link href={'/'}>

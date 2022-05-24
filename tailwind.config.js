@@ -15,6 +15,7 @@ module.exports = {
 				belvert: '#23EB83',
 				belrose: '#F19CAE',
 				belviolet: '#4E4898',
+				belbeige: '#FDF9F3',
 			},
 			// cursor: {
 			// 	belcustom: 'url("../public/bCursor.svg"), pointer',

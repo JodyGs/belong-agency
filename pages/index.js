@@ -106,14 +106,12 @@ export default function Home() {
 										<path
 											fill='none'
 											stroke='#161615'
-											stroke-width='1.727'
 											d='M1.32 73.239h20.015l15.482 38.775h.15L52.3 73.242h21.826l15.558 38.772h.076l15.332-38.772h19.943l-23.564 53.9H79.335L63.322 88.447h-.15l-16.163 38.695H24.883Z'
 											data-name='Path 326'
 										/>
 										<path
 											fill='none'
 											stroke='#161615'
-											stroke-width='1.727'
 											d='M128.799 73.239h57.023v12.2h-37.914v9.033h34.893v10.466h-34.893v10.012h38.671v12.195h-57.78Z'
 											data-name='Path 327'
 										/>
@@ -135,7 +133,7 @@ export default function Home() {
 							</button>
 						</div>
 					</div>
-					<div className='w-full'>
+					<div className='w-full pt-32'>
 						<Pills />
 					</div>
 				</div>
