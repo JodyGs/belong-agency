@@ -14,10 +14,10 @@ export default function Home() {
 	React.useEffect(() => {
 		gsap.set(fadeAnim.current, { opacity: '0' });
 		gsap.set(downAnim.current, { y: '-100%' });
-		gsap.set(upAnim.current, { y: '100%' });
-		gsap.to(fadeAnim.current, { opacity: '1', duration: 2 });
-		gsap.to(upAnim.current, { y: '0%', duration: 1 });
-		gsap.to(downAnim.current, { y: '0%', duration: 1 });
+		gsap.set(upAnim.current, { y: '50%' });
+		gsap.to(fadeAnim.current, { opacity: '1', duration: 3 });
+		gsap.to(upAnim.current, { y: '0%', duration: 2 });
+		gsap.to(downAnim.current, { y: '0%', duration: 2 });
 	}, [])
 
 	return (

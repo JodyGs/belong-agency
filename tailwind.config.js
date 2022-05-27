@@ -22,6 +22,7 @@ module.exports = {
 			// },
 			animation: {
 				changeColor: 'changeColor 1.5s ease infinite',
+				shake: 'shake 0.6s ease-in-out'
 			},
 			keyframes: {
 				changeColor: {
@@ -31,6 +32,19 @@ module.exports = {
 					'75%': { color: '#4E4898' },
 					'100%': { color: '#FD4000' },
 				},
+				shake: {
+					'0%': { transform: 'translateX(0px)' },
+					'10%': { transform: 'translateX(3px)' },
+					'20%': { transform: 'translateX(-3px)' },
+					'30%': { transform: 'translateX(3px)' },
+					'40%': { transform: 'translateX(-3px)' },
+					'50%': { transform: 'translateX(3px)' },
+					'60%': { transform: 'translateX(-3px)' },
+					'70%': { transform: 'translateX(3px)' },
+					'80%': { transform: 'translateX(-3px)' },
+					'80%': { transform: 'translateX(3px)' },
+					'100%': { transform: 'translateX(0px)' },
+				}
 			},
 		},
 	},
