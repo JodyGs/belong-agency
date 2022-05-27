@@ -9,7 +9,7 @@ function Contact() {
 		<div className='h-screen'>
 			<Header />
 			<main>
-				<div className='text-center uppercase space-y-5 p-10'>
+				<div className='text-center   space-y-5 p-10'>
 					{/* titles */}
 					<h1 className='text-9xl text-center font-agrandir-grand font-extrabold mt-14'>
 						Say <span className='txtstroke text-transparent'>hi</span> !
@@ -18,7 +18,7 @@ function Contact() {
 				</div>
 				{/* TEAM */}
 				<div className='my-20'>
-					<div className='flex justify-around border-y-2 border-black font-messapia uppercase text-3xl p-14 pb-6'>
+					<div className='flex justify-around border-y-2 border-black font-messapia   text-3xl p-14 pb-6'>
 						<div>
 							<h2 className=''>Magali Gnocchi</h2>
 							<h3 className=' txtstroke-thin text-transparent'>Paris</h3>
@@ -41,7 +41,7 @@ function Contact() {
 							</div>
 						</div>
 					</div>
-					<div className='text-center uppercase p-10 pt-16 space-y-4'>
+					<div className='text-center   p-10 pt-16 space-y-4'>
 						<h3 className='text-3xl font-messapia'>Let's connect</h3>
 						<p className='font-agrandir-grand font-bold text-4xl'>@belongparis</p>
 					</div>

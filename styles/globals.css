@@ -4,7 +4,7 @@
 
 @layer base {
 	html {
-		@apply h-full
+		@apply h-full uppercase
 	}
 	/* * {
 		@apply cursor-belcustom
@@ -22,10 +22,13 @@
 		-webkit-text-stroke: 1px black;
 	}
 	.overlayButton {
-		@apply m-1.5 px-5 py-1 bg-belbeige rounded-full uppercase text-belorange border-2 border-belorange hover:bg-belorange;
+		@apply m-1.5 px-5 py-1 bg-belbeige rounded-full   text-belorange border-2 border-belorange hover:bg-belorange;
+	}
+	.belButton {
+		@apply uppercase rounded-full text-belorange border-2 border-belorange bg-transparent w-full hover:text-belvert hover:bg-belviolet hover:border-transparent
 	}
 	/* .info{
-		@apply font-agrandir-grand font-bold uppercase text-8xl
+		@apply font-agrandir-grand font-bold   text-8xl
 	} */
 	.pills {
 		@apply border-2 border-black rounded-full w-full px-4
@@ -40,6 +43,6 @@
 		@apply object-cover 
 	}
 	.name {
-		@apply border-4 border-black px-3 uppercase text-belbeige bg-belorange text-lg font-bold
+		@apply border-4 border-black px-3   text-belbeige bg-belorange text-lg font-bold
 	}
 }

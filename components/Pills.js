@@ -3,7 +3,7 @@ import React from 'react';
 
 function Pills() {
 	return (
-		<div className='uppercase flex flex-col items-center space-y-3 w-2/5 mx-auto font-bold text-md'>
+		<div className='  flex flex-col items-center space-y-3 w-2/5 mx-auto font-bold text-md'>
 			<div className='pills hover:bg-belvert'>
 				<Link href={'/contact'}>Press Relations</Link>
 			</div>

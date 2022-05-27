@@ -3,7 +3,7 @@ import React from 'react';
 
 function Footer() {
 	return (
-		<footer className='bg-belrose text-belorange uppercase flex justify-between items-center py-3 px-8'>
+		<footer className='bg-belrose text-belorange   flex justify-between items-center py-3 px-8'>
 			<div className='flex flex-col items-start'>
 				<Link href={'#'}>Contact</Link>
 				<div className="flex w-full justify-between">

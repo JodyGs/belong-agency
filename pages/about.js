@@ -12,12 +12,12 @@ function About() {
 	return (
 		<div>
 			<Header />
-			<h1 className='text-center text-8xl font-agrandir-grand uppercase mt-32 mb-14'>
+			<h1 className='text-center text-8xl font-agrandir-grand   mt-32 mb-14'>
 				About
 			</h1>
 
 			<Marquee
-				className=' uppercase text-4xl font-agrandir-grand pt-3 pb-1 border-y-2 border-black bg-belrose'
+				className='   text-4xl font-agrandir-grand pt-3 pb-1 border-y-2 border-black bg-belrose'
 				speed={60}
 				gradient={false}
 				direction='right'
@@ -84,7 +84,7 @@ function About() {
 						</g>
 					</svg>
 				</div>
-				<div className='uppercase w-1/4 space-y-5 pt-12'>
+				<div className='  w-1/4 space-y-5 pt-12'>
 					<p>
 						we’re a <span className='font-bold'>pr agency</span> of{' '}
 						<span className='italic'>interdisciplinary</span> experts who craft
@@ -116,14 +116,14 @@ function About() {
 					<div className='name'>
 						<h3 className=''>Margaux</h3>
 					</div>
-					<p className='uppercase text-xs mt-5 text-justify'>
+					<p className='  text-xs mt-5 text-justify'>
 						margaux trained as a pr for sisley for 5 years in paris, she has
 						switched from beauty and communication to the world of
 						entrepreneurship in new york where she moved 3 years ago. she
 						started her consulting business there, first with twice, an american
 						start-up co-founded by lenny kravitz specialized in oral wellness.
 					</p>
-					<p className='uppercase text-xs mt-5 text-justify'>
+					<p className='  text-xs mt-5 text-justify'>
 						she is the co-founder of belong along with magali. they both started
 						belong in 2019 as a one-of-a-kind pr agency specializing in working
 						with sustainable, clean beauty brands.
@@ -143,16 +143,16 @@ function About() {
 					<div className='name'>
 						<h3 className=''>Magali</h3>
 					</div>
-					<p className='uppercase text-xs mt-5 text-justify'>
+					<p className='  text-xs mt-5 text-justify'>
 						after 7 years working as a fashion editor with the french press,
 						magali moved into pr.{' '}
 					</p>
-					<p className='uppercase text-xs mt-5 text-justify'>
+					<p className='  text-xs mt-5 text-justify'>
 						{' '}
 						she spent 13 years as a beauty pr, 8 of which were as head of pr for
 						sisley paris, where she met margaux.
 					</p>
-					<p className='uppercase text-xs mt-5 text-justify'>
+					<p className='  text-xs mt-5 text-justify'>
 						{' '}
 						she then worked as a pr consultant for brands like google, calvi on
 						the rocks festival, pr agencies like magna presse (ernest leoty,
@@ -173,12 +173,12 @@ function About() {
 					<div className='name'>
 						<h3 className=''>Karine</h3>
 					</div>
-					<p className='uppercase text-xs mt-5 text-justify'>
+					<p className='  text-xs mt-5 text-justify'>
 						multi-faceted assistant, karine joined belong in february 2021. she
 						is a student at sup de web and is finishing her studies in digital
 						communication while working at belong.
 					</p>
-					<p className='uppercase text-xs mt-5 text-justify'>
+					<p className='  text-xs mt-5 text-justify'>
 						{' '}
 						she is also a freelancer and has launched her blog. she is like the
 						genz, a slasher, committed to multiple causes (from crossbreeding to
@@ -247,12 +247,12 @@ function About() {
 						</svg>
 					</div>
 					<div className='w-2/3 text-justify mt-16 text-sm'>
-						<p className='uppercase'>
+						<p  >
 							driving brand awareness and conversion. we’ll develop and execute
 							influencer marketing strategies based on your brand goals to help
 							you engage your target audiences.
 						</p>
-						<p className='uppercase'>
+						<p  >
 							{' '}
 							from influencer matchmaking to campaign management and influencer
 							seeding, we shape the optimal strategy that is right for you and

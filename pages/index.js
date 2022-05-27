@@ -4,16 +4,30 @@ import Pills from '../components/Pills';
 import Marquee from 'react-fast-marquee';
 import SayHi from '../components/SayHi';
 import Footer from '../components/Footer';
+import { gsap } from 'gsap';
 
 export default function Home() {
+	const upAnim = React.useRef();
+	const downAnim = React.useRef();
+	const fadeAnim = React.useRef()
+
+	React.useEffect(() => {
+		gsap.set(fadeAnim.current, { opacity: '0' });
+		gsap.set(downAnim.current, { y: '-100%' });
+		gsap.set(upAnim.current, { y: '100%' });
+		gsap.to(fadeAnim.current, { opacity: '1', duration: 2 });
+		gsap.to(upAnim.current, { y: '0%', duration: 1 });
+		gsap.to(downAnim.current, { y: '0%', duration: 1 });
+	}, [])
+
 	return (
 		<div className='h-screen'>
 			<Header />
 			<main>
 				{/* Hero Banner */}
 				<div className='grid grid-cols-12 max-h-[800px] overflow-hidden relative'>
-					<div className='bg-belrose col-span-6 font-messapia uppercase text-justify p-4 leading-[1] flex flex-col justify-between h-[800px]'>
-						<h1 className='max-w-[870px] mx-auto'>
+					<div className='bg-belrose col-span-6 font-messapia   text-justify p-4 leading-[1] flex flex-col justify-between h-[800px]'>
+						<h1 ref={fadeAnim} className='max-w-[870px] mx-auto'>
 							<span className='lg:text-7xl'>
 								A PR{' '}
 								<span className='txtstroke text-transparent'>Boutique</span>{' '}
@@ -50,12 +64,14 @@ export default function Home() {
 					</div>
 					<div className='col-span-6 flex mx-auto space-x-10'>
 						<svg
+							ref={downAnim}
 							className='fill-belorange h-[1000px] mt-[85px]'
 							viewBox='0 0 11.38 30.81'
 						>
 							<path d='M8.62 0L1.5.04C.67.04 0 .71 0 1.54v27.77c0 .83.67 1.5 1.5 1.5h6.86c.23 0 .48 0 .71-.02 1.09-.09 1.98-.83 2.22-1.89.07-.28.07-.58.07-.88 0-3.63-.02-7.27.02-10.88.02-1.36-.51-2.42-1.92-2.86-.02 0-.04-.04-.09-.11 1.48-.48 2.01-1.52 1.99-2.98-.04-2.82-.05-5.64 0-8.47C11.41.99 10.11-.03 8.62 0zM6.33 25.5c0 .39-.32.71-.71.71s-.71-.32-.71-.71V4.32c0-.39.32-.71.71-.71s.71.32.71.71V25.5z' />
 						</svg>
 						<svg
+							ref={upAnim}
 							className='fill-belviolet rotate-180 h-[1000px] mt-[400px]'
 							viewBox='0 0 11.38 30.81'
 						>
@@ -65,7 +81,7 @@ export default function Home() {
 				</div>
 				{/* End of Hero Banner ||
 				    Bandeau */}
-				<div className='flex uppercase justify-around align-center text-4xl font-agrandir-grand pt-3 pb-1 border-y-2 border-black whitespace-nowrap space-x-10 overflow-hidden'>
+				<div className='flex   justify-around align-center text-4xl font-agrandir-grand pt-3 pb-1 border-y-2 border-black whitespace-nowrap space-x-10 overflow-hidden'>
 					<p>big agency skills</p>
 					<p>small agency vibes</p>
 					<p>big agency skills</p>
@@ -128,9 +144,7 @@ export default function Home() {
 									</g>
 								</g>
 							</svg>
-							<button className='rounded-full text-belorange border-2 border-belorange bg-transparent w-full uppercase text-md hover:text-belvert hover:bg-belviolet hover:border-transparent'>
-								work
-							</button>
+							<button className='belButton'>work</button>
 						</div>
 					</div>
 					<div className='w-full pt-32'>

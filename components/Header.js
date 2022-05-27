@@ -13,7 +13,7 @@ function Header() {
 			{/* <Overlay/> */}
 			
 			<header className='px-6 border-b-2 border-black grid grid-cols-12 justify-between items-center text-sm font-messapia font-bold'>
-				<nav className='space-x-5 col-span-1 font-bold uppercase'>
+				<nav className='space-x-5 col-span-1 font-bold  '>
 					<Link href={'/'}>
 						<a className='hover:text-belorange'>work</a>
 					</Link>
@@ -58,7 +58,7 @@ function Header() {
 						</g>
 					</svg>
 					<Link href={'/contact'}>
-						<a className='uppercase font-bold animate-changeColor'>Say Hi !</a>
+						<a className='  font-bold animate-changeColor'>Say Hi !</a>
 					</Link>
 				</div>
 			</header>
