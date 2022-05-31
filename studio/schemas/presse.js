@@ -1,6 +1,6 @@
 export default {
-  name: 'post',
-  title: 'Post',
+  name: 'presse',
+  title: 'Presse',
   type: 'document',
   fields: [
     {
@@ -18,14 +18,8 @@ export default {
       },
     },
     {
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'},
-    },
-    {
-      name: 'mainImage',
-      title: 'Main image',
+      name: 'thumbnail',
+      title: 'Thumbnail',
       type: 'image',
       options: {
         hotspot: true,
@@ -35,17 +29,12 @@ export default {
       name: 'categories',
       title: 'Categories',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}],
+      of: [{type: 'reference', to: {type: 'tags'}}],
     },
     {
       name: 'publishedAt',
       title: 'Published at',
       type: 'datetime',
-    },
-    {
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
     },
   ],
 

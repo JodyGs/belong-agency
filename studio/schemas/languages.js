@@ -1,6 +1,6 @@
 export default {
-  name: 'author',
-  title: 'Author',
+  name: 'languages',
+  title: 'Languages',
   type: 'document',
   fields: [
     {

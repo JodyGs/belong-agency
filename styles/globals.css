@@ -43,6 +43,6 @@
 		@apply object-cover 
 	}
 	.name {
-		@apply border-4 border-black px-3   text-belbeige bg-belorange text-lg font-bold
+		@apply border-4 border-black px-3 text-belbeige bg-belorange text-lg font-bold
 	}
 }
