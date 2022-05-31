@@ -276,7 +276,7 @@ export default function Home() {
 						<p className='font-sweet-sans-pro'>W<span className='lowercase'>e're a <span className='font-messapia uppercase'>PR</span> agency of interdisciplinary experts who craft brand stories and build comunities through <span className='font-messapia uppercase'>media, social</span> and <span className='font-messapia uppercase'>experiential.</span></span></p>
 					</div>
 				</div>
-				<div> className='font-agrandir-grand uppercase'
+				<div>
 					<SayHi />
 				</div>
 			</main>
