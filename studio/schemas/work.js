@@ -17,10 +17,18 @@ export default {
       type: 'string',
     },
     {
-      name: 'tags',
       title: 'Tags',
+      name: 'tags',
+      description: 'Tags are used to categorize your work. Write keywords and press "Enter" to add a new one.',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'tags'}}],
+      of: [
+        {
+          type: 'string',
+        },
+      ],
+      options: {
+        layout: 'tags',
+      },
     },
   ],
 }
