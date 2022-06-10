@@ -103,7 +103,6 @@ function About() {
 			<div className='flex justify-center space-x-16 mt-20'>
 				<div className='max-w-[360px]'>
 					<div className='divPhotoTeam '>
-						{/* FIXME: Images */}
 						<Image
 							placeholder='blur'
 							height={580}

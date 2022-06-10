@@ -14,7 +14,7 @@ function Header() {
 			
 			<header className='px-6 border-b-2 border-black grid grid-cols-12 justify-between items-center text-sm font-messapia font-bold'>
 				<nav className='space-x-5 col-span-1 font-bold  '>
-					<Link href={'/'}>
+					<Link href={'/work'}>
 						<a className='hover:text-belorange'>work</a>
 					</Link>
 					<Link href={'/about'}>

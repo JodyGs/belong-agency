@@ -4,14 +4,12 @@ import { sanityClient, urlFor } from '../sanity';
 
 function Work({works}) {
 
-	console.log(works);
-	console.log(works);
-
 	return (
 		<div>
 			<Header />
 			<div>
-				<h1 className='animate-changeColor'>work</h1>
+				<p className='font-messapia'>We provide service a la carte</p>
+				<h1 className='animate-changeColor text-9xl font-messapia'>work</h1>
 			</div>
 			{works.map(work => (
 				<div className='work-container' key={work.id}>
@@ -33,13 +31,18 @@ function Work({works}) {
 
 export default Work;
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async ({req,res}) => {
+	res.setHeader(
+    'Cache-Control',
+    'public, s-maxage=10, stale-while-revalidate=59'
+  )
+
   const query = `*[_type == "work"]{
 		_id,
 		title,
 		thumbnail,
 		tags,
-	} | order(_createdAt desc)`;
+	} | order(_createdAt asc)[0..2]`;
 
   const works = await sanityClient.fetch(query);
 
