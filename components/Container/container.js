@@ -6,7 +6,7 @@ function Container({children}) {
   return (
     <>
       <Header />
-      {/* {children} */}
+      {children}
       <Footer />
     </>
   )

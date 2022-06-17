@@ -7,7 +7,6 @@ import {ReactComponent as ReactLogo} from '../public/bCursor.svg';
 function Contact() {
 	return (
 		<div className='h-screen'>
-			<Header />
 			<main>
 				<div className='text-center   space-y-5 p-10'>
 					{/* titles */}
@@ -47,7 +46,6 @@ function Contact() {
 					</div>
 				</div>
 			</main>
-			<Footer />
 		</div>
 	);
 }

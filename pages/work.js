@@ -6,7 +6,6 @@ function Work({works}) {
 
 	return (
 		<div>
-			<Header />
 			<div>
 				<p className='font-messapia'>We provide service a la carte</p>
 				<h1 className='animate-changeColor text-9xl font-messapia'>work</h1>

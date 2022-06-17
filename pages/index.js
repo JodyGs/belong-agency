@@ -1,9 +1,7 @@
 import React from 'react';
-import Header from '../components/Header';
 import Pills from '../components/Pills';
 import Marquee from 'react-fast-marquee';
 import SayHi from '../components/SayHi';
-import Footer from '../components/Footer';
 import { gsap } from 'gsap';
 import teamBelong from '../public/img/PHOTOHOME.jpg';
 import Image from 'next/image';
@@ -27,12 +25,11 @@ export default function Home() {
 	}, []);
 
 	return (
-		<div className='h-screen'>
-			<Header />
-			<main>
+		<div className=''>
+			<main className='h-full flex flex-col'>
 				{/* Hero Banner */}
 				<div className='grid grid-cols-12 max-h-[800px] overflow-hidden relative'>
-					<div className='bg-belrose col-span-6 font-messapia  text-justify p-4 leading-[1] flex flex-col justify-between h-[800px]'>
+					<div className='bg-belrose col-span-12 lg:col-span-6 font-messapia  text-justify p-4 leading-[1] flex flex-col justify-between h-[800px]'>
 					<svg ref={fadeAnim} className='max-w-[870px] mx-auto' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 688.2 443.9">
       <g>
         <path d="M6.1 47.2L7.4 45 30.6 4.7l1.2-2.1h10l24.3 42.1 1.4 2.4.2.4H56l-.1-.3-.8-1.4-4.2-8.1H22.6l-4 7.6-1 1.8-.2.4H5.9l.2-.3zm40.6-16.7l-10-18.9-10 18.9h20zm46.6 17V2.7h27.6c18.4 0 25.8 4.1 25.8 14.3 0 10.3-7.4 14.4-25.8 14.4h-17.1v16.2H93.3zM104 10.2v13.5h18.7c8.8 0 12.4-1.9 12.4-6.7 0-4.8-3.5-6.7-12.4-6.7H104zM205.8 47l.4.5H194l-12.8-16.2h-17.8v16.2h-10.5V2.7h27.6c18.4 0 25.8 4.1 25.8 14.3 0 7.6-4 11.8-13.6 13.5l9.8 12.5 3.3 4zm-42.3-23.3h18.7c8.8 0 12.4-1.9 12.4-6.7 0-4.8-3.5-6.7-12.4-6.7h-18.7v13.4z"></path>
@@ -70,13 +67,10 @@ export default function Home() {
 							<span className='txtstroke-thin text-transparent text-[19px]'>
 								to gain
 							</span>{' '}
-							maximum exposure and generate{' '}
-							<span className='txtstroke-thin text-transparent text-[19px]'>
-								sales
-							</span>
+							maximum exposure.
 						</p>
 					</div>
-					<div className='col-span-6 flex mx-auto space-x-10'>
+					<div className='hidden lg:flex col-span-6 mx-auto space-x-10'>
 						<svg
 							ref={downAnim}
 							className='fill-belorange h-[1000px] mt-[85px]'
@@ -95,7 +89,7 @@ export default function Home() {
 				</div>
 				{/* End of Hero Banner ||
 				    Bandeau */}
-				<div className='flex   justify-around align-center text-4xl font-agrandir-grand pt-3 pb-1 border-y-2 border-black whitespace-nowrap space-x-10 overflow-hidden'>
+				<div className='flex justify-around align-center text-4xl font-agrandir-grand pt-3 pb-1 border-y-2 border-black whitespace-nowrap space-x-10 overflow-hidden '>
 					<p>big agency skills</p>
 					<p>small agency vibes</p>
 					<p>big agency skills</p>
@@ -103,9 +97,9 @@ export default function Home() {
 				</div>
 				{/* End of Bandeau
 				What we do */}
-				<div className='flex justify-between'>
+				<div className='flex flex-col md:flex-row justify-between'>
 					<div className='w-full'>
-						<div className='py-32 max-w-[360px] mx-auto space-y-14'>
+						<div className='md:py-32 py-20 max-w-[360px] mx-auto space-y-14'>
 							<svg
 								className=''
 								xmlns='http://www.w3.org/2000/svg'
@@ -161,7 +155,7 @@ export default function Home() {
 							<button className='belButton'>work</button>
 						</div>
 					</div>
-					<div className='w-full pt-32'>
+					<div className='w-full pt-8 pb-16 md:pt-32'>
 						<Pills />
 					</div>
 				</div>
@@ -234,9 +228,9 @@ export default function Home() {
 						/>
 					</svg>
 				</Marquee>
-				<div className='flex justify-around my-20'>
+				<div className='w-full flex justify-around my-20 flex-col items-center space-y-12 md:flex-row'>
 					<div className=''>
-					<div className='divPhotoTeam max-h-[500px] max-w-[406px]'>
+					<div className='divPhotoTeam max-h-[480px] max-w-[406px]'>
 						<Image
 						placeholder='blur'
 							className='photoTeam'
@@ -248,8 +242,8 @@ export default function Home() {
 						/>
 					</div>
 					</div>
-					<div className='max-w-md my-auto space-y-12 text-right'>
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362.83 134.985"><g data-name="WHO WE ARE"><g data-name="Group 25"><path fill="#161615" d="M0 2.445h25.677l19.862 50.346h.195L65.403 2.445h28l19.96 50.346h.1l19.669-50.346h25.582l-30.23 70h-28.39L79.55 22.196h-.195L58.62 72.445H30.23Z" data-name="Path 311"/><path fill="#161615" d="M163.546 2.445h25.288v24.83h38.274V2.445h25.289v70h-25.289V44.579h-38.274v27.862h-25.288Z" data-name="Path 312"/><path fill="#161615" d="M260.432 37.442C260.432 14.958 280.778 0 311.204 0c30.522 0 50.868 14.958 50.868 37.442s-20.346 37.442-50.868 37.442c-30.426 0-50.772-14.958-50.772-37.442Zm76.352 0c0-11.634-10.368-19.455-25.581-19.455s-25.483 7.821-25.483 19.455 10.271 19.454 25.484 19.454 25.581-7.822 25.581-19.454Z" data-name="Path 313"/><path fill="none" stroke="#161615" stroke-width="1.516" d="M200.64 86.625h19.964l23 47.6h-17.86l-3.689-8.311h-23.524l-3.624 8.311h-17.793Zm18.121 29.518-8.3-18.815h-.133l-8.435 18.815Z" data-name="Path 314"/><path fill="none" stroke="#161615" stroke-width="1.516" d="M246.958 86.625h39.669c12.652 0 19.9 5.517 19.9 15.224 0 6.715-4.284 11.636-11.73 13.364l12.124 19.015h-18.449l-9.358-15.825h-14.958v15.824h-17.2Zm34.53 22.006c4.942 0 7.84-2.2 7.84-5.851 0-3.724-2.9-5.918-7.84-5.918h-17.332v11.768Z" data-name="Path 315"/><path fill="none" stroke="#161615" stroke-width="1.516" d="M311.663 86.625h49.751v10.771h-33.08v7.979h30.442v9.241h-30.441v8.842h33.738v10.771h-50.41Z" data-name="Path 316"/><path fill="#161615" d="M0 86.623h17.463l13.508 34.24h.131l13.378-34.24h19.044l13.574 34.24h.066l13.376-34.24h17.395l-20.559 47.6H68.07L54.1 100.05h-.131l-14.1 34.173h-19.31Z" data-name="Path 317"/><path fill="#161615" d="M111.225 86.623h49.75v10.773h-33.078v7.977h30.444v9.242h-30.444v8.844h33.738v10.77h-50.41Z" data-name="Path 318"/></g></g></svg>
+					<div className=' my-auto max-w-sm space-y-12 text-right'>
+					<svg className='max-w-xs mr-0 ml-auto' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 362.83 134.985"><g data-name="WHO WE ARE"><g data-name="Group 25"><path fill="#161615" d="M0 2.445h25.677l19.862 50.346h.195L65.403 2.445h28l19.96 50.346h.1l19.669-50.346h25.582l-30.23 70h-28.39L79.55 22.196h-.195L58.62 72.445H30.23Z" data-name="Path 311"/><path fill="#161615" d="M163.546 2.445h25.288v24.83h38.274V2.445h25.289v70h-25.289V44.579h-38.274v27.862h-25.288Z" data-name="Path 312"/><path fill="#161615" d="M260.432 37.442C260.432 14.958 280.778 0 311.204 0c30.522 0 50.868 14.958 50.868 37.442s-20.346 37.442-50.868 37.442c-30.426 0-50.772-14.958-50.772-37.442Zm76.352 0c0-11.634-10.368-19.455-25.581-19.455s-25.483 7.821-25.483 19.455 10.271 19.454 25.484 19.454 25.581-7.822 25.581-19.454Z" data-name="Path 313"/><path fill="none" stroke="#161615" stroke-width="1.516" d="M200.64 86.625h19.964l23 47.6h-17.86l-3.689-8.311h-23.524l-3.624 8.311h-17.793Zm18.121 29.518-8.3-18.815h-.133l-8.435 18.815Z" data-name="Path 314"/><path fill="none" stroke="#161615" stroke-width="1.516" d="M246.958 86.625h39.669c12.652 0 19.9 5.517 19.9 15.224 0 6.715-4.284 11.636-11.73 13.364l12.124 19.015h-18.449l-9.358-15.825h-14.958v15.824h-17.2Zm34.53 22.006c4.942 0 7.84-2.2 7.84-5.851 0-3.724-2.9-5.918-7.84-5.918h-17.332v11.768Z" data-name="Path 315"/><path fill="none" stroke="#161615" stroke-width="1.516" d="M311.663 86.625h49.751v10.771h-33.08v7.979h30.442v9.241h-30.441v8.842h33.738v10.771h-50.41Z" data-name="Path 316"/><path fill="#161615" d="M0 86.623h17.463l13.508 34.24h.131l13.378-34.24h19.044l13.574 34.24h.066l13.376-34.24h17.395l-20.559 47.6H68.07L54.1 100.05h-.131l-14.1 34.173h-19.31Z" data-name="Path 317"/><path fill="#161615" d="M111.225 86.623h49.75v10.773h-33.078v7.977h30.444v9.242h-30.444v8.844h33.738v10.77h-50.41Z" data-name="Path 318"/></g></g></svg>
 						<p className='font-sweet-sans-pro'>W<span className='lowercase'>e're a <span className='font-messapia uppercase'>PR</span> agency of interdisciplinary experts who craft brand stories and build comunities through <span className='font-messapia uppercase'>media, social</span> and <span className='font-messapia uppercase'>experiential.</span></span></p>
 					</div>
 				</div>
@@ -257,7 +251,6 @@ export default function Home() {
 					<SayHi />
 				</div>
 			</main>
-			<Footer />
 		</div>
 	);
 }

@@ -1,17 +1,14 @@
 import React from 'react';
-import Header from '../components/Header';
 import Marquee from 'react-fast-marquee';
 import Image from 'next/image';
 import magali from '../public/img/Magali.jpg';
 import margaux from '../public/img/Margaux.jpg';
 import karine from '../public/img/Karine.jpg';
 import Pills from '../components/Pills';
-import Footer from '../components/Footer';
 
 function About() {
 	return (
 		<div>
-			<Header />
 			<h1 className='text-center text-8xl font-agrandir-grand   mt-32 mb-14'>
 				About
 			</h1>
@@ -158,6 +155,64 @@ function About() {
 						pigalle hotel...) before co-founding belong in 2019 with margaux.
 					</p>
 				</div>
+				{/* <div className='max-w-[360px]'>
+					<div className='divPhotoTeam'>
+						<Image
+							placeholder='blur'
+							height={580}
+							width={360}
+							src={karine}
+							className='photoTeam'
+							alt='Karine'
+						/>
+					</div>
+					<div className='name'>
+						<h3 className=''>Karine</h3>
+					</div>
+					<p className='  text-xs mt-5 text-justify'>
+						multi-faceted assistant, karine joined belong in february 2021. she
+						is a student at sup de web and is finishing her studies in digital
+						communication while working at belong.
+					</p>
+					<p className='  text-xs mt-5 text-justify'>
+						{' '}
+						she is also a freelancer and has launched her blog. she is like the
+						genz, a slasher, committed to multiple causes (from crossbreeding to
+						clean beauty).
+					</p>
+				</div> */}
+			</div>
+			<div className='flex justify-center space-x-16 mt-20'>
+				<div className='max-w-[360px]'>
+					<div className='divPhotoTeam'>
+						<Image
+							placeholder='blur'
+							height={580}
+							width={360}
+							src={magali}
+							className='photoTeam'
+							alt='Magali Gnocchi'
+						/>
+					</div>
+					<div className='name'>
+						<h3 className=''>Magali</h3>
+					</div>
+					<p className='  text-xs mt-5 text-justify'>
+						after 7 years working as a fashion editor with the french press,
+						magali moved into pr.{' '}
+					</p>
+					<p className='  text-xs mt-5 text-justify'>
+						{' '}
+						she spent 13 years as a beauty pr, 8 of which were as head of pr for
+						sisley paris, where she met margaux.
+					</p>
+					<p className='  text-xs mt-5 text-justify'>
+						{' '}
+						she then worked as a pr consultant for brands like google, calvi on
+						the rocks festival, pr agencies like magna presse (ernest leoty,
+						pigalle hotel...) before co-founding belong in 2019 with margaux.
+					</p>
+				</div>
 				<div className='max-w-[360px]'>
 					<div className='divPhotoTeam'>
 						<Image
@@ -260,7 +315,6 @@ function About() {
 					</div>
 				</div>
 			</div>
-			<Footer />
 		</div>
 	);
 }

@@ -1,27 +1,44 @@
 import React from 'react';
 import Link from 'next/link';
 import Overlay from './Overlay';
+import { shuffle } from 'lodash';
+
+
+const colors = [
+	"belvert",
+	"belorange",
+	"belrose",
+];
+
 
 
 function Header() {
+	const [color, setColor] = React.useState(null);
+
+	const handleColors = () => {
+		setColor(shuffle(colors).pop());
+	}
+
 	React.useEffect(() => {
-		// localstorage?
-	}, []);
+		handleColors()
+	}	, []);
+
+
 
 	return (
 		<>
 			{/* <Overlay/> */}
 			
-			<header className='px-6 border-b-2 border-black grid grid-cols-12 justify-between items-center text-sm font-messapia font-bold'>
+			<header className='w-full px-6 border-b-2 border-black grid grid-cols-12 justify-between items-center text-sm font-messapia font-bold'>
 				<nav className='space-x-5 col-span-1 font-bold  '>
 					<Link href={'/work'}>
-						<a className='hover:text-belorange'>work</a>
+						<a onMouseEnter={handleColors} className={`hover:text-${color}`}>work</a>
 					</Link>
 					<Link href={'/about'}>
-						<a className='hover:text-belorange'>about</a>
+						<a onMouseEnter={handleColors} className={`hover:text-${color}`}>about</a>
 					</Link>
 					<Link href={'/presse'}>
-						<a className='hover:text-belorange'>presse</a>
+						<a onMouseEnter={handleColors} className={`hover:text-${color}`}>presse</a>
 					</Link>
 				</nav>
 				<div className='col-span-10 mx-auto'>

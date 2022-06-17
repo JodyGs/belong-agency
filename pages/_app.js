@@ -3,9 +3,9 @@ import Container from '../components/Container/container';
 
 function MyApp({ Component, pageProps }) {
 	return (
-		// <Container>
+		<Container>
 			<Component {...pageProps} />
-		// </Container>
+		</Container>
 	);
 }
 

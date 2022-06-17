@@ -31,7 +31,7 @@
 		@apply font-agrandir-grand font-bold   text-8xl
 	} */
 	.pills {
-		@apply border-2 border-black rounded-full w-full px-4
+		@apply border-2 border-black rounded-full w-full px-4 min-w-[300px]
 	}
 	.sticker {
 		@apply border-4 border-black lg:rounded-[60px] h-[155px]
