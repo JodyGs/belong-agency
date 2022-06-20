@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import Header from '../components/Header';
 import { gsap } from 'gsap';
 import { sanityClient, urlFor } from '../sanity';
+import Link from 'next/link';
 
 function presse({ magazines }) {
 	console.log(magazines);
@@ -28,9 +29,11 @@ function presse({ magazines }) {
 
 			<div ref={el} className='flex flex-col items-center space-y-3 mx-auto'>
 				{magazines.map((magazine) => (
+					  <Link key={magazine._id} href={`/magazines/${magazine.slug.current}`}>
 					<div key={magazine._id} className='belButton p-6 w-[250px]'>
 						<img src={urlFor(magazine.logo).width(300).url()} alt={magazine.name} />
 					</div>
+					</Link>
 				))}
 			</div>
 		</div>

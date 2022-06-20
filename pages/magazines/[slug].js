@@ -1,10 +1,13 @@
 import React from 'react';
 import Header from '../../components/Header';
+import { sanityClient } from '../../sanity';
 
-function presse() {
+function presse({magazine}) {
+
+	console.log(magazine);
+
 	return (
 		<div>
-			<Header />
 			<h1 className='text-9xl text-center font-sweet-sans-pro font-bold mt-32'>
 				presse
 			</h1>
@@ -58,7 +61,7 @@ export const getStaticProps= async ({ params }) => {
        logo,
         'publications': *[
           _type == "publications" && 
-          magazine._ref == ^._id,
+          magazine._ref == ^._id],
         description,
         mainImage,
         slug,
