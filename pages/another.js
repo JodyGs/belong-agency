@@ -11,12 +11,10 @@ export default function Another(props) {
 }
 
 
-export async function getStaticProps(context) {
+export async function getServerSideProps() {
   // call sanity
   return {
     props: {
-      toto: "prout",
-      context
     }, // will be passed to the page component as props
   }
 }

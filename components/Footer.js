@@ -1,14 +1,20 @@
 import Link from 'next/link';
 import React from 'react';
+import { useRouter } from 'next/router'
 
 function Footer() {
+	const router = useRouter()
+	const { pathname, asPath, query, isReady } = router
+	console.log(router);
+	console.log(isReady);
+
 	return (
 		<footer className='bg-belrose text-belorange mt-auto flex justify-between items-center py-3 px-8'>
 			<div className='flex flex-col items-start'>
 				<Link href={'#'}>Contact</Link>
 				<div className="flex w-full justify-between">
-					<Link href={'#'}>FR</Link>
-					<Link href={'#'}>EN</Link>
+					<Link href={`${pathname}`} locale={'fr'}>FR</Link>
+					<Link href={`${pathname}`} locale={'en'}>EN</Link>
 				</div>
 			</div>
 			<svg

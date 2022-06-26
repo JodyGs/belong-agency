@@ -2,43 +2,56 @@ import React from 'react';
 import Link from 'next/link';
 import Overlay from './Overlay';
 import { shuffle } from 'lodash';
+import clsx from 'clsx';
 
-
-const colors = [
-	"belvert",
-	"belorange",
-	"belrose",
-];
-
-
+const colors = ['vert', 'orange', 'rose'];
 
 function Header() {
 	const [color, setColor] = React.useState(null);
 
 	const handleColors = () => {
 		setColor(shuffle(colors).pop());
-	}
+	};
 
 	React.useEffect(() => {
-		handleColors()
-	}	, []);
-
-
+		handleColors();
+	}, []);
 
 	return (
 		<>
-			{/* <Overlay/> */}
-			
+			<Overlay/>
+
 			<header className='w-full px-6 border-b-2 border-black grid grid-cols-12 justify-between items-center text-sm font-messapia font-bold'>
-				<nav className='space-x-5 col-span-1 font-bold  '>
+				<nav className='space-x-5 col-span-1 font-bold'>
 					<Link href={'/work'}>
-						<a onMouseEnter={handleColors} className={`hover:text-${color}`}>work</a>
+						<a
+							onMouseEnter={handleColors}
+							className={clsx({
+								'hover:text-belvert': color === 'vert',
+								'hover:text-belorange': color === 'orange',
+								'hover:text-belrose': color === 'rose',
+							})}
+						>
+							work
+						</a>
 					</Link>
 					<Link href={'/about'}>
-						<a onMouseEnter={handleColors} className={`hover:text-${color}`}>about</a>
+						<a onMouseEnter={handleColors} className={clsx({
+								'hover:text-belvert': color === 'vert',
+								'hover:text-belorange': color === 'orange',
+								'hover:text-belrose': color === 'rose',
+							})}>
+							about
+						</a>
 					</Link>
 					<Link href={'/presse'}>
-						<a onMouseEnter={handleColors} className={`hover:text-${color}`}>presse</a>
+						<a onMouseEnter={handleColors} className={clsx({
+								'hover:text-belvert': color === 'vert',
+								'hover:text-belorange': color === 'orange',
+								'hover:text-belrose': color === 'rose',
+							})}>
+							presse
+						</a>
 					</Link>
 				</nav>
 				<div className='col-span-10 mx-auto'>

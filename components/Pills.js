@@ -1,11 +1,13 @@
 import { shuffle } from 'lodash';
 import Link from 'next/link';
 import React from 'react';
+import clsx from 'clsx';
+
 
 const colors = [
-	"belvert",
-	"belorange",
-	"belrose",
+	"vert",
+	"orange",
+	"rose",
 ];
 
 function Pills() {
@@ -23,22 +25,46 @@ function Pills() {
 
 	return (
 		<div className='flex flex-col items-center space-y-3 w-2/5 mx-auto font-bold text-md'>
-			<div onMouseEnter={handleColors} className={`pills hover:bg-${color}`}>
+			<div onMouseEnter={handleColors} className={clsx({
+								'pills hover:bg-belvert': color === 'vert',
+								'pills hover:bg-belorange': color === 'orange',
+								'pills hover:bg-belrose': color === 'rose',
+							})}>
 				<Link href={'/contact'}>Press Relations</Link>
 			</div>
-			<div onMouseEnter={handleColors} className={`pills hover:bg-${color}`}>
+			<div onMouseEnter={handleColors}  className={clsx({
+								'pills hover:bg-belvert': color === 'vert',
+								'pills hover:bg-belorange': color === 'orange',
+								'pills hover:bg-belrose': color === 'rose',
+							})}>
 				<Link href={'/contact'}>Influencer Marketing</Link>
 			</div>
-			<div onMouseEnter={handleColors} className={`pills hover:bg-${color}`}>
+			<div onMouseEnter={handleColors}  className={clsx({
+								'pills hover:bg-belvert': color === 'vert',
+								'pills hover:bg-belorange': color === 'orange',
+								'pills hover:bg-belrose': color === 'rose',
+							})}>
 				<Link href={'/contact'}>360˚ Strategy</Link>
 			</div>
-			<div onMouseEnter={handleColors} className={`pills hover:bg-${color}`}>
+			<div onMouseEnter={handleColors}  className={clsx({
+								'pills hover:bg-belvert': color === 'vert',
+								'pills hover:bg-belorange': color === 'orange',
+								'pills hover:bg-belrose': color === 'rose',
+							})}>
 				<Link href={'/contact'}>Strategic Partnerships</Link>
 			</div>
-			<div onMouseEnter={handleColors} className={`pills hover:bg-${color}`}>
+			<div onMouseEnter={handleColors}  className={clsx({
+								'pills hover:bg-belvert': color === 'vert',
+								'pills hover:bg-belorange': color === 'orange',
+								'pills hover:bg-belrose': color === 'rose',
+							})}>
 				<Link href={'/contact'}>Events</Link>
 			</div>
-			<div onMouseEnter={handleColors} className={`pills hover:bg-${color}`}>
+			<div onMouseEnter={handleColors}  className={clsx({
+								'pills hover:bg-belvert': color === 'vert',
+								'pills hover:bg-belorange': color === 'orange',
+								'pills hover:bg-belrose': color === 'rose',
+							})}>
 				<Link href={'/contact'}>Content Production</Link>
 			</div>
 		</div>
