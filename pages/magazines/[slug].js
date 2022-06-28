@@ -1,6 +1,5 @@
 import React from 'react';
-import Header from '../../components/Header';
-import { sanityClient } from '../../sanity';
+import { sanityClient, urlFor } from '../../sanity';
 
 function presse({magazine}) {
 
@@ -8,9 +7,8 @@ function presse({magazine}) {
 
 	return (
 		<div>
-			<h1 className='text-9xl text-center font-sweet-sans-pro font-bold mt-32'>
-				presse
-			</h1>
+			<div className='flex flex-col items-center mt-8'>
+			<img className='max-w-[300px]' src={urlFor(magazine.logo).width(300).url()} alt={magazine.name} />
 			<p className='my-8 max-w-2xl text-center mx-auto'>
 				We have <span className='font-bold'>strong and long</span> lasting
 				relationships white <span className='italic'>the media</span> that
@@ -18,6 +16,7 @@ function presse({magazine}) {
 				<span className='font-bold'>Excellent</span> coverage for every{' '}
 				<span className='italic'>client</span> we work with.
 			</p>
+			</div>
 
 			<div className='flex justify-between max-w-2xl mx-auto'>
 				<button className='belButton max-w-[300px]'>print</button>

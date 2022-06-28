@@ -6,14 +6,14 @@ import { gsap } from 'gsap';
 import teamBelong from '../public/img/PHOTOHOME.jpg';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import prBoutique from '../public/img/pr-boutique.png'
+
 
 export default function Home() {
 	const upAnim = React.useRef();
 	const downAnim = React.useRef();
 	const fadeAnim = React.useRef();
 	const { locale, locales, defaultLocale } = useRouter();
-
-	console.log(locale);
 
 	React.useEffect(() => {
 		gsap.set(fadeAnim.current, { opacity: '0' });
@@ -24,52 +24,23 @@ export default function Home() {
 		gsap.to(downAnim.current, { y: '0%', duration: 2 });
 	}, []);
 
+
 	return (
-		<div className='w-full'>
+		<div className='w-full scrollbar-hide overflow-x-hidden'>
 			<main className='h-full flex flex-col'>
 				{/* Hero Banner */}
-				<div className='grid grid-cols-12 max-h-[800px] overflow-hidden relative'>
-					<div className='bg-belrose col-span-12 lg:col-span-6 font-messapia  text-justify p-4 leading-[1] flex flex-col justify-between h-[800px]'>
-						<svg
-							ref={fadeAnim}
-							className='max-w-[870px] mx-auto'
-							xmlns='http://www.w3.org/2000/svg'
-							viewBox='0 0 688.2 443.9'
-						>
-							<g>
-								<path d='M6.1 47.2L7.4 45 30.6 4.7l1.2-2.1h10l24.3 42.1 1.4 2.4.2.4H56l-.1-.3-.8-1.4-4.2-8.1H22.6l-4 7.6-1 1.8-.2.4H5.9l.2-.3zm40.6-16.7l-10-18.9-10 18.9h20zm46.6 17V2.7h27.6c18.4 0 25.8 4.1 25.8 14.3 0 10.3-7.4 14.4-25.8 14.4h-17.1v16.2H93.3zM104 10.2v13.5h18.7c8.8 0 12.4-1.9 12.4-6.7 0-4.8-3.5-6.7-12.4-6.7H104zM205.8 47l.4.5H194l-12.8-16.2h-17.8v16.2h-10.5V2.7h27.6c18.4 0 25.8 4.1 25.8 14.3 0 7.6-4 11.8-13.6 13.5l9.8 12.5 3.3 4zm-42.3-23.3h18.7c8.8 0 12.4-1.9 12.4-6.7 0-4.8-3.5-6.7-12.4-6.7h-18.7v13.4z'></path>
-								<path
-									d='M234.3 47.5l-.1-44.9h27.6c17.5 0 24.6 3.4 24.6 11.8 0 4.5-2 7.4-7 10 5.9 2.7 8.3 5.8 8.3 10.9 0 8.7-6.9 12.2-24.3 12.2h-29.1zm10.5-27.1h19.5c7.2 0 10.1-1.5 10.1-5.4 0-3.6-2.9-5-10.1-5h-19.5v10.4zm.1 19.2h21.9c6.4 0 8.9-1.7 8.9-5.9s-2.6-5.8-8.9-5.8h-21.9v11.7zm47.8-14.1c0-14.7 12-24.5 31.1-24.5 19 0 30.9 9.8 30.9 24.5s-11.9 23.9-30.9 23.9c-19.2 0-31.1-9.2-31.1-23.9zm51 0c.1-10-7.6-16.9-19.9-16.9-12.4 0-20.2 6.8-20.1 16.9-.1 9.6 7.7 15.7 20.1 15.7 12.3 0 20-6.1 19.9-15.7zm17.9-22.8H372v22.7c0 8.4 5 15.3 16.5 15.3 11.6 0 16.5-6.9 16.5-15.3V2.7h10.3l.1 25.3c0 12.4-8.6 21.4-26.9 21.4-18.3 0-26.9-9-26.9-21.4V2.7zm59.7 0h54.4v8.6h-21.9v36.3h-10.6V11.2h-21.9V2.7zm71 0v44.9h-10.4V2.7h10.4zm56 42.5l2 2.6 3.3 4.1.4.5h-12.2l-3-3.9c-2.9.6-5.9.9-9.2.9-18.7 0-31.1-9.5-31.1-23.9C498.5 10.8 511 1 529.6 1s30.9 9.8 30.9 24.5c0 8.7-4.5 15.6-12.2 19.7zm1.4-19.7c0-10.2-8.1-17.1-20.2-17.1-12.2 0-20.4 6.8-20.4 17.1 0 9.5 8.1 15.8 20.4 15.8 1.2 0 2.3-.1 3.5-.2L525.2 31h12.2l5.3 6.9c4.5-2.7 7-7.1 7-12.4zm17-22.8h10.4v22.7c0 8.4 5 15.3 16.5 15.3 11.6 0 16.5-6.9 16.5-15.3V2.7h10.3l.1 25.3c0 12.4-8.6 21.4-26.9 21.4-18.3 0-26.9-9-26.9-21.4V2.7zm117.8 0v8.6h-43.8v9.1h33.5V29h-33.5v10H685v8.6h-55V2.7h54.5z'
-									className='st0'
-								></path>
-								<path d='M9.9 306.2c7.9 4.6 17 7 27.1 6.9 13.1-.1 21-2.1 21-6.9 0-3.6-5.1-4.9-17.6-5.4-21.4-.9-31.9-5.7-31.9-15.1 0-10.2 9.4-15.5 27.4-15.6 12.3-.1 21.9 2.2 30.5 6.4L63 286c-7.3-4.2-15.8-6.5-27.5-6.4-11.6.1-16.3 1.7-16.3 5.7 0 3.9 5.9 5.3 18.7 5.8 20.8.7 31.6 5.3 31.6 15.1 0 10.8-11.6 16.5-33.9 16.5-11.1 0-21.5-2.8-29.7-7.4l4-9.1zM76.6 272H88v24.8c0 9.2 5.4 16.7 18 16.7s18-7.5 18-16.7V272h11.2l.1 27.5c0 13.5-9.3 23.3-29.3 23.3s-29.3-9.8-29.3-23.3V272zm69.3 34.2c7.9 4.6 17 7 27.1 6.9 13.1-.1 21-2.1 21-6.9 0-3.6-5.1-4.9-17.6-5.4-21.4-.9-31.9-5.7-31.9-15.1 0-10.2 9.4-15.5 27.4-15.6 12.3-.1 21.9 2.2 30.5 6.4l-3.2 9.5c-7.3-4.2-15.8-6.5-27.5-6.4-11.6.1-16.3 1.7-16.3 5.7 0 3.9 5.9 5.3 18.7 5.8 20.8.7 31.6 5.3 31.6 15.1 0 10.8-11.6 16.5-33.9 16.5-11.1 0-21.5-2.8-29.7-7.4l3.8-9.1zm64-34.3h59.2v9.3h-23.8v39.5h-11.6v-39.5h-23.8v-9.3zm52.4 48.4l1.4-2.4 25.2-43.8 1.3-2.3H301l26.5 45.8 1.5 2.6.2.4h-12.7l-.1-.3-.9-1.5-4.6-8.9h-30.7l-4.3 8.3-1.1 2-.3.4h-12.4l.2-.3zm44.2-18.1l-10.8-20.6-10.8 20.6h21.6zm39.5-30.3v48.8h-11.3v-48.8H346zm24.5 0l36.4 37v-37h11.5v48.8h-13.6l-36.3-35.3v35.3h-11.6v-48.8h13.6zm53.4 48.4l1.4-2.4 25.2-43.8 1.3-2.3h10.8l26.5 45.8 1.5 2.6.2.4h-12.7l-.1-.3-.9-1.5-4.6-8.9h-30.7l-4.3 8.3-1.1 2-.3.4h-12.4l.2-.3zm44.1-18.1l-10.8-20.6-10.8 20.6H468zm28.4 18.5l-.1-48.8h30c19.1 0 26.8 3.7 26.8 12.8 0 4.9-2.2 8.1-7.6 10.9 6.4 2.9 9 6.3 9 11.8 0 9.4-7.5 13.2-26.4 13.2h-31.7zm11.3-29.4H529c7.9 0 11-1.7 11-5.9 0-3.9-3.1-5.5-11-5.5h-21.2v11.4zm.1 20.9h23.8c6.9 0 9.7-1.8 9.7-6.4 0-4.5-2.8-6.3-9.7-6.3h-23.8v12.7zm66.7-40.3v39.5h42.7v9.3h-54.3v-48.8h11.6zm110 0v9.3h-47.7v9.9h36.5v9.3h-36.5v11H685v9.3h-59.8v-48.8h59.3z'></path>
-								<path
-									d='M5.3 441.5l-.1-83.6h51.4c32.7 0 45.8 6.3 45.8 22 0 8.4-3.8 13.8-13 18.7 10.9 5 15.4 10.8 15.4 20.3 0 16.2-12.9 22.7-45.2 22.7H5.3zM24.7 391H61c13.4 0 18.8-2.8 18.8-10.1 0-6.7-5.4-9.3-18.8-9.3H24.7V391zm.2 35.8h40.8c11.8 0 16.6-3.1 16.6-10.9 0-7.7-4.8-10.8-16.6-10.8H24.9v21.7zm195.7-68.9v16h-81.7v17h62.4v15.9h-62.4v18.8h82.6v16H119.1V358h101.5zm10.5 82.9l2.4-4.1 43.2-75 2.3-3.9h18.6l45.3 78.5 2.6 4.4.3.7H324l-.2-.6-1.5-2.6-7.9-15.2h-52.6l-7.4 14.2-1.9 3.4-.5.7h-21.3l.4-.5zm75.5-31.1L288 374.5l-18.6 35.2h37.2zm41.5-51.7h19.4v42.4c0 15.7 9.2 28.6 30.8 28.6 21.5 0 30.8-12.9 30.8-28.6V358h19.2l.1 47c0 23.1-16 39.9-50.1 39.9-34.2 0-50.1-16.7-50.1-39.9v-47zm111.4-.1h101.4v16h-40.8v67.7h-19.8v-67.7h-40.8v-16zm226.3 0l-48 57.1v26.5h-19.5V415L570 357.9h23.2l34.9 41.1 34.5-41.1h23.2z'
-									className='st0'
-								></path>
-								<path d='M5.7 127.6l1.2-2.1 21.9-38.1 1.2-2h9.4l23 39.8 1.3 2.3.2.3h-11l-.1-.3-.8-1.3-4-7.7H21.3l-3.8 7.2-1 1.7-.2.3H5.5l.2-.1zm38.4-15.8l-9.4-17.9-9.4 17.9h18.8zm74.8 9.1v5.1l-5 1.6c-4.2 1.2-11.8 2-19.1 2-18.9 0-31.5-9-31.5-22.6s12.6-22.6 31.5-22.6c8.6 0 17.3 2.5 21.8 6.2l-.3 1.2-.2.8-1.4 6.3-.1.3c-4.7-3.6-12.7-6.5-19.9-6.5-12.6 0-20.9 6.1-20.9 14.4 0 8.4 8.3 14.6 20.9 14.6 6 0 11.7-1.2 14.3-2.2v-7.2H86v-8.1h32.9v16.7zm60.2-35.4v8.1h-41.5v8.6h31.7v8.1h-31.7v9.5h41.9v8.1h-52V85.5h51.6zm20.2 0l31.6 32.2V85.5h10V128H229l-31.6-30.7V128h-10.1V85.5h12zm103.1 38.6c-4.9 3.4-14.3 5.6-23.6 5.6-18.6 0-30.9-9-30.9-22.6s12.4-22.6 30.9-22.6c9.1 0 18.6 2.8 23.7 7.1l-.3 1.1-.2.9-2.2 6.5-.2.6c-5.7-4.3-14-7.2-20.6-7.2-12.3 0-20.5 5.4-20.5 13.6s8.2 13.6 20.5 13.6c8.4 0 16.9-2.1 21.2-5.2l2.2 8.6zM367 85.5l-24.3 29V128h-9.9v-13.5l-24.5-29h11.8l17.7 20.9 17.5-20.9H367zM441.4 127.9l-11.3-31.2-11.3 31.2h-11.4l-16.2-42.5h12.1l10.2 30.1 11.4-30.1h11.2l11.2 30.1 10.2-30.1H469l-16.2 42.5h-11.4zm43.2-42.4V128h-9.8V85.5h9.8zm5.8 0h51.5v8.1h-20.7V128h-10.1V93.6h-20.7v-8.1zm112.4 0V128h-10.1v-17.6h-35V128h-10.1V85.5h10.1v16.7h35V85.5h10.1z'></path>
-								<path
-									d='M627.2 127.6l1.2-2.1 21.9-38.1 1.2-2h9.4l23 39.8 1.3 2.3.2.3h-11l-.1-.3-.8-1.3-4-7.7h-26.7l-3.8 7.2-1 1.7-.2.3H627l.2-.1zm38.3-15.8l-9.4-17.9-9.4 17.9h18.8z'
-									className='st0'
-								></path>
-								<g>
-									<path
-										d='M83.3 165.5v12.7H22.6v15.4h45.3v12.7H22.6v25.9H6.8v-66.7h76.5zm3.2 34c0-21.8 17.8-36.5 46.3-36.5 28.3 0 46 14.6 46 36.5 0 21.8-17.7 35.5-46 35.5-28.4 0-46.3-13.7-46.3-35.5zm75.9 0c.1-14.9-11.4-25.1-29.6-25.1-18.5 0-30 10.2-29.9 25.1-.1 14.3 11.5 23.3 29.9 23.3 18.3 0 29.7-9 29.6-23.3zm109.4 26.7c-7.6 5.3-22.5 8.8-37.1 8.8-29.2 0-48.6-14.2-48.6-35.5s19.5-35.5 48.6-35.5c14.4 0 29.2 4.5 37.2 11.1l-.5 1.7-.4 1.4-3.5 10.3-.3.9c-9-6.7-22-11.3-32.5-11.3-19.4 0-32.3 8.5-32.3 21.4 0 12.9 12.9 21.5 32.3 21.5 13.2 0 26.5-3.3 33.3-8.2l3.8 13.4zm10.8-60.6h15.5v33.8c0 12.5 7.4 22.8 24.5 22.8 17.2 0 24.5-10.3 24.5-22.8v-33.8h15.4l.1 37.5c0 18.5-12.7 31.8-40 31.8s-40-13.4-40-31.8v-37.5zm94.6 46.7c10.7 6.3 23.3 9.5 37 9.5 17.9-.1 28.6-2.9 28.6-9.5 0-4.9-6.9-6.6-24.1-7.4-29.2-1.3-43.6-7.8-43.6-20.6 0-13.9 12.8-21.2 37.5-21.3 16.8-.1 29.9 3 41.6 8.7l-4.4 13c-10-5.7-21.6-8.8-37.5-8.7-15.9.2-22.3 2.4-22.3 7.7 0 5.4 8 7.3 25.5 7.9 28.4 1 43.2 7.2 43.2 20.6 0 14.8-15.9 22.5-46.4 22.5-15.2 0-29.4-3.8-40.5-10.1l5.4-12.3z'
-										className='st0'
-									></path>
-									<path d='M496.7 199.5c0-21.8 17.8-36.5 46.3-36.5 28.3 0 46 14.6 46 36.5 0 21.8-17.7 35.5-46 35.5-28.5 0-46.3-13.7-46.3-35.5zm75.9 0c.1-14.9-11.4-25.1-29.6-25.1-18.5 0-30 10.2-29.9 25.1-.1 14.3 11.5 23.3 29.9 23.3 18.2 0 29.7-9 29.6-23.3zm46.1-34l49.7 50.5v-50.5h15.7v66.7h-18.6L615.9 184v48.3H600v-66.7h18.7z'></path>
-								</g>
-							</g>
-						</svg>
+				<div className='grid grid-cols-12 max-h-[300px] md:max-h-[800px] overflow-hidden relative'>
+					<div className='bg-belrose col-span-12 lg:col-span-6 font-messapia  text-justify p-4 leading-[1] flex flex-col space-y-5 md:space-y-0 md:justify-between h-[800px]'>
+						<Image src={prBoutique} alt="a pr boutique agency with a focus on sustainable beauty" />
 
-						<p className='max-w-[870px] mx-auto'>
+						<p className='max-w-[870px] mx-auto text-[10px] md:text-[19px]'>
 							* We{' '}
-							<span className='txtstroke-thin text-transparent text-[19px]'>
+							<span className='txtstroke-thin text-transparent text-[10px] md:text-[19px]'>
 								help
 							</span>{' '}
 							our clients to create content and communicate their stories
 							effectively{' '}
-							<span className='txtstroke-thin text-transparent text-[19px]'>
+							<span className='txtstroke-thin text-transparent text-[10px] md:text-[19px]'>
 								to gain
 							</span>{' '}
 							maximum exposure.
@@ -94,7 +65,7 @@ export default function Home() {
 				</div>
 				{/* End of Hero Banner ||
 				    Bandeau */}
-				<div className='flex justify-around align-center text-4xl font-agrandir-grand pt-3 pb-1 border-y-2 border-black whitespace-nowrap space-x-10 overflow-hidden '>
+				<div className='flex justify-around align-center text-md md:text-4xl font-agrandir-grand pt-3 pb-1 border-y-2 border-black whitespace-nowrap space-x-10 overflow-hidden '>
 					<p>big agency skills</p>
 					<p>small agency vibes</p>
 					<p>big agency skills</p>
@@ -106,7 +77,7 @@ export default function Home() {
 					<div className='w-full'>
 						<div className='md:py-32 py-20 max-w-[360px] mx-auto space-y-14'>
 							<svg
-								className=''
+								className='max-w-[60vw]'
 								xmlns='http://www.w3.org/2000/svg'
 								viewBox='0 0 364.656 129.025'
 							>
@@ -157,7 +128,7 @@ export default function Home() {
 									</g>
 								</g>
 							</svg>
-							<button className='belButton'>work</button>
+							<button className='belButton hidden md:block'>work</button>
 						</div>
 					</div>
 					<div className='w-full pt-8 pb-16 md:pt-32'>
@@ -233,8 +204,8 @@ export default function Home() {
 						/>
 					</svg>
 				</Marquee>
-				<div className='w-full flex justify-around my-20 flex-col items-center space-y-12 md:flex-row '>
-					<div className='h-full w-full  max-h-[250px] max-w-[230px] md:max-h-[480px] md:max-w-[406px]'>
+				<div className='w-full flex justify-around my-20 flex-col items-center space-y-12 md:flex-row'>
+					<div className='h-full w-full max-w-[90vw] md:max-h-[580px] md:max-w-[456px]'>
 						<div className='divPhotoTeam h-full w-full'>
 							<Image
 								placeholder='blur'
@@ -248,9 +219,9 @@ export default function Home() {
 							/>
 						</div>
 					</div>
-					<div className=' my-auto max-w-sm space-y-12 text-right'>
+					<div className=' my-auto max-w-sm space-y-12 text-right flex flex-col justify-center'>
 						<svg
-							className='max-w-xs mr-0 ml-auto'
+							className='max-w-[60vw] mr-5 ml-auto md:max-w-xs md:mx-auto  md:mr-0 md:ml-auto'
 							xmlns='http://www.w3.org/2000/svg'
 							viewBox='0 0 362.83 134.985'
 						>
@@ -305,7 +276,7 @@ export default function Home() {
 								</g>
 							</g>
 						</svg>
-						<p className='font-sweet-sans-pro'>
+						<p className='font-sweet-sans-pro text-xs md:-text-md text-left md:text-right px-3'>
 							W
 							<span className='lowercase'>
 								e&apos;re a <span className='font-messapia uppercase'>PR</span>{' '}

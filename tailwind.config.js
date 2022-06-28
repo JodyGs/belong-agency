@@ -17,9 +17,9 @@ module.exports = {
 				belviolet: '#4E4898',
 				belbeige: '#FDF9F3',
 			},
-			// cursor: {
-			// 	belcustom: 'url("../public/bCursor.svg"), pointer',
-			// },
+			cursor: {
+				belcustom: 'url("../public/bCursor.svg"), default',
+			},
 			animation: {
 				changeColor: 'changeColor 1.5s ease infinite',
 				shake: 'shake 0.6s ease-in-out'

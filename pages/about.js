@@ -5,30 +5,32 @@ import magali from '../public/img/Magali.jpg';
 import margaux from '../public/img/Margaux.jpg';
 import karine from '../public/img/Karine.jpg';
 import Pills from '../components/Pills';
+import SayHi from '../components/SayHi'
 
 function About() {
 	return (
-		<div>
-			<h1 className='text-center text-8xl font-agrandir-grand   mt-32 mb-14'>
+		<div className='overflow-x-hidden'>
+			<h1 className='text-center text-6xl md:text-8xl font-agrandir-grand mt-8 mb-4 md:mt-32 md:mb-14'>
 				About
 			</h1>
 
 			<Marquee
-				className='   text-4xl font-agrandir-grand pt-3 pb-1 border-y-2 border-black bg-belrose'
+				className='text-lg md:text-4xl font-agrandir-grand pt-2 md:pt-3 pb-1 border-y-1 md:border-y-2 border-black bg-belrose'
 				speed={60}
 				gradient={false}
 				direction='right'
 			>
-				<p className='mr-24'>big agency skills</p>
-				<p className='mr-24'>small agency vibes</p>
-				<p className='mr-24'>big agency skills</p>
-				<p className='mr-24'>small agency vibes</p>
+				<p className='mr-8 md:mr-24'>big agency skills</p>
+				<p className='mr-8 md:mr-24'>small agency vibes</p>
+				<p className='mr-8 md:mr-24'>big agency skills</p>
+				<p className='mr-8 md:mr-24'>small agency vibes</p>
 			</Marquee>
 
-			<div className='flex justify-around p-20 mt-20'>
-				<div className='bg-belviolet sticker px-12'>
+			<div className='flex flex-col lg:flex-row md:justify-around lg:p-20 mt-20'>
+				<div className=' ml-5 mr-auto bg-belviolet sticker md:px-12 flex max-w-[200px] max-h-[120px] sm:max-h-[200px] sm:max-w-[350px] justify-center items-center'>
+					{/* mr-5 ml-auto bg-belorange sticker flex justify-center items-center max-w-[200px] max-h-[120px] sm:max-w-[350px] md:max-w-sm md:mx-auto */}
 					<svg
-						className='h-[100px] m-6 mb-0'
+						className='max-h-[70%] max-w-[70%] md:max-w-none'
 						xmlns='http://www.w3.org/2000/svg'
 						viewBox='0 0 276.037 107.288'
 					>
@@ -81,12 +83,13 @@ function About() {
 						</g>
 					</svg>
 				</div>
-				<div className='  w-1/4 space-y-5 pt-12'>
+				<div className='mr-4 ml-auto text-right md:text-justify sm:w-2/3 lg:w-1/2 space-y-5 pt-12'>
+					{/* ml-4 mr-auto w-2/3 text-justify mt-16 text-sm flex flex-col space-y-5 */}
 					<p>
 						we’re a <span className='font-bold'>pr agency</span> of{' '}
 						<span className='italic'>interdisciplinary</span> experts who craft
 						brand stories and build communities through media, social and
-						<span className='font-bold'>experiential</span>.
+						<span className='font-bold'> experiential</span>.
 					</p>
 					<p>
 						together we have <span className='font-bold'>over 20 years</span> of
@@ -97,9 +100,9 @@ function About() {
 					</p>
 				</div>
 			</div>
-			<div className='flex justify-center space-x-16 mt-20'>
+			<div className='flex flex-col space-y-10 md:space-y-0 items-center md:items-start md:flex-row justify-center md:space-x-16 mt-20'>
 				<div className='max-w-[360px]'>
-					<div className='divPhotoTeam '>
+					<div className='divPhotoTeam'>
 						<Image
 							placeholder='blur'
 							height={580}
@@ -112,14 +115,14 @@ function About() {
 					<div className='name'>
 						<h3 className=''>Margaux</h3>
 					</div>
-					<p className='  text-xs mt-5 text-justify'>
+					<p className='text-xs mt-5 text-justify'>
 						margaux trained as a pr for sisley for 5 years in paris, she has
 						switched from beauty and communication to the world of
 						entrepreneurship in new york where she moved 3 years ago. she
 						started her consulting business there, first with twice, an american
 						start-up co-founded by lenny kravitz specialized in oral wellness.
 					</p>
-					<p className='  text-xs mt-5 text-justify'>
+					<p className='text-xs mt-5 text-justify'>
 						she is the co-founder of belong along with magali. they both started
 						belong in 2019 as a one-of-a-kind pr agency specializing in working
 						with sustainable, clean beauty brands.
@@ -155,35 +158,9 @@ function About() {
 						pigalle hotel...) before co-founding belong in 2019 with margaux.
 					</p>
 				</div>
-				{/* <div className='max-w-[360px]'>
-					<div className='divPhotoTeam'>
-						<Image
-							placeholder='blur'
-							height={580}
-							width={360}
-							src={karine}
-							className='photoTeam'
-							alt='Karine'
-						/>
-					</div>
-					<div className='name'>
-						<h3 className=''>Karine</h3>
-					</div>
-					<p className='  text-xs mt-5 text-justify'>
-						multi-faceted assistant, karine joined belong in february 2021. she
-						is a student at sup de web and is finishing her studies in digital
-						communication while working at belong.
-					</p>
-					<p className='  text-xs mt-5 text-justify'>
-						{' '}
-						she is also a freelancer and has launched her blog. she is like the
-						genz, a slasher, committed to multiple causes (from crossbreeding to
-						clean beauty).
-					</p>
-				</div> */}
 			</div>
-			<div className='flex justify-center space-x-16 mt-20'>
-				<div className='max-w-[360px]'>
+			<div className='flex flex-col space-y-10 md:space-y-0 items-center md:items-start md:flex-row justify-center md:space-x-16 mt-20'>
+				<div className='max-w-[360px] mx-auto md:mx-0'>
 					<div className='divPhotoTeam'>
 						<Image
 							placeholder='blur'
@@ -213,7 +190,7 @@ function About() {
 						pigalle hotel...) before co-founding belong in 2019 with margaux.
 					</p>
 				</div>
-				<div className='max-w-[360px]'>
+				<div className='max-w-[360px] mx-auto md:mx-0'>
 					<div className='divPhotoTeam'>
 						<Image
 							placeholder='blur'
@@ -241,14 +218,14 @@ function About() {
 				</div>
 			</div>
 
-			<div className='flex my-40'>
-				<div className='flex-1 pt-28'>
+			<div className='flex flex-col-reverse lg:flex-row my-20 sm:my-40'>
+				<div className='flex-1 pt-14 sm:pt-28'>
 					<Pills />
 				</div>
 				<div className='flex-1'>
-					<div className='bg-belorange sticker max-w-sm mx-auto'>
+					<div className='mr-5 ml-auto bg-belorange sticker flex justify-center items-center max-w-[200px] max-h-[120px] sm:max-h-[200px] sm:max-w-[350px] md:max-w-sm lg:mx-auto'>
 						<svg
-							className='h-[100px] mx-auto mt-6'
+							className='max-h-[70%] max-w-[70%] md:max-w-none '
 							xmlns='http://www.w3.org/2000/svg'
 							viewBox='0 0 288.046 113.02'
 						>
@@ -300,13 +277,13 @@ function About() {
 							</g>
 						</svg>
 					</div>
-					<div className='w-2/3 text-justify mt-16 text-sm'>
-						<p  >
+					<div className='ml-4 mr-auto w-2/3 text-justify mt-16 text-sm flex flex-col space-y-5'>
+						<p>
 							driving brand awareness and conversion. we’ll develop and execute
 							influencer marketing strategies based on your brand goals to help
 							you engage your target audiences.
 						</p>
-						<p  >
+						<p>
 							{' '}
 							from influencer matchmaking to campaign management and influencer
 							seeding, we shape the optimal strategy that is right for you and
@@ -315,6 +292,7 @@ function About() {
 					</div>
 				</div>
 			</div>
+			<SayHi />
 		</div>
 	);
 }

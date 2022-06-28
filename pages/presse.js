@@ -5,7 +5,6 @@ import { sanityClient, urlFor } from '../sanity';
 import Link from 'next/link';
 
 function presse({ magazines }) {
-	console.log(magazines);
 
 	const el = useRef();
 	const q = gsap.utils.selector(el);
@@ -17,7 +16,7 @@ function presse({ magazines }) {
 	return (
 		<div>
 			<h1 className='text-9xl text-center font-sweet-sans-pro font-bold mt-32'>
-				Magazine
+				Press
 			</h1>
 			<p className='my-8 max-w-2xl text-center mx-auto'>
 				We have <span className='font-bold'>strong and long</span> lasting
