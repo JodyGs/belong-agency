@@ -30,5 +30,19 @@ export default {
         layout: 'tags',
       },
     },
+    {
+      title: 'Tagsfr',
+      name: 'tagsfr',
+      description: 'Tags are used to categorize your work. Write keywords and press "Enter" to add a new one.',
+      type: 'array',
+      of: [
+        {
+          type: 'string',
+        },
+      ],
+      options: {
+        layout: 'tags',
+      },
+    },
   ],
 }
