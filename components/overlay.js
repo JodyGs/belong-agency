@@ -21,4 +21,4 @@ function Overlay({overlay, setOverlay}) {
   )
 }
 
-export default Overlay
+export { Overlay }
