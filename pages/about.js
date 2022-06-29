@@ -266,9 +266,9 @@ function About() {
 					</div>
 					<div className='ml-4 mr-auto w-2/3 text-justify mt-16 text-sm flex flex-col space-y-5'>
 						{locale === "fr" ? 		<p>
-						De la définition d&apos;une stratégie de communication au déploiement d&apos;une campagne RP, jusqu’à l’organisation d’évènements, nous vous proposons tout un éventail de prises de parole et de rencontres entre votre marque et votre communauté afin de développer votre pouvoir d’expression.
+						De la définition d&apos;une stratégie de communication au déploiement d&apos;une campagne RP, jusqu&apos;à l&apos;organisation d&apos;évènements, nous vous proposons tout un éventail de prises de parole et de rencontres entre votre marque et votre communauté afin de développer votre pouvoir d&apos;expression.
 						</p> : <p>
-							driving brand awareness and conversion. we’ll develop and execute
+							driving brand awareness and conversion. we&apos;ll develop and execute
 							influencer marketing strategies based on your brand goals to help
 							you engage your target audiences.
 							from influencer matchmaking to campaign management and influencer
