@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import Header from '../components/Header';
-import { gsap } from 'gsap';
 import { sanityClient, urlFor } from '../sanity';
 import Link from 'next/link';
 import Marquee from 'react-fast-marquee';
