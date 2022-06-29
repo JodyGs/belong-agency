@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { sanityClient, urlFor } from '../../sanity';
 
 function Presse({ magazine }) {
-	console.log(magazine);
 	
 	const [print, setPrint] = React.useState(true);
 
