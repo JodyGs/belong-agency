@@ -10,18 +10,19 @@ import clsx from 'clsx';
 const COLORS = ['bg-belviolet', 'bg-belorange', 'bg-belvert', 'bg-belrose'];
 
 function Mag({ mag, locale, index, line }) {
-return (
-	<Link key={mag._id} href={`/magazines/${mag.slug.current}`}>
-		<div
+	return (
+		<Link key={mag._id} href={`/magazines/${mag.slug.current}`}>
+			<div
 				key={mag._id}
 				className={clsx(
-					'm-6 rounded-full h-[140px] p-6 flex justify-center items-center w-[250px] overflow-hidden border-2 border-black',
-					COLORS[(index + line) % COLORS.length]
-
+					'm-6 rounded-full h-[140px] p-6 flex justify-center items-center w-[250px] overflow-hidden border-2 border-black hover:opacity-80 transition-opacity',
+					COLORS[
+						(index + line) % COLORS.length
+					]
 				)}
 			>
 				<img src={urlFor(mag.logo).width(200).url()} alt={mag.name} />
-		</div>
+			</div>
 		</Link>
 	);
 }
