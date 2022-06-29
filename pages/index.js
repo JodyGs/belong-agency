@@ -6,14 +6,13 @@ import { gsap } from 'gsap';
 import teamBelong from '../public/img/PHOTOHOME.jpg';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import prBoutique from '../public/img/pr-boutique.png'
-
+import prBoutique from '../public/img/pr-boutique.png';
 
 export default function Home() {
 	const upAnim = React.useRef();
 	const downAnim = React.useRef();
 	const fadeAnim = React.useRef();
-	const { locale, locales, defaultLocale } = useRouter();
+	const router = useRouter();
 
 	React.useEffect(() => {
 		gsap.set(fadeAnim.current, { opacity: '0' });
@@ -24,14 +23,16 @@ export default function Home() {
 		gsap.to(downAnim.current, { y: '0%', duration: 2 });
 	}, []);
 
-
 	return (
 		<div className='w-full scrollbar-hide overflow-x-hidden'>
 			<main className='h-full flex flex-col'>
 				{/* Hero Banner */}
 				<div className='grid grid-cols-12 max-h-[300px] md:max-h-[800px] overflow-hidden relative'>
 					<div className='bg-belrose col-span-12 lg:col-span-6 font-messapia  text-justify p-4 leading-[1] flex flex-col space-y-5 md:space-y-0 md:justify-between h-[800px]'>
-						<Image src={prBoutique} alt="a pr boutique agency with a focus on sustainable beauty" />
+						<Image
+							src={prBoutique}
+							alt='a pr boutique agency with a focus on sustainable beauty'
+						/>
 
 						<p className='max-w-[870px] mx-auto text-[10px] md:text-[19px]'>
 							* We{' '}
@@ -128,7 +129,14 @@ export default function Home() {
 									</g>
 								</g>
 							</svg>
-							<button className='belButton hidden md:block'>work</button>
+							<button
+								onClick={() => {
+									router.push('/work');
+								}}
+								className='belButton hidden md:block'
+							>
+								work
+							</button>
 						</div>
 					</div>
 					<div className='w-full pt-8 pb-16 md:pt-32'>
@@ -210,7 +218,7 @@ export default function Home() {
 							<Image
 								placeholder='blur'
 								className='photoTeam'
-								width={'100%'}
+								width={'80%'}
 								height={'100%'}
 								objectFit='cover'
 								src={teamBelong}
@@ -219,7 +227,7 @@ export default function Home() {
 							/>
 						</div>
 					</div>
-					<div className=' my-auto max-w-sm space-y-12 text-right flex flex-col justify-center'>
+					<div className='my-auto max-w-sm space-y-12 text-right flex flex-col justify-center'>
 						<svg
 							className='max-w-[60vw] mr-5 ml-auto md:max-w-xs md:mx-auto  md:mr-0 md:ml-auto'
 							xmlns='http://www.w3.org/2000/svg'

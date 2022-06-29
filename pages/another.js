@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 
 
 export default function Another(props) {
-  console.log(props);
   const { locale, locales, defaultLocale } = useRouter();
   return (
     <div>Hello another - {locale}</div>

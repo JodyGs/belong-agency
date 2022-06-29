@@ -6,9 +6,9 @@
 	html {
 		@apply h-full uppercase
 	}
-	/* *, button {
+	*, body, button {
 		@apply cursor-belcustom
-	} */
+	}
 	*, ::before, ::after {
 		box-sizing: border-box;
 		margin: 0;
@@ -52,5 +52,14 @@
 	}
 	.name {
 		@apply border-4 border-black px-3 text-belbeige bg-belorange text-lg font-bold
+	}
+	.randomvert {
+		@apply m-6 rounded-full h-[140px] p-6 flex justify-center items-center w-[250px] overflow-hidden border-2 border-black bg-belvert
+	}
+	.randomorange {
+		@apply m-6 rounded-full h-[140px] p-6 flex justify-center items-center w-[250px] overflow-hidden border-2 border-black bg-belorange
+	}
+	.randomrose {
+		@apply m-6 rounded-full h-[140px] p-6 flex justify-center items-center w-[250px] overflow-hidden border-2 border-black bg-belrose
 	}
 }
