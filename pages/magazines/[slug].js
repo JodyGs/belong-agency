@@ -23,13 +23,6 @@ function Presse({ magazine }) {
 					src={urlFor(magazine.logo).width(300).url()}
 					alt={magazine.name}
 				/>
-				<p className='my-8 max-w-2xl text-center mx-auto'>
-					We have <span className='font-bold'>strong and long</span> lasting
-					relationships white <span className='italic'>the media</span> that
-					matter. This translates into{' '}
-					<span className='font-bold'>Excellent</span> coverage for every{' '}
-					<span className='italic'>client</span> we work with.
-				</p>
 			</div>
 
 			<div className='flex justify-between max-w-2xl mx-auto'>

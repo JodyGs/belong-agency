@@ -13,6 +13,7 @@ export default function Home() {
 	const downAnim = React.useRef();
 	const fadeAnim = React.useRef();
 	const router = useRouter();
+	const {locale} = useRouter()
 
 	React.useEffect(() => {
 		gsap.set(fadeAnim.current, { opacity: '0' });
@@ -22,6 +23,8 @@ export default function Home() {
 		gsap.to(upAnim.current, { y: '0%', duration: 2 });
 		gsap.to(downAnim.current, { y: '0%', duration: 2 });
 	}, []);
+
+
 
 	return (
 		<div className='w-full scrollbar-hide overflow-x-hidden'>
@@ -140,7 +143,7 @@ export default function Home() {
 						</div>
 					</div>
 					<div className='w-full pt-8 pb-16 md:pt-32'>
-						<Pills />
+						<Pills locale={locale}/>
 					</div>
 				</div>
 				<Marquee
@@ -284,7 +287,16 @@ export default function Home() {
 								</g>
 							</g>
 						</svg>
-						<p className='font-sweet-sans-pro text-xs md:-text-md text-left md:text-right px-3'>
+					{locale === "fr" ? 	<p className='font-sweet-sans-pro text-xs md:-text-md text-left md:text-right px-3'>
+							N
+							<span className='lowercase'>
+								ous sommes une agence de <span className='font-messapia uppercase'>relations publiques</span>{' '}
+								composée d&apos;experts interdisciplinaires qui créent des histoires de marque et construisent des communautés par le biais{' '}
+								<span className='font-messapia uppercase'>des médias, des réseaux sociaux</span>{' '}
+								et{' '}
+								<span className='font-messapia uppercase'>des expériences.</span>
+							</span>
+						</p> : 	<p className='font-sweet-sans-pro text-xs md:-text-md text-left md:text-right px-3'>
 							W
 							<span className='lowercase'>
 								e&apos;re a <span className='font-messapia uppercase'>PR</span>{' '}
@@ -294,7 +306,7 @@ export default function Home() {
 								and{' '}
 								<span className='font-messapia uppercase'>experiential.</span>
 							</span>
-						</p>
+						</p>}
 					</div>
 				</div>
 				<div>

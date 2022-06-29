@@ -10,7 +10,7 @@ const colors = [
 	"rose",
 ];
 
-function Pills() {
+function Pills({locale}) {
 	const [color, setColor] = React.useState(null);
 
 	const handleColors = () => {
@@ -30,42 +30,42 @@ function Pills() {
 								'pills -translate-x-[10%] sm:-translate-x-[25%] lg:translate-x-0 hover:bg-belorange': color === 'orange',
 								'pills -translate-x-[10%] sm:-translate-x-[25%] lg:translate-x-0 hover:bg-belrose': color === 'rose',
 							})}>
-				<Link href={'/contact'}>Press Relations</Link>
+				<Link href={'/contact'}>{locale === "fr" ? "relations presse" : "Press Relations"}</Link>
 			</div>
 			<div onMouseEnter={handleColors}  className={clsx({
 								'pills translate-x-[10%] sm:translate-x-[25%] lg:translate-x-0 hover:bg-belvert': color === 'vert',
 								'pills translate-x-[10%] sm:translate-x-[25%] lg:translate-x-0 hover:bg-belorange': color === 'orange',
 								'pills translate-x-[10%]  sm:translate-x-[25%] lg:translate-x-0 hover:bg-belrose': color === 'rose',
 							})}>
-				<Link href={'/contact'}>Influencer Marketing</Link>
+				<Link href={'/contact'}>{locale === "fr" ? "Marketing d'influence" : "Influencer Marketing"}</Link>
 			</div>
 			<div onMouseEnter={handleColors}  className={clsx({
 								'pills -translate-x-[10%] sm:-translate-x-[25%] lg:translate-x-0 hover:bg-belvert': color === 'vert',
 								'pills -translate-x-[10%] sm:-translate-x-[25%] lg:translate-x-0 hover:bg-belorange': color === 'orange',
 								'pills -translate-x-[10%] sm:-translate-x-[25%] lg:translate-x-0 hover:bg-belrose': color === 'rose',
 							})}>
-				<Link href={'/contact'}>360˚ Strategy</Link>
+				<Link href={'/contact'}>{locale === "fr" ? "Stratégie 360˚" : "360˚ Strategy"}</Link>
 			</div>
 			<div onMouseEnter={handleColors}  className={clsx({
 								'pills translate-x-[10%]  sm:translate-x-[25%] lg:translate-x-0 hover:bg-belvert': color === 'vert',
 								'pills translate-x-[10%]  sm:translate-x-[25%] lg:translate-x-0 hover:bg-belorange': color === 'orange',
 								'pills translate-x-[10%]  sm:translate-x-[25%] lg:translate-x-0 hover:bg-belrose': color === 'rose',
 							})}>
-				<Link href={'/contact'}>Strategic Partnerships</Link>
+				<Link href={'/contact'}>{locale === "fr" ? "Partenariats" : "Strategic Partnerships"}</Link>
 			</div>
 			<div onMouseEnter={handleColors}  className={clsx({
 								'pills -translate-x-[10%] sm:-translate-x-[25%] lg:translate-x-0 hover:bg-belvert': color === 'vert',
 								'pills -translate-x-[10%] sm:-translate-x-[25%] lg:translate-x-0 hover:bg-belorange': color === 'orange',
 								'pills -translate-x-[10%] sm:-translate-x-[25%] lg:translate-x-0 hover:bg-belrose': color === 'rose',
 							})}>
-				<Link href={'/contact'}>Events</Link>
+				<Link href={'/contact'}>{locale === "fr" ? "Évènements" : "Events"}</Link>
 			</div>
 			<div onMouseEnter={handleColors}  className={clsx({
 								'pills translate-x-[10%]  sm:translate-x-[25%] lg:translate-x-0 hover:bg-belvert': color === 'vert',
 								'pills translate-x-[10%]  sm:translate-x-[25%] lg:translate-x-0 hover:bg-belorange': color === 'orange',
 								'pills translate-x-[10%]  sm:translate-x-[25%] lg:translate-x-0 hover:bg-belrose': color === 'rose',
 							})}>
-				<Link href={'/contact'}>Content Production</Link>
+				<Link href={'/contact'}>{locale === "fr" ? "Production de contenu" : "Content Production"}</Link>
 			</div>
 		</div>
 	);
