@@ -8,26 +8,39 @@ import clsx from 'clsx';
 
 const COLORS = ['bg-belviolet', 'bg-belorange', 'bg-belvert', 'bg-belrose'];
 
-function Mag({ mag, locale, index, line }) {
+function Mag({ mag, locale, index, line, button }) {
 	return (
-		<Link key={mag._id} href={`/magazines/${mag.slug.current}`}>
+		<Link key={mag._id} href={`/${button}/${mag.slug.current}`}>
 			<div
 				key={mag._id}
 				className={clsx(
 					'scale-50 md:scale-100 -my-8 -mx-12 md:m-6 rounded-full h-[140px] p-6 flex justify-center items-center w-[250px] overflow-hidden border-2 border-black hover:opacity-80 transition-opacity',
-					COLORS[
-						(index + line) % COLORS.length
-					]
+					COLORS[(index + line) % COLORS.length]
 				)}
 			>
-				<img src={urlFor(mag.logo).width(200).url()} alt={mag.name} /> 
+				<img src={urlFor(mag.logo).width(200).url()} alt={mag.name} />
 			</div>
 		</Link>
 	);
 }
 
-function Presse({ magazines }) {
+function Presse({ magPrint, magWeb, radioTv }) {
 	const { locale } = useRouter();
+	const [button, setButton] = React.useState('print');
+	console.log(magPrint);
+
+	const setPrint = () => {
+		setButton('print');
+	};
+
+	const setDigital = () => {
+		setButton('digital');
+	};
+
+	const setRadio = () => {
+		setButton('radioTv');
+	};
+
 	return (
 		<div className='overflow-x-hidden mb-10'>
 			<h1 className='text-5xl lg:text-8xl text-center font-agrandir-grand font-bold mt-8 lg:mt-24'>
@@ -52,11 +65,27 @@ function Presse({ magazines }) {
 				</p>
 			)}
 
+			<div className='flex flex-col lg:flex-row items-center justify-evenly mx-auto max-w-[250px] lg:justify-between lg:max-w-2xl text-xs md:text-md mb-20 space-y-3 lg:space-y-0 lg:space-x-2'>
+				<button
+					onClick={setPrint}
+					className={`belButton max-w-[300px] ${button === 'print' && 'bg-belviolet text-belvert border-belviolet'}`}
+				>
+					print
+				</button>
+				<button onClick={setDigital} className={`belButton max-w-[300px]  ${button === 'digital' && 'bg-belviolet text-belvert border-belviolet'}`}>
+					digital
+				</button>
+				<button onClick={setRadio} className={`belButton max-w-[300px] ${button === 'radioTv' && 'bg-belviolet text-belvert border-belviolet'}`}>
+					Radio / Tv
+				</button>
+			</div>
+
+			{button === 'print' ? <div>
 			<Marquee className='' speed={40} gradient={false} direction='right'>
-				{magazines
+				{magPrint
 					.filter((_, i) => i % 4 === 0)
 					.map((mag, index) => (
-						<Mag key={mag.title} {...{ mag, locale, index, line: 0 }} />
+						<Mag key={mag.title} {...{ mag, locale, index, line: 0, button }} />
 					))}
 			</Marquee>
 			<Marquee
@@ -66,10 +95,10 @@ function Presse({ magazines }) {
 				gradient={false}
 				direction='right'
 			>
-				{magazines
+				{magPrint
 					.filter((_, i) => i % 4 === 1)
 					.map((mag, index) => (
-						<Mag key={mag.title} {...{ mag, locale, index, line: 1 }} />
+						<Mag key={mag.title} {...{ mag, locale, index, line: 1, button }} />
 					))}
 			</Marquee>
 			<Marquee
@@ -78,10 +107,10 @@ function Presse({ magazines }) {
 				gradient={false}
 				direction='right'
 			>
-				{magazines
+				{magPrint
 					.filter((_, i) => i % 4 === 2)
 					.map((mag, index) => (
-						<Mag key={mag.title} {...{ mag, locale, index, line: 2 }} />
+						<Mag key={mag.title} {...{ mag, locale, index, line: 2, button }} />
 					))}
 			</Marquee>
 			<Marquee
@@ -90,12 +119,104 @@ function Presse({ magazines }) {
 				gradient={false}
 				direction='right'
 			>
-				{magazines
+				{magPrint
 					.filter((_, i) => i % 4 === 3)
 					.map((mag, index) => (
-						<Mag key={mag.title} {...{ mag, locale, index, line: 1 }} />
+						<Mag key={mag.title} {...{ mag, locale, index, line: 1, button }} />
 					))}
 			</Marquee>
+			</div> : button === "digital" ? <div>
+			<Marquee className='' speed={40} gradient={false} direction='right'>
+				{magWeb
+					.filter((_, i) => i % 4 === 0)
+					.map((mag, index) => (
+						<Mag key={mag.title} {...{ mag, locale, index, line: 0, button }} />
+					))}
+			</Marquee>
+			<Marquee
+				style={{ width: 'calc(100% + 83px)', transform: 'translateX(-83px)' }}
+				className=''
+				speed={40}
+				gradient={false}
+				direction='right'
+			>
+				{magWeb
+					.filter((_, i) => i % 4 === 1)
+					.map((mag, index) => (
+						<Mag key={mag.title} {...{ mag, locale, index, line: 1, button }} />
+					))}
+			</Marquee>
+			<Marquee
+				style={{ width: 'calc(100% + 166px)', transform: 'translateX(-166px)' }}
+				speed={40}
+				gradient={false}
+				direction='right'
+			>
+				{magWeb
+					.filter((_, i) => i % 4 === 2)
+					.map((mag, index) => (
+						<Mag key={mag.title} {...{ mag, locale, index, line: 2, button }} />
+					))}
+			</Marquee>
+			<Marquee
+				style={{ width: 'calc(100% + 83px)', transform: 'translateX(-83px)' }}
+				speed={40}
+				gradient={false}
+				direction='right'
+			>
+				{magWeb
+					.filter((_, i) => i % 4 === 3)
+					.map((mag, index) => (
+						<Mag key={mag.title} {...{ mag, locale, index, line: 1, button }} />
+					))}
+			</Marquee>
+			</div> : button === 'radioTv' ? <div>
+			<Marquee className='' speed={40} gradient={false} direction='right'>
+				{radioTv
+					.filter((_, i) => i % 4 === 0)
+					.map((mag, index) => (
+						<Mag key={mag.title} {...{ mag, locale, index, line: 0, button }} />
+					))}
+			</Marquee>
+			<Marquee
+				style={{ width: 'calc(100% + 83px)', transform: 'translateX(-83px)' }}
+				className=''
+				speed={40}
+				gradient={false}
+				direction='right'
+			>
+				{radioTv
+					.filter((_, i) => i % 4 === 1)
+					.map((mag, index) => (
+						<Mag key={mag.title} {...{ mag, locale, index, line: 1, button }} />
+					))}
+			</Marquee>
+			<Marquee
+				style={{ width: 'calc(100% + 166px)', transform: 'translateX(-166px)' }}
+				speed={40}
+				gradient={false}
+				direction='right'
+			>
+				{radioTv
+					.filter((_, i) => i % 4 === 2)
+					.map((mag, index) => (
+						<Mag key={mag.title} {...{ mag, locale, index, line: 2, button }} />
+					))}
+			</Marquee>
+			<Marquee
+				style={{ width: 'calc(100% + 83px)', transform: 'translateX(-83px)' }}
+				speed={40}
+				gradient={false}
+				direction='right'
+			>
+				{radioTv
+					.filter((_, i) => i % 4 === 3)
+					.map((mag, index) => (
+						<Mag key={mag.title} {...{ mag, locale, index, line: 1, button }} />
+					))}
+			</Marquee>
+			</div> : ""
+			}
 		</div>
 	);
 }
@@ -103,7 +224,7 @@ function Presse({ magazines }) {
 export default Presse;
 
 export const getServerSideProps = async () => {
-	const query = `*[_type == "magazines"]{
+	const digital = `*[_type == "magWeb"]{
     _id,
     name,
     slug{
@@ -112,11 +233,33 @@ export const getServerSideProps = async () => {
   logo
 }`;
 
-	const magazines = await sanityClient.fetch(query);
+const print = `*[_type == "magPrint"]{
+	_id,
+	name,
+	slug{
+		current
+	},
+logo
+}`
+
+const radio = `*[_type == "radioTv"]{
+	_id,
+	name,
+	slug{
+		current
+	},
+logo
+}`
+
+	const magPrint = await sanityClient.fetch(print);
+	const magWeb = await sanityClient.fetch(digital);
+	const radioTv = await sanityClient.fetch(radio)
 
 	return {
 		props: {
-			magazines,
+			magPrint,
+			magWeb,
+			radioTv
 		},
 	};
 };

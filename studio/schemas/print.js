@@ -1,6 +1,6 @@
 export default {
-  name: 'digital',
-  title: 'Digital',
+  name: 'print',
+  title: 'Print',
   type: 'document',
   fields: [
     {
@@ -9,10 +9,12 @@ export default {
       type: 'string',
     },
     {
-      name: 'url',
-      title: 'URL',
-      description: 'Write the complete url (https://example.com/page_example/)',
-      type: 'url',
+      name: 'thumbnail',
+      title: 'Thumbnail',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
     },
     {
       name: 'date',
@@ -25,7 +27,7 @@ export default {
       description: 'Reference the magazine the publication is associated to:',
       type: 'reference',
       to: {
-        type: 'magWeb'
+        type: 'magPrint'
       }
     },
   ],

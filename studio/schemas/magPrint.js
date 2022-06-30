@@ -1,6 +1,6 @@
 export default {
-  name: 'magazines',
-  title: 'Magazines',
+  name: 'magPrint',
+  title: 'Magazine Print',
   type: 'document',
   fields: [
     {
