@@ -4,6 +4,7 @@ import { sanityClient, urlFor } from '../sanity';
 import { useRouter } from 'next/router';
 
 function Work({ work, locale}) {
+	console.log(work._createAt);
 	const translatedTags = (locale === 'fr' ? work.tagsfr : work.tags) || [];
 	return (
 		<div className={'w-full'} key={work.id}>

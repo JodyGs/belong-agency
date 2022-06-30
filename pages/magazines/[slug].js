@@ -17,11 +17,7 @@ function Presse({ magazine }) {
 	return (
 		<div>
 			<div className='flex flex-col items-center mt-8'>
-				<img
-					className='max-w-[300px]'
-					src={urlFor(magazine.logo).width(300).url()}
-					alt={magazine.name}
-				/>
+				<h1 className='text-6xl lg:text-8xl font-agrandir-grand my-24'>{magazine.name}</h1>
 			</div>
 
 			<div className='flex justify-between max-w-2xl mx-auto'>

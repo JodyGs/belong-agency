@@ -44,5 +44,12 @@ export default {
         layout: 'tags',
       },
     },
+    {
+      name: 'date',
+      title: 'Date',
+      type: 'datetime',
+      description: 'Date and time of publishing',
+      validation: Rule =&gt; Rule.required()
+    },
   ],
 }
