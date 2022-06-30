@@ -10,7 +10,7 @@ function Contact() {
 			<main>
 				<div className='text-center space-y-5 p-10'>
 					{/* titles */}
-					<h1 className='text-5xl md:text-9xl text-center font-agrandir-grand font-extrabold mt-14'>
+					<h1 className='text-5xl md:text-8xl text-center font-agrandir-grand font-extrabold mt-14 lg:mt-24'>
 						Say <span className='txtstroke text-transparent'>hi</span> !
 					</h1>
 					<h3 className='text-xl md:text-3xl font-messapia'>Let&apos;s work together</h3>
@@ -43,7 +43,7 @@ function Contact() {
 							</div>
 						</div>
 					</div>
-					<div className='text-center   p-10 pt-16 space-y-4'>
+					<div className='text-center pt-20 space-y-4'>
 						<h3 className='text-3xl font-messapia'>Let&apos;s connect</h3>
 						<p className='font-agrandir-grand font-bold text-lg md:text-4xl'>@belongparis</p>
 					</div>

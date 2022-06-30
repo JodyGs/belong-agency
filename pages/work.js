@@ -15,13 +15,13 @@ function Work({ work, locale}) {
 				/>
 			</div>
 			<div className='work-text-container w-full md:max-w-lg mx-auto'>
-				<h2 className=' border-2 border-black font-messapia px-2 text-md md:text-lg hover:text-belbeige hover:bg-belorange b-1'>
+				<h2 className=' border-2 border-black font-messapia px-2 text-md md:text-lg text-belbeige bg-belorange b-1'>
 					{work.title}
 				</h2>
 				<div className='w-full flex flex-wrap pt-3'>
 					{translatedTags.map((tag) => (
 						<span
-							className='border-2 border-black rounded-md p-1 font-messapia text-xs mr-3 mb-3'
+							className='border-2 border-black rounded-full py-1 px-2 font-messapia text-xs mr-3 mb-3'
 							key={tag}
 						>
 							{tag}
@@ -37,9 +37,9 @@ function Works({ works }) {
 	const { locale } = useRouter();
 	return (
 		<div className='overflow-x-hidden flex flex-col justify-center lg:block'>
-			<div className='mx-auto max-w-6xl'>
+			<div className='mx-auto max-w-6xl md:mt-24 '>
 				<p className='font-messapia mt-12 text-xs md:text-md lg:text-lg'>
-					We provide service à la carte
+					We provide à la carte services
 				</p>
 				<h1 className='-mt-2 lg:-mt-6 md:-mt-4 animate-changeColor text-7xl md:text-9xl lg:text-[200px] font-messapia -z-10'>
 					work
@@ -57,12 +57,12 @@ function Works({ works }) {
 							/>
 						</div>
 						<div>
-							<h2 className='border-2 border-black font-messapia p-1 hover:text-belbeige hover:bg-belorange mb-2'>
+							<h2 className='border-2 border-black font-messapia p-1 text-belbeige bg-belorange mb-2'>
 								{work.title}
 							</h2>
 							<div className='flex flex-wrap font-messapia text-xs'>
 								{work.tags.map((tag) => (
-									<span className='mr-3 mb-3 border-2 border-black rounded-md p-0.5 whitespace-nowrap' key={tag}>{tag}</span>
+									<span className='mr-3 mb-3 border-2 border-black rounded-full px-2 py-1 whitespace-nowrap' key={tag}>{tag}</span>
 								))}
 							</div>
 						</div>
@@ -70,7 +70,7 @@ function Works({ works }) {
 				))}
 			</div>
 
-			<div className='hidden lg:flex -mt-12'>
+			<div className='hidden lg:flex -mt-12 mb-10'>
 				<div className='space-y-10 lg:flex-col lg:max-w-8xl mx-auto w-full lg:max-w-[500px]'>
 					{works
 						.filter((_, i) => i % 2 === 0)
@@ -104,7 +104,7 @@ export const getServerSideProps = async ({ req, res }) => {
 		thumbnail,
 		tags,
 		tagsfr,
-	} | order(_createdAt asc)`;
+	} | order(_createdAt desc)`;
 
 	const works = await sanityClient.fetch(query);
 

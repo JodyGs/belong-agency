@@ -24,48 +24,48 @@ function Pills({locale}) {
 
 
 	return (
-		<div className='flex flex-col items-center space-y-3 w-2/5 mx-auto font-bold text-md'>
+		<div className='flex flex-col items-center space-y-3 w-2/5 mx-auto font-bold text-md font-messapia text-xs'>
 			<div onMouseEnter={handleColors} className={clsx({
 								'pills -translate-x-[10%] sm:-translate-x-[25%] lg:translate-x-0 hover:bg-belvert': color === 'vert',
 								'pills -translate-x-[10%] sm:-translate-x-[25%] lg:translate-x-0 hover:bg-belorange': color === 'orange',
 								'pills -translate-x-[10%] sm:-translate-x-[25%] lg:translate-x-0 hover:bg-belrose': color === 'rose',
 							})}>
-				<Link href={'/contact'}>{locale === "fr" ? "relations presse" : "Press Relations"}</Link>
+				<Link href={'/work'}>{locale === "fr" ? "relations presse" : "Press Relations"}</Link>
 			</div>
 			<div onMouseEnter={handleColors}  className={clsx({
 								'pills translate-x-[10%] sm:translate-x-[25%] lg:translate-x-0 hover:bg-belvert': color === 'vert',
 								'pills translate-x-[10%] sm:translate-x-[25%] lg:translate-x-0 hover:bg-belorange': color === 'orange',
 								'pills translate-x-[10%]  sm:translate-x-[25%] lg:translate-x-0 hover:bg-belrose': color === 'rose',
 							})}>
-				<Link href={'/contact'}>{locale === "fr" ? "Marketing d'influence" : "Influencer Marketing"}</Link>
+				<Link href={'/work'}>{locale === "fr" ? "Marketing d'influence" : "Influencer Marketing"}</Link>
 			</div>
 			<div onMouseEnter={handleColors}  className={clsx({
 								'pills -translate-x-[10%] sm:-translate-x-[25%] lg:translate-x-0 hover:bg-belvert': color === 'vert',
 								'pills -translate-x-[10%] sm:-translate-x-[25%] lg:translate-x-0 hover:bg-belorange': color === 'orange',
 								'pills -translate-x-[10%] sm:-translate-x-[25%] lg:translate-x-0 hover:bg-belrose': color === 'rose',
 							})}>
-				<Link href={'/contact'}>{locale === "fr" ? "Stratégie 360˚" : "360˚ Strategy"}</Link>
+				<Link href={'/work'}>{locale === "fr" ? "Stratégie 360˚" : "360˚ Strategy"}</Link>
 			</div>
 			<div onMouseEnter={handleColors}  className={clsx({
 								'pills translate-x-[10%]  sm:translate-x-[25%] lg:translate-x-0 hover:bg-belvert': color === 'vert',
 								'pills translate-x-[10%]  sm:translate-x-[25%] lg:translate-x-0 hover:bg-belorange': color === 'orange',
 								'pills translate-x-[10%]  sm:translate-x-[25%] lg:translate-x-0 hover:bg-belrose': color === 'rose',
 							})}>
-				<Link href={'/contact'}>{locale === "fr" ? "Partenariats" : "Strategic Partnerships"}</Link>
+				<Link href={'/work'}>{locale === "fr" ? "Partenariats" : "Strategic Partnerships"}</Link>
 			</div>
 			<div onMouseEnter={handleColors}  className={clsx({
 								'pills -translate-x-[10%] sm:-translate-x-[25%] lg:translate-x-0 hover:bg-belvert': color === 'vert',
 								'pills -translate-x-[10%] sm:-translate-x-[25%] lg:translate-x-0 hover:bg-belorange': color === 'orange',
 								'pills -translate-x-[10%] sm:-translate-x-[25%] lg:translate-x-0 hover:bg-belrose': color === 'rose',
 							})}>
-				<Link href={'/contact'}>{locale === "fr" ? "Évènements" : "Events"}</Link>
+				<Link href={'/work'}>{locale === "fr" ? "Évènements" : "Events"}</Link>
 			</div>
 			<div onMouseEnter={handleColors}  className={clsx({
 								'pills translate-x-[10%]  sm:translate-x-[25%] lg:translate-x-0 hover:bg-belvert': color === 'vert',
 								'pills translate-x-[10%]  sm:translate-x-[25%] lg:translate-x-0 hover:bg-belorange': color === 'orange',
 								'pills translate-x-[10%]  sm:translate-x-[25%] lg:translate-x-0 hover:bg-belrose': color === 'rose',
 							})}>
-				<Link href={'/contact'}>{locale === "fr" ? "Production de contenu" : "Content Production"}</Link>
+				<Link href={'/work'}>{locale === "fr" ? "Production de contenu" : "Content Production"}</Link>
 			</div>
 		</div>
 	);

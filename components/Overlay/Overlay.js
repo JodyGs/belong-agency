@@ -1,17 +1,37 @@
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 function Overlay({ overlay, setOverlay }) {
-	const { locale } = useRouter();
+	const { locale, pathname } = useRouter();
 
 	const toggleOverlay = () => {
 		setOverlay(!overlay);
-		localStorage.setItem('overlay', 'no');
 	};
 
 	return (
-		<div className='h-screen w-full bg-belorange relative p-1'>
+		<div className='h-screen w-full bg-belorange relative p-1 overflow-hidden'>
 			<svg
-				className='fill-belrose w-full p-5 mx-auto'
+				className='fill-belrose w-[250vw] translate-x-[-28%] translate-y-[-15%] lg:hidden'
+				enableBackground='new 0 0 283.5 283.5'
+				viewBox='0 0 283.5 283.5'
+				xmlns='http://www.w3.org/2000/svg'
+			>
+				<path d='m148.8 44.9-40.4.2c-4.7 0-8.5 3.8-8.5 8.5v157.5c0 4.7 3.8 8.5 8.5 8.5h38.9c1.3 0 2.7 0 4-.1 6.2-.5 11.2-4.7 12.6-10.7.4-1.6.4-3.3.4-5 0-20.6-.1-41.2.1-61.7.1-7.7-2.9-13.7-10.9-16.2-.1 0-.2-.2-.5-.6 8.4-2.7 11.4-8.6 11.3-16.9-.2-16-.3-32 0-48 .4-9.8-7-15.6-15.5-15.5zm-12.9 144.7c0 2.2-1.8 4-4 4s-4-1.8-4-4v-120.1c0-2.2 1.8-4 4-4s4 1.8 4 4z' />
+				<path d='m175.9 187.9c.4-.3.5-.7.4-1.3.5.2.8.2 1.2 0 .7-.5.5-1.2-.5-2.6l-1.6-2.2-3.6 2.6 1.7 2.3c1 1.4 1.7 1.7 2.4 1.2zm-.4-4.8 1.1 1.6c.4.6.5.9.2 1.1s-.6.1-1-.5l-1.1-1.6zm-1.5 1 1.3 1.7c.4.5.4.8.1 1s-.6.1-1-.4l-1.3-1.7z' />
+				<path d='m177.8 195.2.8-.4-1.7-4 1-.4 1.2 3.1.8-.3-1.3-3.1.9-.3 1.6 4 .8-.3-2-5-4.1 1.7z' />
+				<path d='m179 201.7.8-.1-.6-3.8 3.6-.5-.2-1.1-4.4.7z' />
+				<path d='m181.3 203.3c-1.4-.1-2.4 1-2.6 2.9-.1 1.9.7 3.1 2.1 3.2s2.5-1 2.6-2.8c.2-2-.7-3.2-2.1-3.3zm1.4 3.2c-.1 1.2-.8 1.9-1.8 1.8-.9-.1-1.5-.9-1.4-2.1s.7-1.9 1.7-1.9c1 .1 1.6.9 1.5 2.2z' />
+				<path d='m178 211.9 3 1-4.1 2.1-.4 1.1 4.2 1.4.4-.9-3.2-1.1 4.2-2.1.4-1.1-4.2-1.4z' />
+				<path d='m177.7 218.9c-1.2-.8-2.7-.2-3.7 1.5-.4.6-.8 1.3-.9 1.8l-.1.5.4.3 1.4.9 1.8-2.9-.7-.5-1.3 2-.6-.4c.1-.3.3-.8.6-1.4.7-1.1 1.7-1.5 2.5-1 .7.5.8 1.5.1 2.6-.4.6-1.1 1.2-1.7 1.4l.5.5.1.1.1.1c.6-.2 1.3-.8 1.8-1.6.9-1.6.8-3.2-.3-3.9z' />
+				<path d='m169.7 226.2v-.2l-.9.7v.2l.2.8-2.2 1.7-.8-.4-.1-.1-.9.7.3.1 4.4 1.8.8-.6v-.2zm-2.2 3.5 1.5-1.2.4 2.1z' />
+				<path d='m161 231.3c-.7.3-1.4.7-1.7 1l-.4.4.2.5.7 1.6 3.1-1.4-.3-.8-2.2 1-.3-.7c.2-.2.7-.6 1.3-.8 1.2-.5 2.2-.3 2.6.5s-.2 1.7-1.4 2.3c-.7.3-1.6.4-2.2.2l.1.7v.1.1c.6.2 1.5 0 2.3-.3 1.8-.8 2.6-2.2 2-3.5-.4-1.4-2-1.7-3.8-.9z' />
+				<path d='m151.8 234 .1.8 4.3-.8.2 1-3.3.6.2.8 3.2-.6.2.9-4.3.8.2.8 5.3-.9-.9-4.4z' />
+				<path d='m148.7 237.2-3.1-3.3-1.2-.1-.3 4.4 1.1.1.2-3.4 3.1 3.6h1.2l.2-4.4h-1z' />
+				<path d='m139.7 232.4c-.9-.3-1.9-.4-2.5-.2v.9c.5-.2 1.4-.1 2.3.1 1.2.4 1.9 1.2 1.6 2s-1.2 1.1-2.5.7c-.7-.2-1.4-.7-1.8-1.3v.1l-.4.6v.1l-.1.1c.4.6 1.2 1.1 2.1 1.4 1.8.6 3.3.1 3.8-1.3.3-1.4-.7-2.6-2.5-3.2z' />
+				<path d='m132.8 229.4-.7 1.1-3.7 1.3 1 .6 2.7-.9.4 2.8 1.1.7-.6-3.9.7-1.2z' />
+			</svg>
+			<svg
+				className='fill-belrose w-full p-5 mx-auto hidden md:block'
 				xmlns='http://www.w3.org/2000/svg'
 				viewBox='0 0 392 200.2'
 			>
@@ -22,12 +42,24 @@ function Overlay({ overlay, setOverlay }) {
 				</g>
 			</svg>
 			<div className='absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]'>
-				<button
-					onClick={toggleOverlay}
-					className='overlayButton scale-150 hover:text-belvert hover:bg-belviolet hover:border-transparent'
-				>
-					{locale === 'fr' ? 'Entrer sur le site' : 'Enter the website'}
-				</button>
+				<div className='flex flex-cols lg:flez-row justify-between items-center'>
+					<Link href={`${pathname}`} locale={'fr'}>
+						<a
+							onClick={toggleOverlay}
+							className='overlayButton lg:inline lg:m-10 font-messapia text-sm uppercase lg:scale-150 hover:text-belvert hover:bg-belviolet hover:border-transparent'
+						>
+							Français
+						</a>
+					</Link>
+					<Link href={`${pathname}`} locale={'en'} onClick={toggleOverlay}>
+						<a
+							onClick={toggleOverlay}
+							className='overlayButton lg:inline lg:m-10 font-messapia text-sm uppercase lg:scale-150 hover:text-belvert hover:bg-belviolet hover:border-transparent'
+						>
+							English
+						</a>
+					</Link>
+				</div>
 			</div>
 		</div>
 	);

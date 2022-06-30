@@ -1,6 +1,6 @@
 export default {
-  name: 'publications',
-  title: 'Publications',
+  name: 'digital',
+  title: 'Digital',
   type: 'document',
   fields: [
     {
@@ -9,12 +9,10 @@ export default {
       type: 'string',
     },
     {
-      name: 'thumbnail',
-      title: 'Thumbnail',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      name: 'url',
+      title: 'URL',
+      description: 'Write the complete url (https://example.com/page_example/)',
+      type: 'url',
     },
     {
       name: 'date',

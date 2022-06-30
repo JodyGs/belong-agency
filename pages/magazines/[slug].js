@@ -29,22 +29,35 @@ function Presse({ magazine }) {
 				<button  onClick={printFalse} className='belButton max-w-[300px]'>digital</button>
 			</div>
 
-			<div className='w-full mt-20 flex flex-wrap justify-around'>
+			{ print ? <div className='w-full mt-20 flex flex-wrap justify-around'>
 				{magazine.publications.map((publication) => (
 					<div key={publication._id} className='w-[700px]'>
 						<div className='max-w-[350px] md:max-w-none h-full mb-10 flex flex-col items-center mx-auto w-[500px] space-y-5'>
-							{print && <img
+							<img
 								className='border-2 border-black'
 								src={urlFor(publication.thumbnail).width(500).url()}
 								alt={publication.title}
-							/>}
+							/>
 							<div className={`border-2 border-black w-full font-messapia p-2 text-sm ${!print && 'hover:text-white hover:bg-belorange'}`}>
-								{print ? <h3>{publication.title} - {publication.date}</h3> : <Link href={publication.url}><a>{publication.title} - {publication.date}</a></Link> }
+								<h3>{publication.title} - {publication.date}</h3>
 							</div>
 						</div>
 					</div>
 				))}
-			</div>
+			</div> :
+			<div className='w-full mt-20 flex flex-wrap justify-around'>
+				{magazine.digital.map((digit) => (
+					<div key={digit._id} className='w-[700px]'>
+						<div className='max-w-[350px] md:max-w-none h-full mb-10 flex flex-col items-center mx-auto w-[500px] space-y-5'>
+							<div className={`border-2 border-black w-full font-messapia p-2 text-sm ${!print && 'hover:text-white hover:bg-belorange'}`}>
+								<Link href={digit.url}>
+								<h3>{digit.title} - {digit.date}</h3>
+								</Link>
+							</div>
+						</div>
+					</div>
+				))}
+			</div>}
 		</div>
 	);
 }
@@ -84,6 +97,9 @@ export const getStaticProps = async ({ params }) => {
         'publications': *[
           _type == "publications" && 
           magazine._ref == ^._id],
+					'digital': *[
+						_type == "digital" && 
+						magazine._ref == ^._id],
         description,
         mainImage,
         slug,

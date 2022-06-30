@@ -14,7 +14,7 @@ function Mag({ mag, locale, index, line }) {
 			<div
 				key={mag._id}
 				className={clsx(
-					'm-6 rounded-full h-[140px] p-6 flex justify-center items-center w-[250px] overflow-hidden border-2 border-black hover:opacity-80 transition-opacity',
+					'scale-50 md:scale-100 -my-8 -mx-12 md:m-6 rounded-full h-[140px] p-6 flex justify-center items-center w-[250px] overflow-hidden border-2 border-black hover:opacity-80 transition-opacity',
 					COLORS[
 						(index + line) % COLORS.length
 					]
@@ -30,7 +30,7 @@ function Presse({ magazines }) {
 	const { locale } = useRouter();
 	return (
 		<div className='overflow-x-hidden mb-10'>
-			<h1 className='text-9xl text-center font-sweet-sans-pro font-bold mt-32'>
+			<h1 className='text-5xl lg:text-8xl text-center font-agrandir-grand font-bold mt-24'>
 				{locale === 'fr' ? 'Presse' : 'Press'}
 			</h1>
 			{locale === 'fr' ? (

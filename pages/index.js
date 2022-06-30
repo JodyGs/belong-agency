@@ -287,27 +287,29 @@ export default function Home() {
 								</g>
 							</g>
 						</svg>
-					{locale === "fr" ? 	<p className='font-sweet-sans-pro text-xs md:-text-md text-left md:text-right px-3'>
-							N
-							<span className='lowercase'>
-								ous sommes une agence de <span className='font-messapia uppercase'>relations publiques</span>{' '}
+					{locale === "fr" ? 	<p className='font-sweet-sans-pro text-xs md:text-sm text-left md:text-right px-3 lg:px-0 uppercase'>
+								Nous sommes une agence de <span className='font-messapia'>relations publiques</span>{' '}
 								composée d&apos;experts interdisciplinaires qui créent des histoires de marque et construisent des communautés par le biais{' '}
-								<span className='font-messapia uppercase'>des médias, des réseaux sociaux</span>{' '}
+								<span className='font-messapia'>des médias, des réseaux sociaux</span>{' '}
 								et{' '}
-								<span className='font-messapia uppercase'>des expériences.</span>
-							</span>
-						</p> : 	<p className='font-sweet-sans-pro text-xs md:-text-md text-left md:text-right px-3'>
-							W
-							<span className='lowercase'>
-								e&apos;re a <span className='font-messapia uppercase'>PR</span>{' '}
+								<span className='font-messapia'>des expériences.</span>
+						</p> : 	<p className='font-sweet-sans-pro text-xs md:text-sm text-left md:text-right px-3 lg:px-0'>
+							We&apos;re a <span className='font-messapia'>PR</span>{' '}
 								agency of interdisciplinary experts who craft brand stories and
 								build comunities through{' '}
-								<span className='font-messapia uppercase'>media, social</span>{' '}
+								<span className='font-messapia'>media, social</span>{' '}
 								and{' '}
-								<span className='font-messapia uppercase'>experiential.</span>
-							</span>
-						</p>}
+								<span className='font-messapia'>experiential.</span></p>}
+						<button
+								onClick={() => {
+									router.push('/about');
+								}}
+								className='belButton hidden md:block'
+							>
+								about
+							</button>
 					</div>
+					
 				</div>
 				<div>
 					<SayHi />

@@ -6,7 +6,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // We import object and document schemas
 import magazines from './magazines'
-import languages from './languages'
+import digital from './digital'
 import work from './work'
 import publications from './publications'
 
@@ -21,7 +21,7 @@ export default createSchema({
     // in the studio.
     magazines,
     work,
-    languages,
+    digital,
     publications,
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas

@@ -8,6 +8,7 @@ import camille from '../public/img/Camille.jpg';
 import Pills from '../components/Pills';
 import SayHi from '../components/SayHi'
 import { useRouter } from 'next/router';
+import whoweare from '../public/img/whoweare.png'
 
 function About() {
 
@@ -15,7 +16,7 @@ function About() {
 
 	return (
 		<div className='overflow-x-hidden'>
-			<h1 className='text-center text-6xl md:text-8xl font-agrandir-grand mt-8 mb-4 md:mt-32 md:mb-14'>
+			<h1 className='text-center text-6xl md:text-8xl font-agrandir-grand my-8 mb-4 md:mt-24 md:mb-14'>
 				About
 			</h1>
 
@@ -31,63 +32,11 @@ function About() {
 				<p className='mr-8 md:mr-24'>small agency vibes</p>
 			</Marquee>
 
-			<div className='flex flex-col lg:flex-row md:justify-around lg:p-20 mt-20'>
+			<div className='flex flex-col lg:flex-row md:justify-around lg:p-20 mt-20 max-w-[1500px] mx-auto'>
 				<div className=' ml-5 mr-auto bg-belviolet sticker md:px-12 flex max-w-[200px] max-h-[120px] sm:max-h-[200px] sm:max-w-[350px] justify-center items-center'>
-					<svg
-						className='max-h-[70%] max-w-[70%] md:max-w-none'
-						xmlns='http://www.w3.org/2000/svg'
-						viewBox='0 0 276.037 107.288'
-					>
-						<g data-name='WHO WE ARE - BEIGE'>
-							<g data-name='Group 30'>
-								<path
-									fill='#fcf8f2'
-									d='M0 1.859h19.535l15.108 38.288h.148L49.755 1.859h21.3l15.188 38.288h.075l14.964-38.288h19.461l-23 53.232h-21.6L60.516 16.877h-.148L44.593 55.091h-21.6z'
-									data-name='Path 342'
-								/>
-								<path
-									fill='#fcf8f2'
-									d='M124.424 1.859h19.239v18.884h29.118V1.859h19.24v53.232h-19.24V33.902h-29.118v21.189h-19.239z'
-									data-name='Path 343'
-								/>
-								<path
-									fill='#fcf8f2'
-									d='M198.134 28.475c0-17.1 15.479-28.475 38.627-28.475 23.221 0 38.7 11.375 38.7 28.475s-15.479 28.475-38.7 28.475c-23.148-.001-38.627-11.376-38.627-28.475zm58.088 0c0-8.848-7.888-14.8-19.461-14.8s-19.387 5.948-19.387 14.8 7.813 14.794 19.387 14.794 19.461-5.948 19.461-14.794z'
-									data-name='Path 344'
-								/>
-								<path
-									fill='none'
-									stroke='#fcf8f2'
-									d='M152.643 70.508h15.19l17.5 36.2h-13.59l-2.807-6.32h-17.893l-2.757 6.32h-13.543zm13.786 22.448l-6.316-14.309h-.1l-6.417 14.309z'
-									data-name='Path 345'
-								/>
-								<path
-									fill='none'
-									stroke='#fcf8f2'
-									d='M187.882 70.508h30.18c9.626 0 15.14 4.2 15.14 11.578 0 5.107-3.259 8.849-8.924 10.163l9.225 14.459h-14.037l-7.123-12.031h-11.376v12.031h-13.085zm26.27 16.736c3.76 0 5.965-1.67 5.965-4.449 0-2.832-2.205-4.5-5.965-4.5h-13.185v8.95z'
-									data-name='Path 346'
-								/>
-								<path
-									fill='none'
-									stroke='#fcf8f2'
-									d='M237.109 70.508h37.851v8.19h-25.167v6.068h23.16v7.028h-23.16v6.724h25.667v8.19h-38.351z'
-									data-name='Path 347'
-								/>
-								<path
-									fill='#fcf8f2'
-									d='M0 70.508h13.285l10.277 26.04h.1l10.181-26.04h14.488l10.327 26.04h.051l10.177-26.04H82.12l-15.641 36.2H51.787L41.159 80.719h-.1L30.33 106.708H15.643z'
-									data-name='Path 348'
-								/>
-								<path
-									fill='#fcf8f2'
-									d='M84.619 70.508h37.849v8.191H97.303v6.067h23.161v7.029H97.303v6.726h25.667v8.19H84.619z'
-									data-name='Path 349'
-								/>
-							</g>
-						</g>
-					</svg>
+					<Image className='object-contain' src={whoweare} />
 				</div>
-				<div className='mr-4 ml-auto text-right md:text-justify sm:w-2/3 lg:w-1/2 space-y-5 pt-12'>
+				<div className='mr-4 ml-auto text-right md:text-justify sm:w-2/3 lg:w-1/2 space-y-5 pt-12 text-sm'>
 					{locale === 'fr' ? <p>
 						Une agence de <span className='font-bold'>Relations Publiques</span> composée d&apos;expertes{' '}
 						<span className='italic'>interdisciplinaires</span> dotées d&apos;une forte connaissance du secteur de la beauté et du bien-être et de <span className='font-bold'> 20 ans d&apos;expérience</span> dans des agences RP, des entreprises internationales et en tant que freelance.
@@ -110,7 +59,7 @@ function About() {
 					</p>}
 				</div>
 			</div>
-			<div className='flex flex-col space-y-10 md:space-y-0 items-center md:items-start md:flex-row justify-center md:space-x-16 mt-20'>
+			<div className='flex flex-col space-y-10 md:space-y-0 items-center md:items-start md:flex-row justify-center md:justify-evenly md:space-x-16 mt-20 lg:mt-0'>
 				<div className='max-w-[360px]'>
 					<div className='divPhotoTeam'>
 						<Image
@@ -123,7 +72,7 @@ function About() {
 						/>
 					</div>
 					<div className='name'>
-						<h3 className=''>Margaux</h3>
+						<h3 className='font-messapia'>Margaux</h3>
 					</div>
 					
 						{locale === "fr" ? <p className='text-xs mt-5 text-justify'>Formée comme RP chez Sisley à Paris pendant 5 ans, Margaux est passée de la beauté et la communication au monde de l&apos;entrepreneuriat à New-York où elle est partie s&apos;installer il y a 3 ans. Elle y a démarré son activité de consulting avec Twice, une start-up américaine co-fondée par Lenny Kravitz.<br/><br/>Elle a cofondé Belong avec Magali en 2019</p> : <p className='text-xs mt-5 text-justify'>Margaux trained as a PR for Sisley for 5 years in Paris, she has switched from beauty and communication to the world of entrepreneurship in New York where she moved 3 years ago. She started her consulting business there, first with Twice, an American start-up co-founded by Lenny Kravitz specialized in oral wellness. She is the co-founder of Belong along with Magali. They both started Belong in 2019 as a one-of-a-kind PR agency specializing in working with sustainable, clean beauty brands.</p>}
@@ -140,7 +89,7 @@ function About() {
 						/>
 					</div>
 					<div className='name'>
-						<h3 className=''>Magali</h3>
+						<h3 className='font-messapia'>Magali</h3>
 					</div>
 					{locale === 'fr' ? <p className='  text-xs mt-5 text-justify'>
 					Après 7 ans comme rédactrice de mode, Magali a travaillé 13 ans dans les Relations Presse beauté, dont 5 ans au sein de l&apos;agence NiceWork et 8 ans comme Responsable PR France chez Sisley Paris où elle a rencontré Margaux.<br/><br/>Elle a ensuite été consultante RP pour des marques comme Google, le Festival Calvi on the Rocks, l&apos;agence RP Magna Presse, avant de fonder Belong avec Margaux
@@ -155,7 +104,7 @@ function About() {
 					</p>}
 				</div>
 			</div>
-			<div className='flex flex-col space-y-10 md:space-y-0 items-center md:items-start md:flex-row justify-center md:space-x-16 mt-20'>
+			<div className='flex flex-col space-y-10 md:space-y-0 items-center md:items-start md:flex-row justify-center md:justify-evenly md:space-x-16 mt-20'>
 				<div className='max-w-[360px] mx-auto md:mx-0'>
 					<div className='divPhotoTeam'>
 						<Image
@@ -168,7 +117,7 @@ function About() {
 						/>
 					</div>
 					<div className='name'>
-						<h3 className=''>Karine</h3>
+						<h3 className='font-messapia'>Karine</h3>
 					</div>
 					{locale === 'fr' ? <p className='  text-xs mt-5 text-justify'>
 					Assistante multi-casquettes, Karine a rejoint Belong en février 2021.<br/><br/>Élève à Sup de Web, elle finit en parallèle de son alternance ses études de communication digitale.Elle est également freelance et a lancé son blog.<br/><br/> Elle est à l’image de la GenZ, une slasheuse, engagée sur de multiples causes (du métissage à la clean beauty).
@@ -195,7 +144,7 @@ function About() {
 						/>
 					</div>
 					<div className='name'>
-						<h3 className=''>Camille</h3>
+						<h3 className='font-messapia'>Camille</h3>
 					</div>
 					{locale === "fr" ? <p className='  text-xs mt-5 text-justify'>
 					Camille est étudiante en Communication et Relations presse.<br /><br />Elle a rejoint Belong en février 2022 pour accompagner l&apos;équipe et vivre de nouvelles aventures ! Intéressée par l&apos;industrie de la beauté, elle connaît toutes les dernières tendances du milieu. Camille relève tous les challenges de l&apos;agence avec joie !
@@ -265,7 +214,7 @@ function About() {
 						</svg>
 					</div>
 					<div className='ml-4 mr-auto w-2/3 text-justify mt-16 text-sm flex flex-col space-y-5'>
-						{locale === "fr" ? 		<p>
+						{locale === "fr" ? 		<p className=''>
 						De la définition d&apos;une stratégie de communication au déploiement d&apos;une campagne RP, jusqu&apos;à l&apos;organisation d&apos;évènements, nous vous proposons tout un éventail de prises de parole et de rencontres entre votre marque et votre communauté afin de développer votre pouvoir d&apos;expression.
 						</p> : <p>
 							driving brand awareness and conversion. we&apos;ll develop and execute
