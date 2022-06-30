@@ -20,7 +20,7 @@ function Presse({ magazine }) {
 				<h1 className='text-4xl text-center md:text-8xl font-agrandir-grand mt-10 lg:mt-24 mb-14'>{magazine.name}</h1>
 			</div>
 
-			<div className='flex flex-col lg:flex-row items-center justify-evenly max-w-2xl mx-auto max-w-[250px] text-xs'>
+			<div className='flex flex-col lg:flex-row items-center justify-evenly mx-auto max-w-[250px] lg:justify-between lg:max-w-2xl text-xs md:text-md'>
 				<button onClick={printTrue} className={'belButton max-w-[300px] mb-5 lg:mb-0'}>print</button>
 				<button  onClick={printFalse} className={'belButton max-w-[300px]'}>digital</button>
 			</div>

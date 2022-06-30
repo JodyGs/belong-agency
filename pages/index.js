@@ -287,7 +287,7 @@ export default function Home() {
 								</g>
 							</g>
 						</svg>
-					{locale === "fr" ? 	<p className='font-sweet-sans-pro text-xs md:text-sm text-justify px-3 lg:px-0 uppercase'>
+					{locale === "fr" ? 	<p className='font-sweet-sans-pro text-xs md:text-sm text-justify lg:text-right px-3 lg:px-0 uppercase'>
 								Nous sommes une agence de <span className='font-messapia'>relations publiques</span>{' '}
 								composée d&apos;experts interdisciplinaires qui créent des histoires de marque et construisent des communautés par le biais{' '}
 								<span className='font-messapia'>des médias, des réseaux sociaux</span>{' '}
