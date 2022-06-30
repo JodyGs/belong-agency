@@ -17,12 +17,12 @@ function Presse({ magazine }) {
 	return (
 		<div>
 			<div className='flex flex-col items-center mt-8'>
-				<h1 className='text-6xl lg:text-8xl font-agrandir-grand my-24'>{magazine.name}</h1>
+				<h1 className='text-4xl text-center md:text-8xl font-agrandir-grand mt-10 lg:mt-24 mb-14'>{magazine.name}</h1>
 			</div>
 
-			<div className='flex justify-between max-w-2xl mx-auto'>
-				<button onClick={printTrue} className='belButton max-w-[300px]'>print</button>
-				<button  onClick={printFalse} className='belButton max-w-[300px]'>digital</button>
+			<div className='flex flex-col lg:flex-row items-center justify-evenly max-w-2xl mx-auto max-w-[250px] text-xs'>
+				<button onClick={printTrue} className={'belButton max-w-[300px] mb-5 lg:mb-0'}>print</button>
+				<button  onClick={printFalse} className={'belButton max-w-[300px]'}>digital</button>
 			</div>
 
 			{ print ? <div className='w-full mt-20 flex flex-wrap justify-around'>
