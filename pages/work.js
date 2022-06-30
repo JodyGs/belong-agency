@@ -4,7 +4,7 @@ import { sanityClient, urlFor } from '../sanity';
 import { useRouter } from 'next/router';
 
 function Work({ work, locale}) {
-	console.log(work._createAt);
+	console.log(work._createdAt);
 	const translatedTags = (locale === 'fr' ? work.tagsfr : work.tags) || [];
 	return (
 		<div className={'w-full'} key={work.id}>
@@ -101,11 +101,12 @@ export const getServerSideProps = async ({ req, res }) => {
 
 	const query = `*[_type == "work"]{
 		_id,
+		_createdAt,
 		title,
 		thumbnail,
 		tags,
 		tagsfr,
-	} | order(_createdAt asc)`;
+	} | order(_createdAt desc)`;
 
 	const works = await sanityClient.fetch(query);
 
