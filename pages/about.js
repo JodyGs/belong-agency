@@ -33,7 +33,7 @@ function About() {
 			</Marquee>
 
 			<div className='flex flex-col lg:flex-row md:justify-around lg:p-20 mt-20 max-w-[1500px] mx-auto'>
-				<div className=' ml-5 mr-auto bg-belviolet sticker md:px-12 flex max-w-[200px] max-h-[120px] sm:max-h-[200px] sm:max-w-[350px] justify-center items-center'>
+				<div className=' ml-5 mr-auto bg-belviolet sticker px-5 md:px-12 flex max-w-[200px] max-h-[120px] sm:max-h-[200px] sm:max-w-[350px] justify-center items-center'>
 					<Image className='object-contain' src={whoweare} />
 				</div>
 				<div className='mr-4 ml-auto text-right md:text-justify sm:w-2/3 lg:w-1/2 space-y-5 pt-12 text-sm'>
