@@ -30,14 +30,14 @@ export default function Home() {
 		<div className='w-full scrollbar-hide overflow-x-hidden'>
 			<main className='h-full flex flex-col'>
 				{/* Hero Banner */}
-				<div className='grid grid-cols-12 max-h-[300px] md:max-h-[800px] overflow-hidden relative'>
+				<div className='grid grid-cols-12 max-h-[310px] md:max-h-[800px] overflow-hidden relative'>
 					<div className='bg-belrose col-span-12 lg:col-span-6 font-messapia  text-justify p-4 leading-[1] flex flex-col space-y-5 md:space-y-0 md:justify-between h-[800px]'>
 						<Image
 							src={prBoutique}
 							alt='a pr boutique agency with a focus on sustainable beauty'
 						/>
 
-						<p className='max-w-[870px] mx-auto text-[10px] md:text-[19px]'>
+						<p className='max-w-[870px] mx-auto text-[10px] md:text-[19px] mb-3'>
 							* We{' '}
 							<span className='txtstroke-thin text-transparent text-[10px] md:text-[19px]'>
 								help
@@ -69,7 +69,7 @@ export default function Home() {
 				</div>
 				{/* End of Hero Banner ||
 				    Bandeau */}
-				<div className='flex justify-around align-center text-md md:text-4xl font-agrandir-grand pt-3 pb-1 border-y-2 border-black whitespace-nowrap space-x-10 overflow-hidden '>
+				<div className='flex justify-around align-center text-md md:text-3xl font-agrandir-grand pt-3 pb-1 border-y-2 border-black whitespace-nowrap space-x-10 overflow-hidden '>
 					<p>big agency skills</p>
 					<p>small agency vibes</p>
 					<p>big agency skills</p>
@@ -79,7 +79,7 @@ export default function Home() {
 				What we do */}
 				<div className='flex flex-col md:flex-row justify-between'>
 					<div className='w-full'>
-						<div className='md:py-32 py-20 max-w-[360px] mx-auto space-y-14'>
+						<div className='md:py-32 py-20 max-w-[360px] mx-auto space-y-14 -mb-14 lg:-mb-0'>
 							<svg
 								className='max-w-[60vw]'
 								xmlns='http://www.w3.org/2000/svg'
@@ -215,7 +215,7 @@ export default function Home() {
 						/>
 					</svg>
 				</Marquee>
-				<div className='w-full flex justify-around my-20 flex-col items-center space-y-12 md:flex-row'>
+				<div className='w-full flex justify-around mt-20 mb-10 lg:mb-20 flex-col items-center space-y-12 md:flex-row'>
 					<div className='h-full w-full max-w-[90vw] md:max-h-[580px] md:max-w-[456px]'>
 						<div className='divPhotoTeam h-full w-full'>
 							<Image
@@ -287,7 +287,7 @@ export default function Home() {
 								</g>
 							</g>
 						</svg>
-					{locale === "fr" ? 	<p className='font-sweet-sans-pro text-xs md:text-sm text-left md:text-right px-3 lg:px-0 uppercase'>
+					{locale === "fr" ? 	<p className='font-sweet-sans-pro text-xs md:text-sm text-justify px-3 lg:px-0 uppercase'>
 								Nous sommes une agence de <span className='font-messapia'>relations publiques</span>{' '}
 								composée d&apos;experts interdisciplinaires qui créent des histoires de marque et construisent des communautés par le biais{' '}
 								<span className='font-messapia'>des médias, des réseaux sociaux</span>{' '}

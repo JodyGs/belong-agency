@@ -20,7 +20,7 @@ function Mag({ mag, locale, index, line }) {
 					]
 				)}
 			>
-				<img className='' src={urlFor(mag.logo).width(200).url()} alt={mag.name} />
+				<img src={urlFor(mag.logo).width(200).url()} alt={mag.name} /> 
 			</div>
 		</Link>
 	);
@@ -30,11 +30,11 @@ function Presse({ magazines }) {
 	const { locale } = useRouter();
 	return (
 		<div className='overflow-x-hidden mb-10'>
-			<h1 className='text-5xl lg:text-8xl text-center font-agrandir-grand font-bold mt-24'>
+			<h1 className='text-5xl lg:text-8xl text-center font-agrandir-grand font-bold mt-8 lg:mt-24'>
 				{locale === 'fr' ? 'Presse' : 'Press'}
 			</h1>
 			{locale === 'fr' ? (
-				<p className='my-8 max-w-2xl text-center mx-auto'>
+				<p className='my-8 px-3 text-sm max-w-2xl text-center mx-auto'>
 					Nous entretenons des relations{' '}
 					<span className='font-bold'>solides et durables</span> avec{' '}
 					<span className='italic'>les médias</span> qui comptent. Cela se
@@ -54,7 +54,7 @@ function Presse({ magazines }) {
 
 			<Marquee className='' speed={40} gradient={false} direction='right'>
 				{magazines
-					.filter((_, i) => i % 3 === 0)
+					.filter((_, i) => i % 4 === 0)
 					.map((mag, index) => (
 						<Mag key={mag.title} {...{ mag, locale, index, line: 0 }} />
 					))}
@@ -67,7 +67,7 @@ function Presse({ magazines }) {
 				direction='right'
 			>
 				{magazines
-					.filter((_, i) => i % 3 === 1)
+					.filter((_, i) => i % 4 === 1)
 					.map((mag, index) => (
 						<Mag key={mag.title} {...{ mag, locale, index, line: 1 }} />
 					))}
@@ -79,9 +79,21 @@ function Presse({ magazines }) {
 				direction='right'
 			>
 				{magazines
-					.filter((_, i) => i % 3 === 2)
+					.filter((_, i) => i % 4 === 2)
 					.map((mag, index) => (
 						<Mag key={mag.title} {...{ mag, locale, index, line: 2 }} />
+					))}
+			</Marquee>
+			<Marquee
+				style={{ width: 'calc(100% + 83px)', transform: 'translateX(-83px)' }}
+				speed={40}
+				gradient={false}
+				direction='right'
+			>
+				{magazines
+					.filter((_, i) => i % 4 === 3)
+					.map((mag, index) => (
+						<Mag key={mag.title} {...{ mag, locale, index, line: 1 }} />
 					))}
 			</Marquee>
 		</div>

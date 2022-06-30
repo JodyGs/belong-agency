@@ -10,7 +10,7 @@ function Contact() {
 			<main>
 				<div className='text-center space-y-5 p-10'>
 					{/* titles */}
-					<h1 className='text-5xl md:text-8xl text-center font-agrandir-grand font-extrabold mt-14 lg:mt-24'>
+					<h1 className='text-5xl md:text-8xl text-center font-agrandir-grand font-extrabold my-2 lg:mt-24'>
 						Say <span className='txtstroke text-transparent'>hi</span> !
 					</h1>
 					<h3 className='text-xl md:text-3xl font-messapia'>Let&apos;s work together</h3>

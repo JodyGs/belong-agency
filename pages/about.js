@@ -21,7 +21,7 @@ function About() {
 			</h1>
 
 			<Marquee
-				className='text-lg md:text-4xl font-agrandir-grand pt-2 md:pt-3 pb-1 border-y-1 md:border-y-2 border-black bg-belrose'
+				className='text-lg md:text-3xl font-agrandir-grand pt-2 md:pt-3 pb-1 border-y-1 md:border-y-2 border-black bg-belrose'
 				speed={60}
 				gradient={false}
 				direction='right'
@@ -36,7 +36,7 @@ function About() {
 				<div className=' ml-5 mr-auto bg-belviolet sticker px-5 md:px-12 flex max-w-[200px] max-h-[120px] sm:max-h-[200px] sm:max-w-[350px] justify-center items-center'>
 					<Image className='object-contain' src={whoweare} />
 				</div>
-				<div className='mr-4 ml-auto text-right md:text-justify sm:w-2/3 lg:w-1/2 space-y-5 pt-12 text-sm'>
+				<div className='mr-4 ml-auto text-right text-justify sm:w-2/3 lg:w-1/2 space-y-5 pt-12 text-sm px-3'>
 					{locale === 'fr' ? <p>
 						Une agence de <span className='font-bold'>Relations Publiques</span> composée d&apos;expertes{' '}
 						<span className='italic'>interdisciplinaires</span> dotées d&apos;une forte connaissance du secteur de la beauté et du bien-être et de <span className='font-bold'> 20 ans d&apos;expérience</span> dans des agences RP, des entreprises internationales et en tant que freelance.
@@ -213,7 +213,7 @@ function About() {
 							</g>
 						</svg>
 					</div>
-					<div className='ml-4 mr-auto w-2/3 text-justify mt-16 text-sm flex flex-col space-y-5'>
+					<div className='mx-auto min-w-[370px] ld:min-w-none p-3 lg:p-0 lg:ml-4 lg:mr-auto w-2/3 text-justify mt-16 text-sm flex flex-col space-y-5'>
 						{locale === "fr" ? 		<p className=''>
 						De la définition d&apos;une stratégie de communication au déploiement d&apos;une campagne RP, jusqu&apos;à l&apos;organisation d&apos;évènements, nous vous proposons tout un éventail de prises de parole et de rencontres entre votre marque et votre communauté afin de développer votre pouvoir d&apos;expression.
 						</p> : <p>
