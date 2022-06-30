@@ -20,7 +20,7 @@ function Mag({ mag, locale, index, line }) {
 					]
 				)}
 			>
-				<img src={urlFor(mag.logo).width(200).url()} alt={mag.name} />
+				<img className='' src={urlFor(mag.logo).width(200).url()} alt={mag.name} />
 			</div>
 		</Link>
 	);

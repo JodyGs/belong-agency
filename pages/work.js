@@ -104,7 +104,7 @@ export const getServerSideProps = async ({ req, res }) => {
 		thumbnail,
 		tags,
 		tagsfr,
-	} | order(_createdAt desc)`;
+	} | order(_createdAt asc)`;
 
 	const works = await sanityClient.fetch(query);
 
