@@ -27,7 +27,6 @@ function Mag({ mag, locale, index, line, button }) {
 function Presse({ magPrint, magWeb, radioTv }) {
 	const { locale } = useRouter();
 	const [button, setButton] = React.useState('print');
-	console.log(magPrint);
 
 	const setPrint = () => {
 		setButton('print');
