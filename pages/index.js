@@ -7,6 +7,8 @@ import teamBelong from '../public/img/PHOTOHOME.jpg';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import prBoutique from '../public/img/pr-boutique.png';
+import whoweareblack from '../public/img/whoweareblack.png'
+import whatwedoblack from '../public/img/whatwedoblack.png'
 
 export default function Home() {
 	const upAnim = React.useRef();
@@ -37,7 +39,7 @@ export default function Home() {
 							alt='a pr boutique agency with a focus on sustainable beauty'
 						/>
 
-						<p className='max-w-[870px] mx-auto text-[10px] md:text-[19px] mb-3'>
+						<p className='mx-auto text-[10px] md:text-[19px] mb-3'>
 							* We{' '}
 							<span className='txtstroke-thin text-transparent text-[10px] md:text-[19px]'>
 								help
@@ -80,58 +82,7 @@ export default function Home() {
 				<div className='flex flex-col md:flex-row justify-between'>
 					<div className='w-full'>
 						<div className='md:py-32 py-20 max-w-[360px] mx-auto space-y-14 -mb-14 lg:-mb-0'>
-							<svg
-								className='max-w-[60vw]'
-								xmlns='http://www.w3.org/2000/svg'
-								viewBox='0 0 364.656 129.025'
-							>
-								<g data-name='WHAT WE DO'>
-									<g data-name='Group 27'>
-										<path
-											fill='#161615'
-											d='M1.32-.001h21.89l16.931 42.4h.166l16.767-42.4h23.871l17.016 42.4h.083l16.767-42.4h21.807L110.847 58.95h-24.2L69.135 16.63h-.164L51.294 58.95h-24.2Z'
-											data-name='Path 322'
-										/>
-										<path
-											fill='#161615'
-											d='M140.735-.001h21.558v20.915h32.632V-.001h21.558V58.95h-21.558V35.484h-32.628V58.95h-21.562Z'
-											data-name='Path 323'
-										/>
-										<path
-											fill='#161615'
-											d='M250.177-.001h25.029l28.829 58.951h-22.387l-4.625-10.292h-29.488l-4.542 10.292h-22.3Zm22.716 36.555-10.408-23.3h-.164l-10.574 23.3Z'
-											data-name='Path 324'
-										/>
-										<path
-											fill='#161615'
-											d='M320.054 15.147h-23.047V-.001h67.649v15.148h-23.043v43.8h-21.559Z'
-											data-name='Path 325'
-										/>
-										<path
-											fill='none'
-											stroke='#161615'
-											d='M1.32 73.239h20.015l15.482 38.775h.15L52.3 73.242h21.826l15.558 38.772h.076l15.332-38.772h19.943l-23.564 53.9H79.335L63.322 88.447h-.15l-16.163 38.695H24.883Z'
-											data-name='Path 326'
-										/>
-										<path
-											fill='none'
-											stroke='#161615'
-											d='M128.799 73.239h57.023v12.2h-37.914v9.033h34.893v10.466h-34.893v10.012h38.671v12.195h-57.78Z'
-											data-name='Path 327'
-										/>
-										<path
-											fill='#161615'
-											d='M209.303 73.239h38.444c21 0 32.7 9.637 32.7 26.952s-11.707 26.951-32.7 26.951h-38.444Zm35.724 40.575c10.423 0 16.314-4.894 16.314-13.627s-5.891-13.7-16.314-13.7h-16.541v27.327Z'
-											data-name='Path 328'
-										/>
-										<path
-											fill='#161615'
-											d='M285.435 100.191c0-17.315 15.861-28.832 39.575-28.832 23.79 0 39.651 11.517 39.651 28.832s-15.861 28.834-39.651 28.834c-23.719 0-39.575-11.519-39.575-28.834Zm59.514 0c0-8.959-8.082-14.981-19.939-14.981s-19.864 6.022-19.864 14.981 8.007 14.982 19.864 14.982 19.934-6.023 19.934-14.982Z'
-											data-name='Path 329'
-										/>
-									</g>
-								</g>
-							</svg>
+						<Image className='object-contain' src={whoweareblack} />
 							<button
 								onClick={() => {
 									router.push('/work');
@@ -231,62 +182,7 @@ export default function Home() {
 						</div>
 					</div>
 					<div className='my-auto max-w-sm space-y-12 text-right flex flex-col justify-center'>
-						<svg
-							className='max-w-[60vw] mr-5 ml-auto md:max-w-xs md:mx-auto  md:mr-0 md:ml-auto'
-							xmlns='http://www.w3.org/2000/svg'
-							viewBox='0 0 362.83 134.985'
-						>
-							<g data-name='WHO WE ARE'>
-								<g data-name='Group 25'>
-									<path
-										fill='#161615'
-										d='M0 2.445h25.677l19.862 50.346h.195L65.403 2.445h28l19.96 50.346h.1l19.669-50.346h25.582l-30.23 70h-28.39L79.55 22.196h-.195L58.62 72.445H30.23Z'
-										data-name='Path 311'
-									/>
-									<path
-										fill='#161615'
-										d='M163.546 2.445h25.288v24.83h38.274V2.445h25.289v70h-25.289V44.579h-38.274v27.862h-25.288Z'
-										data-name='Path 312'
-									/>
-									<path
-										fill='#161615'
-										d='M260.432 37.442C260.432 14.958 280.778 0 311.204 0c30.522 0 50.868 14.958 50.868 37.442s-20.346 37.442-50.868 37.442c-30.426 0-50.772-14.958-50.772-37.442Zm76.352 0c0-11.634-10.368-19.455-25.581-19.455s-25.483 7.821-25.483 19.455 10.271 19.454 25.484 19.454 25.581-7.822 25.581-19.454Z'
-										data-name='Path 313'
-									/>
-									<path
-										fill='none'
-										stroke='#161615'
-										strokeWidth='1.516'
-										d='M200.64 86.625h19.964l23 47.6h-17.86l-3.689-8.311h-23.524l-3.624 8.311h-17.793Zm18.121 29.518-8.3-18.815h-.133l-8.435 18.815Z'
-										data-name='Path 314'
-									/>
-									<path
-										fill='none'
-										stroke='#161615'
-										strokeWidth='1.516'
-										d='M246.958 86.625h39.669c12.652 0 19.9 5.517 19.9 15.224 0 6.715-4.284 11.636-11.73 13.364l12.124 19.015h-18.449l-9.358-15.825h-14.958v15.824h-17.2Zm34.53 22.006c4.942 0 7.84-2.2 7.84-5.851 0-3.724-2.9-5.918-7.84-5.918h-17.332v11.768Z'
-										data-name='Path 315'
-									/>
-									<path
-										fill='none'
-										stroke='#161615'
-										strokeWidth='1.516'
-										d='M311.663 86.625h49.751v10.771h-33.08v7.979h30.442v9.241h-30.441v8.842h33.738v10.771h-50.41Z'
-										data-name='Path 316'
-									/>
-									<path
-										fill='#161615'
-										d='M0 86.623h17.463l13.508 34.24h.131l13.378-34.24h19.044l13.574 34.24h.066l13.376-34.24h17.395l-20.559 47.6H68.07L54.1 100.05h-.131l-14.1 34.173h-19.31Z'
-										data-name='Path 317'
-									/>
-									<path
-										fill='#161615'
-										d='M111.225 86.623h49.75v10.773h-33.078v7.977h30.444v9.242h-30.444v8.844h33.738v10.77h-50.41Z'
-										data-name='Path 318'
-									/>
-								</g>
-							</g>
-						</svg>
+					<Image className='object-contain' src={whatwedoblack} />
 					{locale === "fr" ? 	<p className='font-sweet-sans-pro text-xs md:text-sm text-justify lg:text-right px-3 lg:px-0 uppercase'>
 								Nous sommes une agence de <span className='font-messapia'>relations publiques</span>{' '}
 								composée d&apos;experts interdisciplinaires qui créent des histoires de marque et construisent des communautés par le biais{' '}

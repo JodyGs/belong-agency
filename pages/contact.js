@@ -43,7 +43,7 @@ function Contact() {
 							</div>
 						</div>
 					</div>
-					<div className='text-center pt-20 space-y-4'>
+					<div className='text-center pt-20 space-y-4 mb-20 lg:mb-0'>
 						<h3 className='text-3xl font-messapia'>Let&apos;s connect</h3>
 						<p className='font-agrandir-grand font-bold text-lg md:text-4xl'>@belongparis</p>
 					</div>

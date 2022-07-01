@@ -9,6 +9,7 @@ import Pills from '../components/Pills';
 import SayHi from '../components/SayHi'
 import { useRouter } from 'next/router';
 import whoweare from '../public/img/whoweare.png'
+import whatwedo from '../public/img/whatwedo.png'
 
 function About() {
 
@@ -33,7 +34,7 @@ function About() {
 			</Marquee>
 
 			<div className='flex flex-col lg:flex-row md:justify-around lg:p-20 mt-20 max-w-[1500px] mx-auto'>
-				<div className=' ml-5 mr-auto bg-belviolet sticker px-5 md:px-12 flex max-w-[200px] max-h-[120px] sm:max-h-[200px] sm:max-w-[350px] justify-center items-center'>
+				<div className='ml-5 mr-auto bg-belviolet sticker px-5 md:px-12 flex max-w-[200px] max-h-[120px] sm:max-h-[200px] sm:max-w-[350px] justify-center items-center'>
 					<Image className='object-contain' src={whoweare} />
 				</div>
 				<div className='mr-4 ml-auto text-right text-justify sm:w-2/3 lg:w-1/2 space-y-5 pt-12 text-sm px-3'>
@@ -159,59 +160,8 @@ function About() {
 					<Pills locale={locale}/>
 				</div>
 				<div className='flex-1'>
-					<div className='mr-5 ml-auto bg-belorange sticker flex justify-center items-center max-w-[200px] max-h-[120px] sm:max-h-[200px] sm:max-w-[350px] md:max-w-sm lg:mx-auto'>
-						<svg
-							className='max-h-[70%] max-w-[70%] md:max-w-none '
-							xmlns='http://www.w3.org/2000/svg'
-							viewBox='0 0 288.046 113.02'
-						>
-							<g data-name='WHAT WE DO - BEIGE copie'>
-								<g data-name='Group 29'>
-									<path
-										fill='#fcf8f2'
-										d='M1.042 0h17.291l13.374 33.555h.131L45.082 0h18.856l13.441 33.555h.066L90.692 0h17.225L87.559 46.652H68.442L54.609 13.161h-.13L40.516 46.652H21.399Z'
-										data-name='Path 334'
-									/>
-									<path
-										fill='#fcf8f2'
-										d='M111.171 0H128.2v16.55h25.773V0h17.029v46.652h-17.029v-18.57H128.2v18.57h-17.029Z'
-										data-name='Path 335'
-									/>
-									<path
-										fill='#fcf8f2'
-										d='M197.617 0h19.775l22.772 46.651h-17.688l-3.653-8.145H195.53l-3.587 8.145h-17.618Zm17.944 28.929L207.34 10.49h-.13l-8.352 18.439Z'
-										data-name='Path 336'
-									/>
-									<path
-										fill='#fcf8f2'
-										d='M252.813 11.988h-18.2V0h53.437v11.988h-18.2v34.664h-17.03Z'
-										data-name='Path 337'
-									/>
-									<path
-										fill='none'
-										stroke='#fcf8f2'
-										d='M1.042 68.874h15.81l12.229 30.683h.119l12.112-30.683h17.24l12.289 30.683h.06l12.111-30.683h15.75l-18.613 42.657H62.67L50.021 80.909h-.119l-12.768 30.622H19.655Z'
-										data-name='Path 338'
-									/>
-									<path
-										fill='none'
-										stroke='#fcf8f2'
-										d='M101.739 68.874h45.043v9.648h-29.948v7.149h27.558v8.282h-27.558v7.924h30.546v9.651h-45.64Z'
-										data-name='Path 339'
-									/>
-									<path
-										fill='#fcf8f2'
-										d='M165.33 68.874h30.367c16.585 0 25.832 7.626 25.832 21.329s-9.247 21.328-25.832 21.328H165.33Zm28.218 32.113c8.234 0 12.886-3.873 12.886-10.784s-4.653-10.843-12.886-10.843h-13.065v21.627Z'
-										data-name='Path 340'
-									/>
-									<path
-										fill='#fcf8f2'
-										d='M225.464 90.203c0-13.7 12.529-22.817 31.261-22.817 18.792 0 31.321 9.114 31.321 22.817s-12.529 22.819-31.322 22.819c-18.732 0-31.26-9.117-31.26-22.819Zm47.01 0c0-7.09-6.384-11.855-15.75-11.855s-15.691 4.765-15.691 11.855 6.325 11.857 15.691 11.857 15.75-4.768 15.75-11.857Z'
-										data-name='Path 341'
-									/>
-								</g>
-							</g>
-						</svg>
+					<div className='mr-5 ml-auto px-5 md:px-12 bg-belorange sticker flex justify-center items-center max-w-[200px] max-h-[120px] sm:max-h-[200px] sm:max-w-[350px] md:max-w-sm lg:mx-auto'>
+					<Image className='object-contain' src={whatwedo} />
 					</div>
 					<div className='mx-auto min-w-[370px] ld:min-w-none p-3 lg:p-0 lg:ml-4 lg:mr-auto w-2/3 text-justify mt-16 text-sm flex flex-col space-y-5'>
 						{locale === "fr" ? 		<p className=''>
