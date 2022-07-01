@@ -1,0 +1,6 @@
+Sitemap: https://belongparis.com/api/bel-sitemap
+
+User-agent: *
+Allow: /*
+
+Disallow: /api/*

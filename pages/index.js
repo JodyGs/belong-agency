@@ -32,7 +32,7 @@ export default function Home() {
 		<div className='w-full scrollbar-hide overflow-x-hidden'>
 			<main className='h-full flex flex-col'>
 				{/* Hero Banner */}
-				<div className='grid grid-cols-12 max-h-[310px] md:max-h-[800px] overflow-hidden relative'>
+				<div className='grid grid-cols-12 max-h-[350px] md:max-h-[800px] overflow-hidden relative'>
 					<div className='bg-belrose col-span-12 lg:col-span-6 font-messapia  text-justify p-4 leading-[1] flex flex-col space-y-5 md:space-y-0 md:justify-between h-[800px]'>
 						<Image
 							src={prBoutique}
@@ -82,7 +82,7 @@ export default function Home() {
 				<div className='flex flex-col md:flex-row justify-between'>
 					<div className='w-full'>
 						<div className='md:py-32 py-20 max-w-[360px] mx-auto space-y-14 -mb-14 lg:-mb-0'>
-						<Image className='object-contain' src={whoweareblack} />
+						<Image width={300} height={100} className='object-contain' src={whatwedoblack} alt="Who we are"/>
 							<button
 								onClick={() => {
 									router.push('/work');
@@ -182,7 +182,7 @@ export default function Home() {
 						</div>
 					</div>
 					<div className='my-auto max-w-sm space-y-12 text-right flex flex-col justify-center'>
-					<Image className='object-contain' src={whatwedoblack} />
+					<Image width={300} height={100} className='object-contain translate-x-[20px]' src={whoweareblack} alt="what we do"/>
 					{locale === "fr" ? 	<p className='font-sweet-sans-pro text-xs md:text-sm text-justify lg:text-right px-3 lg:px-0 uppercase'>
 								Nous sommes une agence de <span className='font-messapia'>relations publiques</span>{' '}
 								composée d&apos;experts interdisciplinaires qui créent des histoires de marque et construisent des communautés par le biais{' '}
