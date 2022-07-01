@@ -14,7 +14,7 @@ function Overlay({ overlay, setOverlay }) {
 
 	return (
 		<div className='h-screen w-screen bg-belorange relative p-1 overflow-hidden'>
-			<img src={'/img/logoMark.png'} alt="belong paris" className='h-screen mx-auto md:hidden' />
+			<img src={'/img/logoMark.png'} alt="belong paris" className='h-screen mx-auto lg:hidden' />
 			<img src={'/img/logoOverlay.png'} alt="belong paris" className='h-screen p-3 mx-auto top-[50%] hidden lg:block' />
 			<div className='absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]'>
 				<div className='flex flex-cols lg:flez-row justify-between items-center'>
