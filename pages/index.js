@@ -71,12 +71,17 @@ export default function Home() {
 				</div>
 				{/* End of Hero Banner ||
 				    Bandeau */}
-				<div className='flex justify-around align-center text-md md:text-3xl font-agrandir-grand pt-3 pb-1 border-y-2 border-black whitespace-nowrap space-x-10 overflow-hidden '>
-					<p>big agency skills</p>
-					<p>small agency vibes</p>
-					<p>big agency skills</p>
-					<p>small agency vibes</p>
-				</div>
+				<Marquee
+				className='text-lg md:text-3xl font-agrandir-grand pt-2 md:pt-3 pb-1 border-y-1 md:border-y-2 border-black'
+				speed={60}
+				gradient={false}
+				direction='right'
+			>
+				<p className='mr-8 md:mr-24'>big agency skills</p>
+				<p className='mr-8 md:mr-24'>small agency vibes</p>
+				<p className='mr-8 md:mr-24'>big agency skills</p>
+				<p className='mr-8 md:mr-24'>small agency vibes</p>
+			</Marquee>
 				{/* End of Bandeau
 				What we do */}
 				<div className='flex flex-col md:flex-row justify-between'>
@@ -91,6 +96,7 @@ export default function Home() {
 							>
 								work
 							</button>
+							<p className='text-sm'>Créer une communauté par le biais des médias, des réseaux sociaux et de l'influence, générer de l’engagement et gagner en notoriété.</p>
 						</div>
 					</div>
 					<div className='w-full pt-8 pb-16 md:pt-32'>
