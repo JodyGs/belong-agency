@@ -41,7 +41,7 @@ function Presse({ magPrint, magWeb, radioTv }) {
 	};
 
 	return (
-		<div className='overflow-x-hidden mb-10'>
+		<div className='h-screen overflow-x-hidden mb-10'>
 			<h1 className='text-5xl lg:text-8xl text-center font-agrandir-grand font-bold mt-8 lg:mt-24'>
 				{locale === 'fr' ? 'Presse' : 'Press'}
 			</h1>

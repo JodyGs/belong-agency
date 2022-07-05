@@ -30,7 +30,7 @@
 		@apply m-1.5 px-5 py-1 bg-belbeige rounded-full  text-belorange border-2 border-belorange hover:bg-belorange;
 	}
 	.belButton {
-		@apply uppercase rounded-full text-belorange border-2 border-belorange bg-transparent w-full hover:text-belvert hover:bg-belviolet hover:border-transparent font-messapia
+		@apply uppercase rounded-full text-belorange border-[1px] md:border-2 border-belorange bg-transparent w-full hover:text-belvert hover:bg-belviolet hover:border-transparent font-messapia
 	}
 	/* .info{
 		@apply font-agrandir-grand font-bold   text-8xl
@@ -39,10 +39,10 @@
 		@apply -z-10
 	}
 	.pills {
-		@apply border-2 border-black rounded-full w-full px-4 min-w-[300px] py-1
+		@apply border-[1px] md:border-2 border-black rounded-full w-full px-4 min-w-[300px] lg:min-w-[500px] py-1
 	}
 	.sticker {
-		@apply border-2 sm:border-4 border-black rounded-[40px] sm:rounded-[60px] h-[155px]
+		@apply border-2 sm:border-4 border-black rounded-full
 	}
 	.divPhotoTeam{
 		@apply border-2 border-black overflow-hidden rounded-[40px] max-h-[560px]

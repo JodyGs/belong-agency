@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
+import SayHi from '../../components/SayHi';
 import { sanityClient, urlFor } from '../../sanity';
 
 function Presse({ magazine }) {
@@ -15,7 +16,7 @@ function Presse({ magazine }) {
 					<div key={publication._id} className='w-[700px]'>
 						<div className='max-w-[350px] md:max-w-none h-full mb-10 flex flex-col items-center mx-auto w-[500px] space-y-5'>
 							<img
-								className='border-2 border-black'
+								className='border-2 border-black rounded-[40px]'
 								src={urlFor(publication.thumbnail).width(500).url()}
 								alt={publication.title}
 							/>
@@ -26,6 +27,7 @@ function Presse({ magazine }) {
 					</div>
 				))}
 			</div>
+			<SayHi />
 		</div>
 	);
 }

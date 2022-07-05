@@ -1,19 +1,20 @@
 import Link from 'next/link';
 import React, { useState } from 'react';
+import SayHi from '../../components/SayHi';
 import { sanityClient, urlFor } from '../../sanity';
 
 function Presse({ magazine }) {
 	
 	return (
-		<div>
+		<div className=''>
 			<div className='flex flex-col items-center mt-8'>
 				<h1 className='text-4xl text-center md:text-8xl font-agrandir-grand mt-10 lg:mt-24 mb-14'>{magazine.name}</h1>
 			</div>
-			<div className='w-full mt-20 flex flex-wrap justify-around'>
+			<div className='min-h-[30vh] w-full mt-20 flex flex-wrap justify-around'>
 				{magazine.digital.map((digit) => (
 					<div key={digit._id} className='w-[700px]'>
 						<div className='max-w-[350px] md:max-w-none h-full mb-10 flex flex-col items-center mx-auto w-[500px] space-y-5'>
-							<div className={`border-2 border-black w-full font-messapia p-2 text-sm `}>
+							<div className={`border-2 border-black w-full font-messapia p-2 text-sm hover:bg-belorange hover:text-belbeige`}>
 								<Link href={digit.url}>
 								<h3>{digit.title} - {digit.date}</h3>
 								</Link>
@@ -22,6 +23,7 @@ function Presse({ magazine }) {
 					</div>
 				))}
 			</div>
+			<SayHi />
 		</div>
 	);
 }
