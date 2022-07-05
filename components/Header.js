@@ -26,7 +26,7 @@ function Header() {
 
 	return (
 		<>
-			<header className='w-full px-6 border-b-2 border-black flex justify-between justify-between items-center text-sm font-messapia font-bold'>
+			<header className='w-full px-6 border-b-2 border-black flex justify-between items-center text-sm font-messapia font-bold'>
 				<div
 					className={`${
 						openNav ? 'w-full z-50' : 'w-0 hidden'

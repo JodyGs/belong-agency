@@ -249,16 +249,16 @@ function About() {
 			</div>
 
 			<div className='flex flex-col-reverse lg:flex-row my-10 sm:my-40 md:mb-14 lg:mt-20'>
-				<div className='max-w-xs mx-auto mt-8 w-1/2 md:mt-10 lg:mt-12'>
-				<Pills {...{locale, blockText, setBlockText}} />
-				</div>
+				<div className='max-w-xs mx-auto mb-10 mt-10 lg:mt-2'>
+						<Pills {...{locale, blockText, setBlockText}} />
+					</div>
 				<div className='lg:w-1/2 lg:mt-8'>
 					<div className='bg-belorange sticker mx-3 md:max-w-md lg:max-w-lg md:w-full md:mx-auto'>
 						<h2 className='font-agrandir-grand text-[33px] text-center text-belbeige pt-1'>
 							What we do
 						</h2>
 					</div>
-					<div className='mx-auto min-w-[370px] ld:min-w-none p-3 w-2/3 text-center lg:text-right mt-16 text-sm flex flex-col space-y-5 pr-14'>
+					<div className='mx-auto min-w-[370px] md:min-w-none p-3 w-2/3 text-center lg:text-right mt-16 text-sm flex flex-col space-y-5 lg:pr-14'>
 						{locale === 'fr' ? (
 							<p className='mb-2'>
 								De la définition d&apos;une stratégie de communication au
@@ -282,7 +282,7 @@ function About() {
 								onClick={() => {
 									router.push('/work');
 								}}
-								className='belButton max-w-[120px] lg:max-w-xs text-[9px] lg:text-[12px] mb-10 mx-auto block lg:hidden'
+								className='belButton max-w-[120px] lg:max-w-xs mb-10 mx-auto block lg:hidden'
 							>
 								work
 							</button>

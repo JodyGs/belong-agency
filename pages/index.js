@@ -112,7 +112,7 @@ export default function Home() {
 								onClick={() => {
 									router.push('/work');
 								}}
-								className='belButton max-w-[120px] lg:max-w-xs text-[9px] lg:text-[12px] mt-5 mb-10 mx-auto block'
+								className='belButton max-w-[120px] lg:max-w-xs text-md mt-5 mb-10 mx-auto block'
 							>
 								work
 							</button>
@@ -234,7 +234,7 @@ export default function Home() {
 							onClick={() => {
 								router.push('/about');
 							}}
-							className='belButton max-w-[120px] lg:max-w-xs text-[9px] lg:text-[12px] mt-5 mb-10 mx-auto block lg:mr-0'
+							className='belButton max-w-[120px] lg:max-w-xs mt-5 mb-10 mx-auto block lg:mr-0'
 						>
 							about
 						</button>
