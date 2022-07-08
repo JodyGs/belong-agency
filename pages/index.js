@@ -15,7 +15,7 @@ export default function Home() {
 	const fadeAnim = React.useRef();
 	const router = useRouter();
 	const { locale } = useRouter();
-	const [blockText, setBlockText] = React.useState('init');
+	const [blockText, setBlockText] = React.useState(0);
 
 	React.useEffect(() => {
 		gsap.set(fadeAnim.current, { opacity: '0' });
@@ -132,7 +132,7 @@ export default function Home() {
 									: blockText === 6 && locale === 'fr'
 									? "Distinctif, beau et porteur de sens.\n Grâce à notre réseau mondial d'artistes (MUA, photographe, vidéaste, styliste, etc.), nous créons des contenus mémorables et significatifs pour tous vos outils de communication."
 									: blockText === 0 && locale === 'fr'
-									? "Créer une communauté par le biais des médias, des réseaux sociaux et de l'influence, générer de l’engagement et gagner en notoriété."
+									? "Nous maximisons la visibilité de votre marque dans les médias tout au long de l'année à travers un éventail d'actions et de rendez-vous réguliers avec cette cible prescriptrice."
 									: blockText === 1 && locale === 'en'
 									? 'Earning Media Coverage to Drive Credibility and Success. We’ll maximize your brand’s visibility to establish trust among target consumers through authentic, third-party opinions. An honest, uncompensated endorsement adds credibility to the stories you tell through paid and owned media.'
 									: blockText === 2 && locale === 'en'
@@ -145,7 +145,7 @@ export default function Home() {
 									? 'Whether live or virtual, physical or digital, we offer a range of opportunities for your brand to connect with your audience, establish deep connections and make a meaningful impression.'
 									: blockText === 6 && locale === 'en'
 									? 'Distinctive, beautiful, and imbued with meaning. Thanks to our global network of artists (MUA, photographer, videographer, stylist, etc), we create memorable and meaningful content for all your communication tools.'
-									: 'Create a community through media, social networks and influence, generate engagement and gain notoriety. We offer traditional PR & Media Outreach, Online Visibility, and Event PR & Production.'}
+									: blockText === 0 && locale === 'en' ? 'Create a community through media, social networks and influence, generate engagement and gain notoriety. We offer traditional PR & Media Outreach, Online Visibility, and Event PR & Production.' : ''}
 							</p>
 
 							<button
