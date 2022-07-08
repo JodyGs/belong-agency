@@ -113,7 +113,7 @@ export default function Home() {
 									: 'We maximize the visibility of your brand in the media throughout the year through an engagement of actions and regular meetings with this target audience.'}
 							</p>
 							<p
-								className={`text-xs max-w-xs lg:max-w-lg lg:px-7 lg:text-left 2lg:text-sm'
+								className={`text-sm max-w-xs lg:max-w-lg lg:px-7 lg:text-left 2lg:text-sm'
 								} text-center mx-auto w-full hidden lg:block`}
 							>
 								{blockText === 1 && locale === 'fr'
