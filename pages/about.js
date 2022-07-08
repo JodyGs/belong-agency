@@ -38,7 +38,7 @@ function About() {
 						Who we are
 					</h2>
 				</div>
-				<div className='text-center space-y-5 pt-12 text-sm px-3 lg:max-w-lg lg:mx-auto mb-10 lg:text-left'>
+				<div className='text-center space-y-5 pt-12 text-xs lg:text-sm px-3 lg:max-w-lg lg:mx-auto mb-10 lg:text-left'>
 					{locale === 'fr' ? (
 						<p>
 							Une agence de{' '}
@@ -98,7 +98,7 @@ function About() {
 					</div>
 
 					{locale === 'fr' ? (
-						<p className='text-sm mt-5 text-justify'>
+						<p className='text-xs lg:text-sm mt-5 text-justify'>
 							Formée comme RP chez Sisley à Paris pendant 5 ans, Margaux est
 							passée de la beauté et la communication au monde de
 							l&apos;entrepreneuriat à New-York où elle est partie
@@ -110,7 +110,7 @@ function About() {
 							Elle a cofondé Belong avec Magali en 2019.
 						</p>
 					) : (
-						<p className='text-sm mt-5 text-justify'>
+						<p className='text-xs lg:text-sm mt-5 text-justify'>
 							Margaux trained as a PR for Sisley for 5 years in Paris, she has
 							switched from beauty and communication to the world of
 							entrepreneurship in New York where she moved 3 years ago. She
@@ -137,7 +137,7 @@ function About() {
 						<h3 className='font-messapia'>Magali</h3>
 					</div>
 					{locale === 'fr' ? (
-						<p className='  text-sm mt-5 text-justify'>
+						<p className='  text-xs lg:text-sm mt-5 text-justify'>
 							Après 7 ans comme rédactrice de mode, Magali a travaillé 13 ans
 							dans les Relations Presse beauté, dont 5 ans au sein de
 							l&apos;agence NiceWork et 8 ans comme Responsable PR France chez
@@ -149,7 +149,7 @@ function About() {
 							avant de fonder Belong avec Margaux.
 						</p>
 					) : (
-						<p className='  text-sm mt-5 text-justify'>
+						<p className='  text-xs lg:text-sm mt-5 text-justify'>
 							after 7 years working as a fashion editor with the french press,
 							magali moved into pr.
 							<br />
@@ -180,7 +180,7 @@ function About() {
 						<h3 className='font-messapia'>Karine</h3>
 					</div>
 					{locale === 'fr' ? (
-						<p className='  text-sm mt-5 text-justify'>
+						<p className='  text-xs lg:text-sm mt-5 text-justify'>
 							Assistante multi-casquettes, Karine a rejoint Belong en février
 							2021.
 							<br />
@@ -193,7 +193,7 @@ function About() {
 							de multiples causes (du métissage à la clean beauty).
 						</p>
 					) : (
-						<p className='  text-sm mt-5 text-justify'>
+						<p className='  text-xs lg:text-sm mt-5 text-justify'>
 							after 7 years working as a fashion editor with the french press,
 							magali moved into pr.
 							<br />
@@ -224,7 +224,7 @@ function About() {
 						<h3 className='font-messapia'>Camille</h3>
 					</div>
 					{locale === 'fr' ? (
-						<p className='  text-sm mt-5 text-justify'>
+						<p className='  text-xs lg:text-sm mt-5 text-justify'>
 							Camille est étudiante en Communication et Relations presse.
 							<br />
 							<br />
@@ -235,7 +235,7 @@ function About() {
 							l&apos;agence avec joie !
 						</p>
 					) : (
-						<p className='  text-sm mt-5 text-justify'>
+						<p className='  text-xs lg:text-sm mt-5 text-justify'>
 							Camille is a Communication and Press Relations student.
 							<br />
 							<br />
@@ -266,7 +266,7 @@ function About() {
 							What we do
 						</h2>
 					</div>
-					<div className='mx-auto min-w-[370px] md:min-w-none p-3 w-2/3 text-center lg:text-right mt-10 text-sm flex flex-col space-y-5 lg:pr-14 lg:h-[200px]'>
+					<div className='mx-auto min-w-[370px] md:min-w-none p-3 w-2/3 text-center lg:text-right mt-10 text-xs lg:text-sm flex flex-col space-y-5 lg:pr-14 lg:h-[200px]'>
 						{locale === 'fr' ? <p className='lg:hidden'>De la définition d&apos;une stratégie de communication au déploiement d&apos;une campagne RP, jusqu&apos;a l&apos;organisation d&apos;évènements, nous vous proposons tout un éventail de prises de parole et de rencontres entre votre marque et votre communauté afin de développer votre pouvoir d&apos;expression.</p> : <p className='lg:hidden'>driving brand awareness and conversion. we&apos;ll develop and execute influencer marketing strategies based on your brand goals to help you engage your target audiences.<br/><br/>from influencer matchmaking to campaign management and influencer seeding, we shape the optimal strategy that is right for you and amplify your stories through influential voices.</p>}
 						<div className='hidden lg:block'>
 					{blockText === 1 && locale === 'fr'
