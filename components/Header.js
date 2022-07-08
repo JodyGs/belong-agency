@@ -95,18 +95,7 @@ function Header() {
 				</button>
 				</div>
 				<nav className='hidden md:block space-x-5 w-1/3 font-bold'>
-					<Link href={'/work'}>
-						<a
-							onMouseEnter={handleColors}
-							className={clsx({
-								'hover:text-belvert hover:italic': color === 'vert',
-								'hover:text-belorange hover:italic': color === 'orange',
-								'hover:text-belrose hover:italic': color === 'rose',
-							})}
-						>
-							work
-						</a>
-					</Link>
+				
 					<Link href={'/about'}>
 						<a
 							onMouseEnter={handleColors}
@@ -117,6 +106,18 @@ function Header() {
 							})}
 						>
 							about
+						</a>
+					</Link>
+					<Link href={'/work'}>
+						<a
+							onMouseEnter={handleColors}
+							className={clsx({
+								'hover:text-belvert hover:italic': color === 'vert',
+								'hover:text-belorange hover:italic': color === 'orange',
+								'hover:text-belrose hover:italic': color === 'rose',
+							})}
+						>
+							work
 						</a>
 					</Link>
 					<Link href={'/presse'}>

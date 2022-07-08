@@ -34,11 +34,11 @@ function About() {
 
 			<div className='flex flex-col mt-20 lg:w-1/2'>
 				<div className='bg-belviolet sticker mx-3 md:max-w-md lg:max-w-lg md:w-full md:mx-auto'>
-					<h2 className='font-agrandir-grand text-[33px] text-belbeige text-center lg:text-5xl'>
-						Who we a<span className='font-messapia'>r</span>e
+					<h2 className='font-agrandir-grand text-[33px] text-belbeige text-center lg:text-5xl p-1 pt-3'>
+						Who we are
 					</h2>
 				</div>
-				<div className='text-center space-y-5 pt-12 text-sm px-3 lg:max-w-lg lg:mx-auto mb-10'>
+				<div className='text-center space-y-5 pt-12 text-xs px-3 lg:max-w-lg lg:mx-auto mb-10 lg:text-left'>
 					{locale === 'fr' ? (
 						<p>
 							Une agence de{' '}
@@ -107,7 +107,7 @@ function About() {
 							Kravitz.
 							<br />
 							<br />
-							Elle a cofondé Belong avec Magali en 2019
+							Elle a cofondé Belong avec Magali en 2019.
 						</p>
 					) : (
 						<p className='text-xs mt-5 text-justify'>
@@ -146,7 +146,7 @@ function About() {
 							<br />
 							Elle a ensuite été consultante RP pour des marques comme Google,
 							le Festival Calvi on the Rocks, l&apos;agence RP Magna Presse,
-							avant de fonder Belong avec Margaux
+							avant de fonder Belong avec Margaux.
 						</p>
 					) : (
 						<p className='  text-xs mt-5 text-justify'>
@@ -249,43 +249,51 @@ function About() {
 			</div>
 
 			<div className='flex flex-col-reverse lg:flex-row my-10 sm:my-40 md:mb-14 lg:mt-20'>
-				<div className='max-w-xs mx-auto mb-10 mt-10 lg:mt-2'>
+				<div className='max-w-xs mx-auto mb-10 mt-10 lg:mt-12'>
 						<Pills {...{locale, blockText, setBlockText}} />
-					</div>
-				<div className='lg:w-1/2 lg:mt-8'>
-					<div className='bg-belorange sticker mx-3 md:max-w-md lg:max-w-lg md:w-full md:mx-auto'>
-						<h2 className='font-agrandir-grand text-[33px] text-center text-belbeige pt-1'>
-							What we do
-						</h2>
-					</div>
-					<div className='mx-auto min-w-[370px] md:min-w-none p-3 w-2/3 text-center lg:text-right mt-16 text-sm flex flex-col space-y-5 lg:pr-14'>
-						{locale === 'fr' ? (
-							<p className='mb-2'>
-								De la définition d&apos;une stratégie de communication au
-								déploiement d&apos;une campagne RP, jusqu&apos;à
-								l&apos;organisation d&apos;évènements, nous vous proposons tout
-								un éventail de prises de parole et de rencontres entre votre
-								marque et votre communauté afin de développer votre pouvoir
-								d&apos;expression.
-							</p>
-						) : (
-							<p className='mb-2'>
-								driving brand awareness and conversion. we&apos;ll develop and
-								execute influencer marketing strategies based on your brand
-								goals to help you engage your target audiences. from influencer
-								matchmaking to campaign management and influencer seeding, we
-								shape the optimal strategy that is right for you and amplify
-								your stories through influential voices.
-							</p>
-						)}
 						<button
 								onClick={() => {
 									router.push('/work');
 								}}
-								className='belButton max-w-[120px] lg:max-w-xs mb-10 mx-auto block lg:hidden'
+								className='belButton max-w-[120px] lg:max-w-xs mb-10 mx-auto block lg:hidden mt-12'
 							>
 								work
 							</button>
+					</div>
+				<div className='lg:w-1/2 lg:mt-8'>
+					<div className='bg-belorange sticker mx-3 md:max-w-md lg:max-w-lg md:w-full md:mx-auto'>
+						<h2 className='font-agrandir-grand text-[33px] text-center text-belbeige lg:text-5xl p-1 pt-3'>
+							What we do
+						</h2>
+					</div>
+					<div className='mx-auto min-w-[370px] md:min-w-none p-3 w-2/3 text-center lg:text-right mt-16 lg:mt-10 text-xs flex flex-col space-y-5 lg:pr-14 lg:h-[200px]'>
+					{blockText === 1 && locale === 'fr'
+									? <p>Nous maximisons la visibilité de votre marque dans les médias tout au long de l'année à travers un éventail d'actions et de rendez-vous réguliers avec cette cible prescriptrice.</p>
+									: blockText === 2 && locale === 'fr'
+									? <p>De la recherche d'influenceurs à la gestion de campagne en passant par l'influence organique, nous élaborons des stratégies afin de vous aider à engager votre communauté et amplifier vos histoires grâce à des voix influentes.</p>
+									: blockText === 3 && locale === 'fr'
+									? <p>Chaque marque a une histoire unique. Relations Publiques, Partenariats, Marketing d’influence… En fonction de vos objectifs, nous élaborons et mettons en œuvre une stratégie de communication sur mesure.</p>
+									: blockText === 4 && locale === 'fr'
+									? <p>Nous mettons en relation des marques et des talents pour développer des collaborations qui leur permettront de surprendre, d'accroître leur notoriété ou encore d'explorer un nouveau territoire d'expression.</p>
+									: blockText === 5 && locale === 'fr'
+									? <p>Qu'il s'agisse d'un événement en personne ou virtuel, nous vous offrons une série d'opportunités pour rencontrer votre communauté et développer votre pouvoir d’expression.</p>
+									: blockText === 6 && locale === 'fr'
+									? <p>Distinctif, beau et porteur de sens.\n Grâce à notre réseau mondial d'artistes (MUA, photographe, vidéaste, styliste, etc.), nous créons des contenus mémorables et significatifs pour tous vos outils de communication.</p>
+									: blockText === 0 && locale === 'fr'
+									? <p>De la définition d&apos;une stratégie de communication au déploiement d&apos;une campagne RP, jusqu\'a l \'organisation d\'évènements, nous vous proposons tout un éventail de prises de parole et de rencontres entre votre marque et votre communauté afin de développer votre pouvoir d\'expression.</p>
+									: blockText === 1 && locale === 'en'
+									? <p>Earning Media Coverage to Drive Credibility and Success. We’ll maximize your brand’s visibility to establish trust among target consumers through authentic, third-party opinions. An honest, uncompensated endorsement adds credibility to the stories you tell through paid and owned media.</p>
+									: blockText === 2 && locale === 'en'
+									? <p>Driving Brand Awareness and Conversion. We’ll develop and execute influencer marketing strategies based on your brand goals to help you engage your target audiences. From influencer matchmaking to campaign management and influencer seeding, we shape the optimal strategy that is right for you and amplify your stories through influential voices.</p>
+									: blockText === 3 && locale === 'en'
+									? <p>Every brand has a unique story. We’ll combine best-in-class PR and influencer marketing services to establish and implement a strong brand strategy.</p>
+									: blockText === 4 && locale === 'en'
+									? <p>We connect brands and talents to set up partnerships that will allow them to surprise, drive awareness or explore a new territory of expression.</p>
+									: blockText === 5 && locale === 'en'
+									? <p>Whether live or virtual, physical or digital, we offer a range of opportunities for your brand to connect with your audience, establish deep connections and make a meaningful impression.</p>
+									: blockText === 6 && locale === 'en'
+									? <p>Distinctive, beautiful, and imbued with meaning. Thanks to our global network of artists (MUA, photographer, videographer, stylist, etc), we create memorable and meaningful content for all your communication tools.</p>
+									: <p>driving brand awareness and conversion. we&apos;ll develop and execute influencer marketing strategies based on your brand goals to help you engage your target audiences.<br/><br/>from influencer matchmaking to campaign management and influencer seeding, we shape the optimal strategy that is right for you and amplify your stories through influential voices.</p>}
 					</div>
 				</div>
 			</div>

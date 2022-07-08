@@ -8,10 +8,10 @@ function Presse({ magazine }) {
 	return (
 		<div>
 			<div className='flex flex-col items-center mt-8'>
-				<h1 className='text-4xl text-center md:text-8xl font-agrandir-grand mt-10 lg:mt-24 mb-14'>{magazine.name}</h1>
+				<h1 className='text-4xl text-center md:text-8xl font-agrandir-grand mt-10 mb-14'>{magazine.name}</h1>
 			</div>
 
-			<div className='w-full mt-20 flex flex-wrap justify-around'>
+			<div className='w-full mt-20 lg:mt-0 flex flex-wrap justify-around'>
 				{magazine.publications.map((publication) => (
 					<div key={publication._id} className='w-[700px]'>
 						<div className='max-w-[350px] md:max-w-none h-full mb-10 flex flex-col items-center mx-auto w-[500px] space-y-5'>

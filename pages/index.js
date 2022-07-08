@@ -7,6 +7,7 @@ import teamBelong from '../public/img/PHOTOHOME.jpg';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import prBoutique from '../public/img/pr-boutique.png';
+import prBoutiqueFr from '../public/img/pr-boutique-fr.png';
 
 export default function Home() {
 	const upAnim = React.useRef();
@@ -14,8 +15,7 @@ export default function Home() {
 	const fadeAnim = React.useRef();
 	const router = useRouter();
 	const { locale } = useRouter();
- 	const [blockText, setBlockText] = React.useState('init');
-	console.log(blockText);
+	const [blockText, setBlockText] = React.useState('init');
 
 	React.useEffect(() => {
 		gsap.set(fadeAnim.current, { opacity: '0' });
@@ -30,14 +30,32 @@ export default function Home() {
 		<div className='w-full scrollbar-hide overflow-x-hidden'>
 			<main className='h-full flex flex-col'>
 				{/* Hero Banner */}
-				<div className='grid grid-cols-12 max-h-[350px] md:max-h-[800px] overflow-hidden relative'>
-					<div className='bg-belrose col-span-12 lg:col-span-6 font-messapia  text-justify p-4 leading-[1] flex flex-col space-y-5 md:space-y-0 md:justify-between h-[800px]'>
-						<Image
-							src={prBoutique}
-							alt='a pr boutique agency with a focus on sustainable beauty'
-						/>
+				<div className='grid grid-cols-12 max-h-[300px] md:max-h-[800px] overflow-hidden relative'>
+					<div className={`bg-belrose col-span-12 lg:col-span-6 font-messapia p-4 leading-[1] flex flex-col ${locale === "fr" ? 'space-y-12' : 'space-y-3' } md:space-y-0 md:justify-between h-[800px]`}>
+						{locale === 'fr' ? (
+							<Image
+							className=''
+								src={prBoutiqueFr}
+								alt='a pr boutique agency with a focus on sustainable beauty'
+							/>
+						) : (
+							<Image
+								src={prBoutique}
+								alt='a pr boutique agency with a focus on sustainable beauty'
+							/>
+						)}
 
-						<p className='mx-auto text-[10px] md:text-[19px] mb-3'>
+							{locale === 'fr' ? 	<p className='mx-auto text-[10px] md:text-[19px] mb-3'>
+							* De la définition d&apos;une{' '}
+							<span className='txtstroke-thin text-transparent text-[10px] md:text-[19px]'>
+								stratégie
+							</span>{' '}
+							de communication au déploiement d&apos;une {' '}
+							<span className='txtstroke-thin text-transparent text-[10px] md:text-[19px]'>
+							campagne RP,
+							</span>{' '}
+							jusqu&apos;à l&apos;organisation d&apos;évènements.
+						</p> : 	<p className='mx-auto text-[10px] md:text-[19px] mb-3'>
 							* We{' '}
 							<span className='txtstroke-thin text-transparent text-[10px] md:text-[19px]'>
 								help
@@ -48,7 +66,8 @@ export default function Home() {
 								to gain
 							</span>{' '}
 							maximum exposure.
-						</p>
+						</p>}
+					
 					</div>
 					<div className='hidden lg:flex col-span-6 mx-auto space-x-10'>
 						<svg
@@ -88,39 +107,68 @@ export default function Home() {
 							<h2 className='font-agrandir-grand text-[33px] lg:text-5xl font-extrabold w-full text-center md:mt-14 lg:mt-0'>
 								What we do
 							</h2>
-						<p className='text-xs max-w-xs text-center mx-auto w-full lg:hidden'>{
-							locale === 'fr' ? "Nous maximisons la visibilité de votre marque dans les médias tout au long de l'année à travers un éventail d'actions et de rendez-vous réguliers avec cette cible prescriptrice." : "We maximize the visibility of your brand in the media throughout the year through an engagement of actions and regular meetings with this target audience."}
-						</p>
-						<p className={`text-xs max-w-xs lg:max-w-sm  ${locale === 'en' ? "lg:h-[120px] lg:text-xs" : "lg:h-[110px] lg:text-sm"} text-center mx-auto w-full hidden lg:block`}>
-								{blockText === 1 && locale === 'fr' ? "Nous maximisons la visibilité de votre marque dans les médias tout au long de l'année à travers un éventail d'actions et de rendez-vous réguliers avec cette cible prescriptrice." 
-								:	blockText === 2 && locale === 'fr' ? "De la recherche d'influenceurs à la gestion de campagne en passant par l\'influence organique, nous élaborons des stratégies afin de vous aider à engager votre communauté et amplifier vos histoires grâce à des voix influentes."
-								: blockText === 3 && locale === 'fr'  ? "Chaque marque a une histoire unique. Relations Publiques, Partenariats, Marketing d\’influence… En fonction de vos objectifs, nous élaborons et mettons en œuvre une stratégie de communication sur mesure."
-								: blockText === 4 && locale === 'fr'  ? "Nous mettons en relation des marques et des talents pour développer des collaborations qui leur permettront de surprendre, d'accroître leur notoriété ou encore d'explorer un nouveau territoire d'expression."
-								: blockText === 5 && locale === 'fr'  ? "Qu'il s'agisse d'un événement en personne ou virtuel, nous vous offrons une série d'opportunités pour rencontrer votre communauté et développer votre pouvoir d\’expression."
-								: blockText === 6 && locale === 'fr'  ? "Distinctif, beau et porteur de sens.\n Grâce à notre réseau mondial d'artistes (MUA, photographe, vidéaste, styliste, etc.), nous créons des contenus mémorables et significatifs pour tous vos outils de communication."
-								: blockText === 0 && locale === 'fr' ? "Créer une communauté par le biais des médias, des réseaux sociaux et de l&apos;influence, générer de l&apos;engagement et gagner en notoriété."
-								: blockText === 1 && locale === 'en'? "Earning Media Coverage to Drive Credibility and Success. We\’ll maximize your brand\’s visibility to establish trust among target consumers through authentic, third-party opinions. An honest, uncompensated endorsement adds credibility to the stories you tell through paid and owned media." 
-								:	blockText === 2 && locale === 'en' ? "Driving Brand Awareness and Conversion. We\’ll develop and execute influencer marketing strategies based on your brand goals to help you engage your target audiences. From influencer matchmaking to campaign management and influencer seeding, we shape the optimal strategy that is right for you and amplify your stories through influential voices."
-								: blockText === 3 && locale === 'en' ? "Every brand has a unique story. We\’ll combine best-in-class PR and influencer marketing services to establish and implement a strong brand strategy."
-								: blockText === 4 && locale === 'en' ? "We connect brands and talents to set up partnerships that will allow them to surprise, drive awareness or explore a new territory of expression."
-								: blockText === 5 && locale === 'en' ? "Whether live or virtual, physical or digital, we offer a range of opportunities for your brand to connect with your audience, establish deep connections and make a meaningful impression."
-								: blockText === 6 && locale === 'en' ? "Distinctive, beautiful, and imbued with meaning. Thanks to our global network of artists (MUA, photographer, videographer, stylist, etc), we create memorable and meaningful content for all your communication tools."
-								: "Create a community through media, social networks and influence, generate engagement and gain notoriety."}
+							<p className='text-xs max-w-xs text-center mx-auto w-full lg:hidden '>
+								{locale === 'fr'
+									? "Nous maximisons la visibilité de votre marque dans les médias tout au long de l'année à travers un éventail d'actions et de rendez-vous réguliers avec cette cible prescriptrice."
+									: 'We maximize the visibility of your brand in the media throughout the year through an engagement of actions and regular meetings with this target audience.'}
 							</p>
-						
+							<p
+								className={`text-xs max-w-xs lg:max-w-lg lg:p-7 lg:text-left ${
+									locale === 'en'
+										? 'lg:h-[120px] lg:text-xs'
+										: 'lg:h-[110px] lg:text-sm'
+								} text-center mx-auto w-full hidden lg:block`}
+							>
+								{blockText === 1 && locale === 'fr'
+									? "Nous maximisons la visibilité de votre marque dans les médias tout au long de l'année à travers un éventail d'actions et de rendez-vous réguliers avec cette cible prescriptrice."
+									: blockText === 2 && locale === 'fr'
+									? "De la recherche d'influenceurs à la gestion de campagne en passant par l'influence organique, nous élaborons des stratégies afin de vous aider à engager votre communauté et amplifier vos histoires grâce à des voix influentes."
+									: blockText === 3 && locale === 'fr'
+									? 'Chaque marque a une histoire unique. Relations Publiques, Partenariats, Marketing d’influence… En fonction de vos objectifs, nous élaborons et mettons en œuvre une stratégie de communication sur mesure.'
+									: blockText === 4 && locale === 'fr'
+									? "Nous mettons en relation des marques et des talents pour développer des collaborations qui leur permettront de surprendre, d'accroître leur notoriété ou encore d'explorer un nouveau territoire d'expression."
+									: blockText === 5 && locale === 'fr'
+									? "Qu'il s'agisse d'un événement en personne ou virtuel, nous vous offrons une série d'opportunités pour rencontrer votre communauté et développer votre pouvoir d’expression."
+									: blockText === 6 && locale === 'fr'
+									? "Distinctif, beau et porteur de sens.\n Grâce à notre réseau mondial d'artistes (MUA, photographe, vidéaste, styliste, etc.), nous créons des contenus mémorables et significatifs pour tous vos outils de communication."
+									: blockText === 0 && locale === 'fr'
+									? "Créer une communauté par le biais des médias, des réseaux sociaux et de l'influence, générer de l’engagement et gagner en notoriété."
+									: blockText === 1 && locale === 'en'
+									? 'Earning Media Coverage to Drive Credibility and Success. We’ll maximize your brand’s visibility to establish trust among target consumers through authentic, third-party opinions. An honest, uncompensated endorsement adds credibility to the stories you tell through paid and owned media.'
+									: blockText === 2 && locale === 'en'
+									? 'Driving Brand Awareness and Conversion. We’ll develop and execute influencer marketing strategies based on your brand goals to help you engage your target audiences. From influencer matchmaking to campaign management and influencer seeding, we shape the optimal strategy that is right for you and amplify your stories through influential voices.'
+									: blockText === 3 && locale === 'en'
+									? 'Every brand has a unique story. We’ll combine best-in-class PR and influencer marketing services to establish and implement a strong brand strategy.'
+									: blockText === 4 && locale === 'en'
+									? 'We connect brands and talents to set up partnerships that will allow them to surprise, drive awareness or explore a new territory of expression.'
+									: blockText === 5 && locale === 'en'
+									? 'Whether live or virtual, physical or digital, we offer a range of opportunities for your brand to connect with your audience, establish deep connections and make a meaningful impression.'
+									: blockText === 6 && locale === 'en'
+									? 'Distinctive, beautiful, and imbued with meaning. Thanks to our global network of artists (MUA, photographer, videographer, stylist, etc), we create memorable and meaningful content for all your communication tools.'
+									: 'Create a community through media, social networks and influence, generate engagement and gain notoriety. We offer traditional PR & Media Outreach, Online Visibility, and Event PR & Production.'}
+							</p>
+
 							<button
 								onClick={() => {
 									router.push('/work');
 								}}
-								className='belButton max-w-[120px] lg:max-w-xs text-md mt-5 mb-10 mx-auto block'
+								className='belButton max-w-[230px] hidden lg:max-w-xs text-md mt-5 mb-10 mx-auto lg:block'
 							>
 								work
 							</button>
 						</div>
 					</div>
 					<div className='max-w-xs mx-auto mb-10 mt-10 lg:mt-2'>
-						<Pills {...{locale, blockText, setBlockText}} />
+						<Pills {...{ locale, blockText, setBlockText }} />
 					</div>
+					<button
+								onClick={() => {
+									router.push('/work');
+								}}
+								className='belButton max-w-[230px] lg:max-w-xs text-md mt-5 mb-10 mx-auto block lg:hidden'
+							>
+								work
+							</button>
 				</div>
 				<Marquee
 					className='bg-belorange py-4 md:py-8 fill-belrose'
@@ -211,15 +259,14 @@ export default function Home() {
 							Who we a<span className='font-messapia'>r</span>e
 						</h2>
 						{locale === 'fr' ? (
-							<p className='font-sweet-sans-pro text-xs md:text-sm text-center lg:text-right px-3 lg:px-0 uppercase'>
+							<p className='font-sweet-sans-pro text-xs md:text-sm text-center px-3 lg:px-0 uppercase'>
 								Nous sommes une agence de{' '}
 								<span className='font-messapia'>relations publiques</span>{' '}
-								composée d&apos;experts interdisciplinaires qui créent des
-								histoires de marque et construisent des communautés par le biais{' '}
+								composée d&apos;expertes interdisciplinaires dotées d&apos;une
+								forte connaissance du secteur{' '}
 								<span className='font-messapia'>
-									des médias, des réseaux sociaux
-								</span>{' '}
-								et <span className='font-messapia'>des expériences.</span>
+									de la beauté et du bien-être
+								</span>
 							</p>
 						) : (
 							<p className='font-sweet-sans-pro text-xs md:text-sm text-center md:text-right px-3 lg:px-0'>
@@ -234,7 +281,7 @@ export default function Home() {
 							onClick={() => {
 								router.push('/about');
 							}}
-							className='belButton max-w-[120px] lg:max-w-xs mt-5 mb-10 mx-auto block lg:mr-0'
+							className='belButton max-w-[230px] lg:max-w-xs mt-5 mb-10 mx-auto block lg:mr-0'
 						>
 							about
 						</button>

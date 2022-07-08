@@ -63,18 +63,19 @@ function Presse({ magPrint, magWeb, radioTv }) {
 					<span className='italic'>client</span> we work with.
 				</p>
 			)}
+			{/* belButton max-w-[230px] lg:max-w-xs text-md mt-5 mb-10 mx-auto block */}
 
 			<div className='flex flex-col lg:flex-row items-center justify-evenly mx-auto max-w-[250px] lg:justify-between lg:max-w-2xl text-xs md:text-md mb-20 space-y-3 lg:space-y-0 lg:space-x-2'>
 				<button
 					onClick={setPrint}
-					className={`belButton max-w-[300px] ${button === 'print' && 'bg-belviolet text-belvert border-belviolet'}`}
+					className={`belButton w-[230px] text-[14px] p-1 ${button === 'print' && 'bg-belviolet text-belvert border-belviolet'}`}
 				>
 					print
 				</button>
-				<button onClick={setDigital} className={`belButton max-w-[300px]  ${button === 'digital' && 'bg-belviolet text-belvert border-belviolet'}`}>
+				<button onClick={setDigital} className={`belButton w-[230px] text-[14px] p-1  ${button === 'digital' && 'bg-belviolet text-belvert border-belviolet'}`}>
 					digital
 				</button>
-				<button onClick={setRadio} className={`belButton max-w-[300px] ${button === 'radioTv' && 'bg-belviolet text-belvert border-belviolet'}`}>
+				<button onClick={setRadio} className={`belButton w-[230px] text-[14px] p-1  ${button === 'radioTv' && 'bg-belviolet text-belvert border-belviolet'}`}>
 					Radio / Tv
 				</button>
 			</div>
