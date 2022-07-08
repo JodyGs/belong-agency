@@ -160,7 +160,6 @@ export default function Home() {
 					</div>
 					<div className='max-w-xs mx-auto mb-10 mt-10 lg:mt-2'>
 						<Pills {...{ locale, blockText, setBlockText }} />
-					</div>
 					<button
 								onClick={() => {
 									router.push('/work');
@@ -169,6 +168,7 @@ export default function Home() {
 							>
 								work
 							</button>
+					</div>
 				</div>
 				<Marquee
 					className='bg-belorange py-4 md:py-8 fill-belrose'
