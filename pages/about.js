@@ -255,7 +255,7 @@ function About() {
 								onClick={() => {
 									router.push('/work');
 								}}
-								className='belButton max-w-[120px] lg:max-w-xs mb-10 mx-auto block lg:hidden mt-12'
+								className='belButton max-w-[230px] lg:max-w-xs mb-10 mx-auto block lg:hidden mt-12'
 							>
 								work
 							</button>
@@ -266,7 +266,7 @@ function About() {
 							What we do
 						</h2>
 					</div>
-					<div className='mx-auto min-w-[370px] md:min-w-none p-3 w-2/3 text-center lg:text-right mt-16 lg:mt-10 text-sm flex flex-col space-y-5 lg:pr-14 lg:h-[200px]'>
+					<div className='mx-auto min-w-[370px] md:min-w-none p-3 w-2/3 text-center lg:text-right mt-10 text-sm flex flex-col space-y-5 lg:pr-14 lg:h-[200px]'>
 						{locale === 'fr' ? <p className='lg:hidden'>De la définition d&apos;une stratégie de communication au déploiement d&apos;une campagne RP, jusqu&apos;a l&apos;organisation d&apos;évènements, nous vous proposons tout un éventail de prises de parole et de rencontres entre votre marque et votre communauté afin de développer votre pouvoir d&apos;expression.</p> : <p className='lg:hidden'>driving brand awareness and conversion. we&apos;ll develop and execute influencer marketing strategies based on your brand goals to help you engage your target audiences.<br/><br/>from influencer matchmaking to campaign management and influencer seeding, we shape the optimal strategy that is right for you and amplify your stories through influential voices.</p>}
 						<div className='hidden lg:block'>
 					{blockText === 1 && locale === 'fr'

@@ -113,10 +113,7 @@ export default function Home() {
 									: 'We maximize the visibility of your brand in the media throughout the year through an engagement of actions and regular meetings with this target audience.'}
 							</p>
 							<p
-								className={`text-xs max-w-xs lg:max-w-lg lg:p-7 lg:text-left ${
-									locale === 'en'
-										? 'lg:h-[120px] lg:text-xs'
-										: 'lg:h-[110px] lg:text-sm'
+								className={`text-xs max-w-xs lg:max-w-lg lg:px-7 lg:text-left 2lg:text-sm'
 								} text-center mx-auto w-full hidden lg:block`}
 							>
 								{blockText === 1 && locale === 'fr'
@@ -255,26 +252,26 @@ export default function Home() {
 						</div>
 					</div>
 					<div className='flex flex-col justify-center lg:max-w-lg lg:mx-auto space-y-8'>
-						<h2 className='font-agrandir-grand text-[33px] lg:text-5xl font-extrabold mx-auto lg:text-right lg:mr-0'>
+						<h2 className='font-agrandir-grand text-[33px] lg:text-5xl font-extrabold mx-auto mt-10 lg:mt-0 lg:text-right lg:mr-0'>
 							Who we are
 						</h2>
 						{locale === 'fr' ? (
 							<p className='font-sweet-sans-pro text-xs md:text-sm text-center md:text-right px-3 lg:px-0 uppercase'>
 								Nous sommes une agence de{' '}
-								<span className='font-messapia'>relations publiques</span>{' '}
+								<span className='font-bold'>relations publiques</span>{' '}
 								composée d&apos;expertes interdisciplinaires dotées d&apos;une
 								forte connaissance du secteur{' '}
-								<span className='font-messapia'>
-									de la beauté et du bien-être
+								<span className='font-bold'>
+									de la beauté et du bien-être.
 								</span>
 							</p>
 						) : (
 							<p className='font-sweet-sans-pro text-xs md:text-sm text-center md:text-right px-3 lg:px-0'>
-								We&apos;re a <span className='font-messapia'>PR</span> agency of
+								We&apos;re a <span className='font-messapia text-xs'>PR</span> agency of
 								interdisciplinary experts who craft brand stories and build
 								comunities through{' '}
-								<span className='font-messapia'>media, social</span> and{' '}
-								<span className='font-messapia'>experiential.</span>
+								<span className='font-bold'>media, social</span> and{' '}
+								<span className='font-bold'>experiential.</span>
 							</p>
 						)}
 						<button

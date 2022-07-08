@@ -42,7 +42,7 @@
 		@apply border-[1px] md:border-[2px] border-black rounded-full w-full px-4 min-w-[300px] lg:min-w-[500px] py-1
 	}
 	.sticker {
-		@apply border-2 sm:border-4 border-black rounded-full text-base
+		@apply border-2 border-black rounded-full text-base
 	}
 	.divPhotoTeam{
 		@apply border-2 border-black overflow-hidden rounded-[40px] max-h-[560px]
