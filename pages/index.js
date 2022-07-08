@@ -129,7 +129,7 @@ export default function Home() {
 									: blockText === 6 && locale === 'fr'
 									? "Distinctif, beau et porteur de sens.\n Grâce à notre réseau mondial d'artistes (MUA, photographe, vidéaste, styliste, etc.), nous créons des contenus mémorables et significatifs pour tous vos outils de communication."
 									: blockText === 0 && locale === 'fr'
-									? "Nous maximisons la visibilité de votre marque dans les médias tout au long de l'année à travers un éventail d'actions et de rendez-vous réguliers avec cette cible prescriptrice."
+									? "Créer une communauté par le biais des médias, des réseaux sociaux et de l'influence, générer de l’engagement et gagner en notoriété."
 									: blockText === 1 && locale === 'en'
 									? 'Earning Media Coverage to Drive Credibility and Success. We’ll maximize your brand’s visibility to establish trust among target consumers through authentic, third-party opinions. An honest, uncompensated endorsement adds credibility to the stories you tell through paid and owned media.'
 									: blockText === 2 && locale === 'en'
