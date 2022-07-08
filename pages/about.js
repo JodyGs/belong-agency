@@ -268,25 +268,25 @@ function About() {
 					</div>
 					<div className='mx-auto min-w-[370px] md:min-w-none p-3 w-2/3 text-center lg:text-right mt-16 lg:mt-10 text-xs flex flex-col space-y-5 lg:pr-14 lg:h-[200px]'>
 					{blockText === 1 && locale === 'fr'
-									? <p>Nous maximisons la visibilité de votre marque dans les médias tout au long de l'année à travers un éventail d'actions et de rendez-vous réguliers avec cette cible prescriptrice.</p>
+									? <p>Nous maximisons la visibilité de votre marque dans les médias tout au long de l&apos;année à travers un éventail d&apos;actions et de rendez-vous réguliers avec cette cible prescriptrice.</p>
 									: blockText === 2 && locale === 'fr'
-									? <p>De la recherche d'influenceurs à la gestion de campagne en passant par l'influence organique, nous élaborons des stratégies afin de vous aider à engager votre communauté et amplifier vos histoires grâce à des voix influentes.</p>
+									? <p>De la recherche d&apos;influenceurs à la gestion de campagne en passant par l&apos;influence organique, nous élaborons des stratégies afin de vous aider à engager votre communauté et amplifier vos histoires grâce à des voix influentes.</p>
 									: blockText === 3 && locale === 'fr'
-									? <p>Chaque marque a une histoire unique. Relations Publiques, Partenariats, Marketing d’influence… En fonction de vos objectifs, nous élaborons et mettons en œuvre une stratégie de communication sur mesure.</p>
+									? <p>Chaque marque a une histoire unique. Relations Publiques, Partenariats, Marketing d&apos;influence… En fonction de vos objectifs, nous élaborons et mettons en œuvre une stratégie de communication sur mesure.</p>
 									: blockText === 4 && locale === 'fr'
-									? <p>Nous mettons en relation des marques et des talents pour développer des collaborations qui leur permettront de surprendre, d'accroître leur notoriété ou encore d'explorer un nouveau territoire d'expression.</p>
+									? <p>Nous mettons en relation des marques et des talents pour développer des collaborations qui leur permettront de surprendre, d&apos;accroître leur notoriété ou encore d&apos;explorer un nouveau territoire d&apos;expression.</p>
 									: blockText === 5 && locale === 'fr'
-									? <p>Qu'il s'agisse d'un événement en personne ou virtuel, nous vous offrons une série d'opportunités pour rencontrer votre communauté et développer votre pouvoir d’expression.</p>
+									? <p>Qu&apos;il s&apos;agisse d&apos;un événement en personne ou virtuel, nous vous offrons une série d&apos;opportunités pour rencontrer votre communauté et développer votre pouvoir d&apos;expression.</p>
 									: blockText === 6 && locale === 'fr'
-									? <p>Distinctif, beau et porteur de sens.\n Grâce à notre réseau mondial d'artistes (MUA, photographe, vidéaste, styliste, etc.), nous créons des contenus mémorables et significatifs pour tous vos outils de communication.</p>
+									? <p>Distinctif, beau et porteur de sens.\n Grâce à notre réseau mondial d&apos;artistes (MUA, photographe, vidéaste, styliste, etc.), nous créons des contenus mémorables et significatifs pour tous vos outils de communication.</p>
 									: blockText === 0 && locale === 'fr'
-									? <p>De la définition d&apos;une stratégie de communication au déploiement d&apos;une campagne RP, jusqu\'a l \'organisation d\'évènements, nous vous proposons tout un éventail de prises de parole et de rencontres entre votre marque et votre communauté afin de développer votre pouvoir d\'expression.</p>
+									? <p>De la définition d&apos;une stratégie de communication au déploiement d&apos;une campagne RP, jusqu&apos;a l&apos;organisation d&apos;évènements, nous vous proposons tout un éventail de prises de parole et de rencontres entre votre marque et votre communauté afin de développer votre pouvoir d&apos;expression.</p>
 									: blockText === 1 && locale === 'en'
-									? <p>Earning Media Coverage to Drive Credibility and Success. We’ll maximize your brand’s visibility to establish trust among target consumers through authentic, third-party opinions. An honest, uncompensated endorsement adds credibility to the stories you tell through paid and owned media.</p>
+									? <p>Earning Media Coverage to Drive Credibility and Success. We&apos;ll maximize your brand&apos;s visibility to establish trust among target consumers through authentic, third-party opinions. An honest, uncompensated endorsement adds credibility to the stories you tell through paid and owned media.</p>
 									: blockText === 2 && locale === 'en'
-									? <p>Driving Brand Awareness and Conversion. We’ll develop and execute influencer marketing strategies based on your brand goals to help you engage your target audiences. From influencer matchmaking to campaign management and influencer seeding, we shape the optimal strategy that is right for you and amplify your stories through influential voices.</p>
+									? <p>Driving Brand Awareness and Conversion. We&apos;ll develop and execute influencer marketing strategies based on your brand goals to help you engage your target audiences. From influencer matchmaking to campaign management and influencer seeding, we shape the optimal strategy that is right for you and amplify your stories through influential voices.</p>
 									: blockText === 3 && locale === 'en'
-									? <p>Every brand has a unique story. We’ll combine best-in-class PR and influencer marketing services to establish and implement a strong brand strategy.</p>
+									? <p>Every brand has a unique story. We&apos;ll combine best-in-class PR and influencer marketing services to establish and implement a strong brand strategy.</p>
 									: blockText === 4 && locale === 'en'
 									? <p>We connect brands and talents to set up partnerships that will allow them to surprise, drive awareness or explore a new territory of expression.</p>
 									: blockText === 5 && locale === 'en'
