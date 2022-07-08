@@ -39,7 +39,7 @@
 		@apply -z-10
 	}
 	.pills {
-		@apply border-[1px] md:border-2 border-black rounded-full w-full px-4 min-w-[300px] lg:min-w-[500px] py-1
+		@apply border-[1px] md:border-[2px] border-black rounded-full w-full px-4 min-w-[300px] lg:min-w-[500px] py-1
 	}
 	.sticker {
 		@apply border-2 sm:border-4 border-black rounded-full text-base

@@ -103,7 +103,7 @@ export default function Home() {
 				What we do */}
 				<div className='flex flex-col md:flex-row mt-10 lg:mt-16 lg:mb-14 md:pl-3 lg:pl-0'>
 					<div className='lg:w-1/2'>
-						<div className='max-w-xs lg:max-w-none mx-auto space-y-8 mt-2'>
+						<div className='max-w-xs lg:max-w-lg mx-auto space-y-8 mt-2'>
 							<h2 className='font-agrandir-grand text-[33px] lg:text-5xl font-extrabold w-full text-center md:mt-14 lg:mt-0'>
 								What we do
 							</h2>
@@ -152,7 +152,7 @@ export default function Home() {
 								onClick={() => {
 									router.push('/work');
 								}}
-								className='belButton max-w-[230px] hidden lg:max-w-xs text-md mt-5 mb-10 mx-auto lg:block'
+								className='belButton max-w-[230px] hidden lg:max-w-xs text-md mt-5 mb-10 mx-auto lg:block lg:ml-6 lg:mr-aut0'
 							>
 								work
 							</button>
@@ -256,10 +256,10 @@ export default function Home() {
 					</div>
 					<div className='flex flex-col justify-center lg:max-w-lg lg:mx-auto space-y-8'>
 						<h2 className='font-agrandir-grand text-[33px] lg:text-5xl font-extrabold mx-auto lg:text-right lg:mr-0'>
-							Who we a<span className='font-messapia'>r</span>e
+							Who we are
 						</h2>
 						{locale === 'fr' ? (
-							<p className='font-sweet-sans-pro text-xs md:text-sm text-center px-3 lg:px-0 uppercase'>
+							<p className='font-sweet-sans-pro text-xs md:text-sm text-center md:text-right px-3 lg:px-0 uppercase'>
 								Nous sommes une agence de{' '}
 								<span className='font-messapia'>relations publiques</span>{' '}
 								composée d&apos;expertes interdisciplinaires dotées d&apos;une
