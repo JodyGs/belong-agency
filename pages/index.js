@@ -108,9 +108,8 @@ export default function Home() {
 							</h2>
 							<p className='text-xs max-w-xs text-center mx-auto w-full lg:hidden '>
 								{locale === 'fr'
-									? "Nous maximisons la visibilité de votre marque dans les médias tout au long de l'année à travers un éventail d'actions et de rendez-vous réguliers avec cette cible prescriptrice."
-									: `we offer traditional pr & media outreach, online visibility, and event pr & production.
-									we focus on how to best connect your brand story with your consumers.`}
+									? "créer une communauté par le biais des médias, des réseaux sociaux et de l&apos;influence, générer de l&apos;engagement et gagner en notoriété. Nous nous concentrons sur la meilleure façon de relier l&apos;histoire de votre marque à vos consommateurs."
+									: `we offer traditional pr & media outreach, online visibility, and event pr & production. We focus on how to best connect your brand story with your consumers.`}
 							</p>
 								<div className={`text-sm max-w-xs lg:max-w-lg lg:px-7 lg:text-left lg:text-sm text-center mx-auto w-full hidden lg:block`}>
 								{blockText === 1 && locale === 'fr'
@@ -139,7 +138,7 @@ export default function Home() {
 									? <p>Whether live or virtual, physical or digital, we offer a range of opportunities for your brand to connect with your audience, establish deep connections and make a meaningful impression.</p>
 									: blockText === 6 && locale === 'en'
 									? <p>Distinctive, beautiful, and imbued with meaning. Thanks to our global network of artists (MUA, photographer, videographer, stylist, etc), we create memorable and meaningful content for all your communication tools.</p>
-									: <p>we offer traditional pr & media outreach, online visibility, and event pr & production.<br/><br/>we focus on how to best connect your brand story with your consumers.</p>}
+									: <p>we offer traditional pr & media outreach, online visibility, and event pr & production.<br /><br/>we focus on how to best connect your brand story with your consumers.</p>}
 							</div>
 
 							<button
@@ -253,24 +252,23 @@ export default function Home() {
 							Who we are
 						</h2>
 						{locale === 'fr' ? (
-							<p className='font-sweet-sans-pro text-xs md:text-sm text-center md:text-right px-3 lg:px-0 uppercase'>
-								Nous sommes une agence de{' '}
-								<span className='font-bold'>relations publiques</span>{' '}
-								composée d&apos;expertes interdisciplinaires dotées d&apos;une
-								forte connaissance du secteur{' '}
-								<span className='font-bold'>
-									de la beauté et du bien-être.
-								</span>
-							</p>
-						) : (
-							<p className='font-sweet-sans-pro text-xs md:text-sm text-center md:text-right px-3 lg:px-0'>
-								We&apos;re a <span className='font-messapia text-xs'>PR</span> agency of
-								interdisciplinary experts who craft brand stories and build
-								comunities through{' '}
-								<span className='font-bold'>media, social</span> and{' '}
-								<span className='font-bold'>experiential.</span>
-							</p>
-						)}
+						<p className='font-sweet-sans-pro text-xs md:text-sm text-center md:text-right px-3 lg:px-0'>
+							Une agence de{' '}
+							<span className='font-bold'>Relations Publiques</span> composée
+							d&apos;expertes{' '}
+							<span className='italic'>interdisciplinaires</span> qui créent des histoires de marque et construisent des{' '}
+							<span className='font-bold'>Communautés</span> à travers les médias, les réseaux sociaux et les expériences.
+						</p>
+					) : (
+						<p className='font-sweet-sans-pro text-xs md:text-sm text-center md:text-right px-3 lg:px-0'>
+							we’re a <span className='font-bold'>pr agency</span> of{' '}
+							<span className='italic'>interdisciplinary</span> experts who
+							craft brand stories and build communities through media, social
+							and
+							<span className='font-bold'> experiential</span>.<br /><br />
+							Well-connected to beauty and lifestyle influencers and media, we get people talking and build brands through creative thinking, teamwork and hard work.
+						</p>
+					)}
 						<button
 							onClick={() => {
 								router.push('/about');

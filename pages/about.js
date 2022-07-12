@@ -45,12 +45,8 @@ function About() {
 							Une agence de{' '}
 							<span className='font-bold'>Relations Publiques</span> composée
 							d&apos;expertes{' '}
-							<span className='italic'>interdisciplinaires</span> dotées
-							d&apos;une forte connaissance du secteur de la beauté et du
-							bien-être et de{' '}
-							<span className='font-bold'> 20 ans d&apos;expérience</span> dans
-							des agences RP, des entreprises internationales et en tant que
-							freelance.
+							<span className='italic'>interdisciplinaires</span> qui créent des histoires de marque et construisent des{' '}
+							<span className='font-bold'>Communautés</span> à travers les médias, les réseaux sociaux et les expériences.
 						</p>
 					) : (
 						<p>
@@ -58,26 +54,8 @@ function About() {
 							<span className='italic'>interdisciplinary</span> experts who
 							craft brand stories and build communities through media, social
 							and
-							<span className='font-bold'> experiential</span>.
-						</p>
-					)}
-					{locale === 'fr' ? (
-						<p>
-							Notre savoir-faire ? Créer{' '}
-							<span className='font-bold'>une communauté</span> par le biais des{' '}
-							<span className='italic'>médias, des réseaux sociaux</span> et de{' '}
-							<span className='italic'>l&apos;influence,</span> générer de
-							l’engagement et{' '}
-							<span className='font-bold'>gagner en notoriété</span>.
-						</p>
-					) : (
-						<p>
-							together we have <span className='font-bold'>over 20 years</span>{' '}
-							of experience in pr agencies,{' '}
-							<span className='italic'>global companies</span> and as
-							freelancers, working on{' '}
-							<span className='italic'>a variety of</span> projects in the
-							beauty and <span className='font-bold'>wellness industry</span>.
+							<span className='font-bold'> experiential</span>.<br /><br />
+							Well-connected to beauty and lifestyle influencers and media, we get people talking and build brands through creative thinking, teamwork and hard work.
 						</p>
 					)}
 				</div>
@@ -268,7 +246,7 @@ function About() {
 						</h2>
 					</div>
 					<div className='mx-auto min-w-[370px] md:min-w-none p-3 w-2/3 text-center lg:text-right mt-10 text-xs lg:text-sm flex flex-col space-y-5 lg:pr-0 lg:h-[200px] lg:max-w-lg'>
-						{locale === 'fr' ? <p className='lg:hidden'>De la définition d&apos;une stratégie de communication au déploiement d&apos;une campagne RP, jusqu&apos;a l&apos;organisation d&apos;évènements, nous vous proposons tout un éventail de prises de parole et de rencontres entre votre marque et votre communauté afin de développer votre pouvoir d&apos;expression.</p> : <p className='lg:hidden'>driving brand awareness and conversion. we&apos;ll develop and execute influencer marketing strategies based on your brand goals to help you engage your target audiences.<br/><br/>from influencer matchmaking to campaign management and influencer seeding, we shape the optimal strategy that is right for you and amplify your stories through influential voices.</p>}
+						{locale === 'fr' ? <p className='lg:hidden'>créer une communauté par le biais des médias, des réseaux sociaux et de l&apos;influence, générer de l&apos;engagement et gagner en notoriété.<br /><br />nous nous concentrons sur la meilleure façon de relier l&apos;histoire de votre marque à vos consommateurs.</p> : <p className='lg:hidden'>we offer traditional pr & media outreach, online visibility, and event pr & production.<br /><br/>we focus on how to best connect your brand story with your consumers.</p>}
 						<div className='hidden lg:block'>
 					{blockText === 1 && locale === 'fr'
 									? <p>Nous maximisons la visibilité de votre marque dans les médias tout au long de l&apos;année à travers un éventail d&apos;actions et de rendez-vous réguliers avec cette cible prescriptrice.</p>
@@ -296,7 +274,7 @@ function About() {
 									? <p>Whether live or virtual, physical or digital, we offer a range of opportunities for your brand to connect with your audience, establish deep connections and make a meaningful impression.</p>
 									: blockText === 6 && locale === 'en'
 									? <p>Distinctive, beautiful, and imbued with meaning. Thanks to our global network of artists (MUA, photographer, videographer, stylist, etc), we create memorable and meaningful content for all your communication tools.</p>
-									: <p>we offer traditional pr & media outreach, online visibility, and event pr & production.<br/><br/>we focus on how to best connect your brand story with your consumers.</p>}
+									: <p>we offer traditional pr & media outreach, online visibility, and event pr & production.<br /><br/>we focus on how to best connect your brand story with your consumers.</p>}
 									</div>
 					</div>
 				</div>
