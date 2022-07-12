@@ -50,7 +50,7 @@ function About() {
 							bien-être et de{' '}
 							<span className='font-bold'> 20 ans d&apos;expérience</span> dans
 							des agences RP, des entreprises internationales et en tant que
-							freelance. .
+							freelance.
 						</p>
 					) : (
 						<p>
@@ -296,7 +296,7 @@ function About() {
 									? <p>Whether live or virtual, physical or digital, we offer a range of opportunities for your brand to connect with your audience, establish deep connections and make a meaningful impression.</p>
 									: blockText === 6 && locale === 'en'
 									? <p>Distinctive, beautiful, and imbued with meaning. Thanks to our global network of artists (MUA, photographer, videographer, stylist, etc), we create memorable and meaningful content for all your communication tools.</p>
-									: <p>we&apos;re a pr agency of interdisciplinary experts who craft brand stories and build communities through media, social and experiential.<br/><br/>well-connected to beauty and lifestyle influencers and media, we get people talking and build brands through creative thinking, teamwork and hard work.</p>}
+									: <p>we offer traditional pr & media outreach, online visibility, and event pr & production.<br/><br/>we focus on how to best connect your brand story with your consumers.</p>}
 									</div>
 					</div>
 				</div>

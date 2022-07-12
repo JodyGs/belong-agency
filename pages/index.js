@@ -109,7 +109,8 @@ export default function Home() {
 							<p className='text-xs max-w-xs text-center mx-auto w-full lg:hidden '>
 								{locale === 'fr'
 									? "Nous maximisons la visibilité de votre marque dans les médias tout au long de l'année à travers un éventail d'actions et de rendez-vous réguliers avec cette cible prescriptrice."
-									: 'We maximize the visibility of your brand in the media throughout the year through an engagement of actions and regular meetings with this target audience.'}
+									: `we offer traditional pr & media outreach, online visibility, and event pr & production.
+									we focus on how to best connect your brand story with your consumers.`}
 							</p>
 								<div className={`text-sm max-w-xs lg:max-w-lg lg:px-7 lg:text-left lg:text-sm text-center mx-auto w-full hidden lg:block`}>
 								{blockText === 1 && locale === 'fr'
@@ -138,7 +139,7 @@ export default function Home() {
 									? <p>Whether live or virtual, physical or digital, we offer a range of opportunities for your brand to connect with your audience, establish deep connections and make a meaningful impression.</p>
 									: blockText === 6 && locale === 'en'
 									? <p>Distinctive, beautiful, and imbued with meaning. Thanks to our global network of artists (MUA, photographer, videographer, stylist, etc), we create memorable and meaningful content for all your communication tools.</p>
-									: <p>we&apos;re a pr agency of interdisciplinary experts who craft brand stories and build communities through media, social and experiential.<br/><br/>well-connected to beauty and lifestyle influencers and media, we get people talking and build brands through creative thinking, teamwork and hard work.</p>}
+									: <p>we offer traditional pr & media outreach, online visibility, and event pr & production.<br/><br/>we focus on how to best connect your brand story with your consumers.</p>}
 							</div>
 
 							<button
