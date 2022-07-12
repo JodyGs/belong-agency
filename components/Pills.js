@@ -74,7 +74,7 @@ function Pills({ locale, blockText, setBlockText }) {
 			>
 				<p>{locale === 'fr' ? 'Partenariats' : 'Strategic Partnerships'}</p>
 			</div>
-			<p className={`w-full text-sm text-center font-sweet-sans-pro font-normal lg:hidden py-5 ${blockText === 4 ? "block" : "hidden"}`}>
+			<p className={`w-full text-xs text-center font-sweet-sans-pro font-normal lg:hidden py-5 ${blockText === 4 ? "block" : "hidden"}`}>
 				{locale === 'fr'
 					? "Nous mettons en relation des marques et des talents pour développer des collaborations qui leur permettront de surprendre, d'accroître leur notoriété ou encore d'explorer un nouveau territoire d'expression."
 					: "We connect brands and talents to set up partnerships that will allow them to surprise, drive awareness or explore a new territory of expression."}

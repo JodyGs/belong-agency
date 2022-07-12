@@ -18,7 +18,7 @@ function Mag({ mag, locale, index, line, button }) {
 					COLORS[(index + line) % COLORS.length]
 				)}
 			>
-				<img className='object-contain max-x-[95%]' src={urlFor(mag.logo).width(200).url()} alt={mag.name} />
+				<img className='object-contain max-w-[70%]' src={urlFor(mag.logo).width(200).url()} alt={mag.name} />
 			</div>
 		</Link>
 	);

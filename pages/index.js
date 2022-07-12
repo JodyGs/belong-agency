@@ -30,7 +30,7 @@ export default function Home() {
 		<div className='w-full scrollbar-hide overflow-x-hidden'>
 			<main className='h-full flex flex-col'>
 				{/* Hero Banner */}
-				<div className='grid grid-cols-12 max-h-[300px] md:max-h-[800px] overflow-hidden relative'>
+				<div className='grid grid-cols-12 max-h-[330px] md:max-h-[800px] overflow-hidden relative'>
 					<div className={`bg-belrose col-span-12 lg:col-span-6 font-messapia p-4 leading-[1] flex flex-col ${locale === "fr" ? 'space-y-12' : 'space-y-3' } md:space-y-0 md:justify-between h-[800px]`}>
 						{locale === 'fr' ? (
 							<Image
@@ -46,26 +46,25 @@ export default function Home() {
 						)}
 
 							{locale === 'fr' ? 	<p className='mx-auto text-[10px] md:text-[19px] mb-3'>
-							* De la définition d&apos;une{' '}
+							* nous élaborons des{' '}
 							<span className='txtstroke-thin text-transparent text-[10px] md:text-[19px]'>
-								stratégie
+								stratégies
 							</span>{' '}
-							de communication au déploiement d&apos;une {' '}
+							de communication sur mesure qui {' '}
 							<span className='txtstroke-thin text-transparent text-[10px] md:text-[19px]'>
-							campagne RP,
+							renforcent la notoriété
 							</span>{' '}
-							jusqu&apos;à l&apos;organisation d&apos;évènements.
+							de la marque et créent la demande.
 						</p> : 	<p className='mx-auto text-[10px] md:text-[19px] mb-3'>
-							* We{' '}
+							* We customize{' '}
 							<span className='txtstroke-thin text-transparent text-[10px] md:text-[19px]'>
-								help
+							communication strategies
 							</span>{' '}
-							our clients to create content and communicate their stories
-							effectively{' '}
+							that strengthens{' '}
 							<span className='txtstroke-thin text-transparent text-[10px] md:text-[19px]'>
-								to gain
+							brand awareness 
 							</span>{' '}
-							maximum exposure.
+							and creates demand.
 						</p>}
 					
 					</div>
@@ -112,38 +111,35 @@ export default function Home() {
 									? "Nous maximisons la visibilité de votre marque dans les médias tout au long de l'année à travers un éventail d'actions et de rendez-vous réguliers avec cette cible prescriptrice."
 									: 'We maximize the visibility of your brand in the media throughout the year through an engagement of actions and regular meetings with this target audience.'}
 							</p>
-							<p
-								className={`text-sm max-w-xs lg:max-w-lg lg:px-7 lg:text-left 2lg:text-sm'
-								} text-center mx-auto w-full hidden lg:block`}
-							>
+								<div className={`text-sm max-w-xs lg:max-w-lg lg:px-7 lg:text-left lg:text-sm text-center mx-auto w-full hidden lg:block`}>
 								{blockText === 1 && locale === 'fr'
-									? "Nous maximisons la visibilité de votre marque dans les médias tout au long de l'année à travers un éventail d'actions et de rendez-vous réguliers avec cette cible prescriptrice."
+									? <p>Nous maximisons la visibilité de votre marque dans les médias tout au long de l&apos;année à travers un éventail d&apos;actions et de rendez-vous réguliers avec cette cible prescriptrice.</p>
 									: blockText === 2 && locale === 'fr'
-									? "De la recherche d'influenceurs à la gestion de campagne en passant par l'influence organique, nous élaborons des stratégies afin de vous aider à engager votre communauté et amplifier vos histoires grâce à des voix influentes."
+									? <p>De la recherche d&apos;influenceurs à la gestion de campagne en passant par l&apos;influence organique, nous élaborons des stratégies afin de vous aider à engager votre communauté et amplifier vos histoires grâce à des voix influentes.</p>
 									: blockText === 3 && locale === 'fr'
-									? 'Chaque marque a une histoire unique. Relations Publiques, Partenariats, Marketing d’influence… En fonction de vos objectifs, nous élaborons et mettons en œuvre une stratégie de communication sur mesure.'
+									? <p>Chaque marque a une histoire unique. Relations Publiques, Partenariats, Marketing d&apos;influence… En fonction de vos objectifs, nous élaborons et mettons en œuvre une stratégie de communication sur mesure.</p>
 									: blockText === 4 && locale === 'fr'
-									? "Nous mettons en relation des marques et des talents pour développer des collaborations qui leur permettront de surprendre, d'accroître leur notoriété ou encore d'explorer un nouveau territoire d'expression."
+									? <p>Nous mettons en relation des marques et des talents pour développer des collaborations qui leur permettront de surprendre, d&apos;accroître leur notoriété ou encore d&apos;explorer un nouveau territoire d&apos;expression.</p>
 									: blockText === 5 && locale === 'fr'
-									? "Qu'il s'agisse d'un événement en personne ou virtuel, nous vous offrons une série d'opportunités pour rencontrer votre communauté et développer votre pouvoir d’expression."
+									? <p>Qu&apos;il s&apos;agisse d&apos;un événement en personne ou virtuel, nous vous offrons une série d&apos;opportunités pour rencontrer votre communauté et développer votre pouvoir d&apos;expression.</p>
 									: blockText === 6 && locale === 'fr'
-									? "Distinctif, beau et porteur de sens.\n Grâce à notre réseau mondial d'artistes (MUA, photographe, vidéaste, styliste, etc.), nous créons des contenus mémorables et significatifs pour tous vos outils de communication."
+									? <p>Distinctif, beau et porteur de sens.\n Grâce à notre réseau mondial d&apos;artistes (MUA, photographe, vidéaste, styliste, etc.), nous créons des contenus mémorables et significatifs pour tous vos outils de communication.</p>
 									: blockText === 0 && locale === 'fr'
-									? "Créer une communauté par le biais des médias, des réseaux sociaux et de l'influence, générer de l’engagement et gagner en notoriété."
+									? <p>créer une communauté par le biais des médias, des réseaux sociaux et de l'influence, générer de l’engagement et gagner en notoriété.<br/><br/>nous nous concentrons sur la meilleure façon de relier l&apos;histoire de votre marque à vos consommateurs.</p>
 									: blockText === 1 && locale === 'en'
-									? 'Earning Media Coverage to Drive Credibility and Success. We’ll maximize your brand’s visibility to establish trust among target consumers through authentic, third-party opinions. An honest, uncompensated endorsement adds credibility to the stories you tell through paid and owned media.'
+									? <p>Earning Media Coverage to Drive Credibility and Success. We&apos;ll maximize your brand&apos;s visibility to establish trust among target consumers through authentic, third-party opinions. An honest, uncompensated endorsement adds credibility to the stories you tell through paid and owned media.</p>
 									: blockText === 2 && locale === 'en'
-									? 'Driving Brand Awareness and Conversion. We’ll develop and execute influencer marketing strategies based on your brand goals to help you engage your target audiences. From influencer matchmaking to campaign management and influencer seeding, we shape the optimal strategy that is right for you and amplify your stories through influential voices.'
+									? <p>Driving Brand Awareness and Conversion. We&apos;ll develop and execute influencer marketing strategies based on your brand goals to help you engage your target audiences. From influencer matchmaking to campaign management and influencer seeding, we shape the optimal strategy that is right for you and amplify your stories through influential voices.</p>
 									: blockText === 3 && locale === 'en'
-									? 'Every brand has a unique story. We’ll combine best-in-class PR and influencer marketing services to establish and implement a strong brand strategy.'
+									? <p>Every brand has a unique story. We&apos;ll combine best-in-class PR and influencer marketing services to establish and implement a strong brand strategy.</p>
 									: blockText === 4 && locale === 'en'
-									? 'We connect brands and talents to set up partnerships that will allow them to surprise, drive awareness or explore a new territory of expression.'
+									? <p>We connect brands and talents to set up partnerships that will allow them to surprise, drive awareness or explore a new territory of expression.</p>
 									: blockText === 5 && locale === 'en'
-									? 'Whether live or virtual, physical or digital, we offer a range of opportunities for your brand to connect with your audience, establish deep connections and make a meaningful impression.'
+									? <p>Whether live or virtual, physical or digital, we offer a range of opportunities for your brand to connect with your audience, establish deep connections and make a meaningful impression.</p>
 									: blockText === 6 && locale === 'en'
-									? 'Distinctive, beautiful, and imbued with meaning. Thanks to our global network of artists (MUA, photographer, videographer, stylist, etc), we create memorable and meaningful content for all your communication tools.'
-									: blockText === 0 && locale === 'en' ? 'Create a community through media, social networks and influence, generate engagement and gain notoriety. We offer traditional PR & Media Outreach, Online Visibility, and Event PR & Production.' : ''}
-							</p>
+									? <p>Distinctive, beautiful, and imbued with meaning. Thanks to our global network of artists (MUA, photographer, videographer, stylist, etc), we create memorable and meaningful content for all your communication tools.</p>
+									: <p>we&apos;re a pr agency of interdisciplinary experts who craft brand stories and build communities through media, social and experiential.<br/><br/>well-connected to beauty and lifestyle influencers and media, we get people talking and build brands through creative thinking, teamwork and hard work.</p>}
+							</div>
 
 							<button
 								onClick={() => {
@@ -155,7 +151,7 @@ export default function Home() {
 							</button>
 						</div>
 					</div>
-					<div className='max-w-xs mx-auto mb-10 mt-10 lg:mt-2'>
+					<div className='max-w-xs mx-auto mb-10 mt-10 lg:mt-8'>
 						<Pills {...{ locale, blockText, setBlockText }} />
 					<button
 								onClick={() => {

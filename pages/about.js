@@ -11,7 +11,8 @@ import { useRouter } from 'next/router';
 
 function About() {
 	const { locale } = useRouter();
-	const [blockText, setBlockText] = React.useState('init');
+	const router = useRouter();
+	const [blockText, setBlockText] = React.useState(0);
 
 
 	return (
@@ -82,7 +83,7 @@ function About() {
 				</div>
 			</div>
 			<div className='flex flex-col space-y-10 md:space-y-0 md:items-start md:flex-row flex-wrap justify-between items-center md:px-5 lg:px-10 lg:mt-10'>
-				<div className='max-w-[360px]'>
+				<div className='max-w-[360px] md:mb-14'>
 					<div className='divPhotoTeam'>
 						<Image
 							placeholder='blur'
@@ -122,7 +123,7 @@ function About() {
 						</p>
 					)}
 				</div>
-				<div className='max-w-[360px]'>
+				<div className='max-w-[360px] md:mb-14'>
 					<div className='divPhotoTeam'>
 						<Image
 							placeholder='blur'
@@ -165,7 +166,7 @@ function About() {
 						</p>
 					)}
 				</div>
-				<div className='max-w-[360px] md:pt-10 lg:pt-0'>
+				<div className='max-w-[360px] md:pt-10 lg:pt-0 md:mb-14'>
 					<div className='divPhotoTeam'>
 						<Image
 							placeholder='blur'
@@ -209,7 +210,7 @@ function About() {
 						</p>
 					)}
 				</div>
-				<div className='max-w-[360px] md:pt-10 lg:pt-0'>
+				<div className='max-w-[360px] md:pt-10 lg:pt-0 md:mb-14'>
 					<div className='divPhotoTeam'>
 						<Image
 							placeholder='blur'
@@ -249,7 +250,7 @@ function About() {
 			</div>
 
 			<div className='flex flex-col-reverse lg:flex-row my-10 sm:my-40 md:mb-14 lg:mt-20'>
-				<div className='max-w-xs mx-auto mb-10 mt-10 lg:mt-14'>
+				<div className='max-w-xs mx-auto mb-10 mt-14 lg:mt-10'>
 						<Pills {...{locale, blockText, setBlockText}} />
 						<button
 								onClick={() => {
@@ -261,12 +262,12 @@ function About() {
 							</button>
 					</div>
 				<div className='lg:w-1/2 lg:mt-8'>
-					<div className='bg-belorange sticker mx-3 md:max-w-md lg:max-w-lg md:w-full md:mx-auto'>
+					<div className='bg-belorange sticker mx-3 md:max-w-md lg:max-w-lg md:w-full md:mx-auto lg:right-0'>
 						<h2 className='font-agrandir-grand text-[33px] text-center text-belbeige lg:text-5xl p-1 pt-3'>
 							What we do
 						</h2>
 					</div>
-					<div className='mx-auto min-w-[370px] md:min-w-none p-3 w-2/3 text-center lg:text-right mt-10 text-xs lg:text-sm flex flex-col space-y-5 lg:pr-14 lg:h-[200px]'>
+					<div className='mx-auto min-w-[370px] md:min-w-none p-3 w-2/3 text-center lg:text-right mt-10 text-xs lg:text-sm flex flex-col space-y-5 lg:pr-0 lg:h-[200px] lg:max-w-lg'>
 						{locale === 'fr' ? <p className='lg:hidden'>De la définition d&apos;une stratégie de communication au déploiement d&apos;une campagne RP, jusqu&apos;a l&apos;organisation d&apos;évènements, nous vous proposons tout un éventail de prises de parole et de rencontres entre votre marque et votre communauté afin de développer votre pouvoir d&apos;expression.</p> : <p className='lg:hidden'>driving brand awareness and conversion. we&apos;ll develop and execute influencer marketing strategies based on your brand goals to help you engage your target audiences.<br/><br/>from influencer matchmaking to campaign management and influencer seeding, we shape the optimal strategy that is right for you and amplify your stories through influential voices.</p>}
 						<div className='hidden lg:block'>
 					{blockText === 1 && locale === 'fr'
@@ -282,7 +283,7 @@ function About() {
 									: blockText === 6 && locale === 'fr'
 									? <p>Distinctif, beau et porteur de sens.\n Grâce à notre réseau mondial d&apos;artistes (MUA, photographe, vidéaste, styliste, etc.), nous créons des contenus mémorables et significatifs pour tous vos outils de communication.</p>
 									: blockText === 0 && locale === 'fr'
-									? <p>De la définition d&apos;une stratégie de communication au déploiement d&apos;une campagne RP, jusqu&apos;a l&apos;organisation d&apos;évènements, nous vous proposons tout un éventail de prises de parole et de rencontres entre votre marque et votre communauté afin de développer votre pouvoir d&apos;expression.</p>
+									? <p>créer une communauté par le biais des médias, des réseaux sociaux et de l'influence, générer de l’engagement et gagner en notoriété.<br/><br/>nous nous concentrons sur la meilleure façon de relier l&apos;histoire de votre marque à vos consommateurs.</p>
 									: blockText === 1 && locale === 'en'
 									? <p>Earning Media Coverage to Drive Credibility and Success. We&apos;ll maximize your brand&apos;s visibility to establish trust among target consumers through authentic, third-party opinions. An honest, uncompensated endorsement adds credibility to the stories you tell through paid and owned media.</p>
 									: blockText === 2 && locale === 'en'
@@ -295,7 +296,7 @@ function About() {
 									? <p>Whether live or virtual, physical or digital, we offer a range of opportunities for your brand to connect with your audience, establish deep connections and make a meaningful impression.</p>
 									: blockText === 6 && locale === 'en'
 									? <p>Distinctive, beautiful, and imbued with meaning. Thanks to our global network of artists (MUA, photographer, videographer, stylist, etc), we create memorable and meaningful content for all your communication tools.</p>
-									: <p>driving brand awareness and conversion. we&apos;ll develop and execute influencer marketing strategies based on your brand goals to help you engage your target audiences.<br/><br/>from influencer matchmaking to campaign management and influencer seeding, we shape the optimal strategy that is right for you and amplify your stories through influential voices.</p>}
+									: <p>we&apos;re a pr agency of interdisciplinary experts who craft brand stories and build communities through media, social and experiential.<br/><br/>well-connected to beauty and lifestyle influencers and media, we get people talking and build brands through creative thinking, teamwork and hard work.</p>}
 									</div>
 					</div>
 				</div>

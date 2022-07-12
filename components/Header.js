@@ -5,12 +5,14 @@ import clsx from 'clsx';
 import menuHamburger from '../public/img/menu.png';
 import logoHeader from '../public/img/logoHeader.png'
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 const colors = ['vert', 'orange', 'rose'];
 
 function Header() {
 	const [color, setColor] = React.useState(null);
 	const [openNav, setOpenNav] = React.useState(false);
+	const { locale } = useRouter();
 
 	const handleColors = () => {
 		setColor(shuffle(colors).pop());
@@ -69,7 +71,7 @@ function Header() {
 								className='hover:italic hover:text-belbeige'
 								onClick={toggleNav}
 							>
-								presse
+								{locale === 'fr' ? "presse" : "press"}
 							</a>
 						</Link>
 						<Link href={'/contact'}>
@@ -129,7 +131,7 @@ function Header() {
 								'hover:text-belrose hover:italic': color === 'rose',
 							})}
 						>
-							presse
+								{locale === 'fr' ? "presse" : "press"}
 						</a>
 					</Link>
 				</nav>
