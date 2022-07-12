@@ -1,6 +1,6 @@
 export default {
   name: 'magWeb',
-  title: 'Magazines Web',
+  title: 'Magazines Web (logos)',
   type: 'document',
   fields: [
     {

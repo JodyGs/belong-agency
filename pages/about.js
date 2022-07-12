@@ -250,7 +250,7 @@ function About() {
 			</div>
 
 			<div className='flex flex-col-reverse lg:flex-row my-10 sm:my-40 md:mb-14 lg:mt-20'>
-				<div className='max-w-xs mx-auto mb-10 mt-14 lg:mt-10'>
+				<div className='max-w-xs mx-auto mb-10 mt-14 lg:mt-10 lg:pt-16'>
 						<Pills {...{locale, blockText, setBlockText}} />
 						<button
 								onClick={() => {

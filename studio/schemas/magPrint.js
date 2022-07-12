@@ -1,6 +1,6 @@
 export default {
   name: 'magPrint',
-  title: 'Magazine Print',
+  title: 'Magazine Print (logos)',
   type: 'document',
   fields: [
     {
