@@ -54,7 +54,7 @@ export default function Home() {
 							<span className='txtstroke-thin text-transparent text-[10px] md:text-[19px]'>
 							renforcent la notoriété
 							</span>{' '}
-							de la marque et créent la demande.
+							de marque et créent la demande.
 						</p> : 	<p className='mx-auto text-[10px] md:text-[19px] mb-3'>
 							* We customize{' '}
 							<span className='txtstroke-thin text-transparent text-[10px] md:text-[19px]'>
