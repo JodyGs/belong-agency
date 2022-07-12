@@ -283,7 +283,7 @@ function About() {
 									: blockText === 6 && locale === 'fr'
 									? <p>Distinctif, beau et porteur de sens.\n Grâce à notre réseau mondial d&apos;artistes (MUA, photographe, vidéaste, styliste, etc.), nous créons des contenus mémorables et significatifs pour tous vos outils de communication.</p>
 									: blockText === 0 && locale === 'fr'
-									? <p>créer une communauté par le biais des médias, des réseaux sociaux et de l'influence, générer de l’engagement et gagner en notoriété.<br/><br/>nous nous concentrons sur la meilleure façon de relier l&apos;histoire de votre marque à vos consommateurs.</p>
+									? <p>créer une communauté par le biais des médias, des réseaux sociaux et de l&apos;influence, générer de l&apos;engagement et gagner en notoriété.<br/><br/>nous nous concentrons sur la meilleure façon de relier l&apos;histoire de votre marque à vos consommateurs.</p>
 									: blockText === 1 && locale === 'en'
 									? <p>Earning Media Coverage to Drive Credibility and Success. We&apos;ll maximize your brand&apos;s visibility to establish trust among target consumers through authentic, third-party opinions. An honest, uncompensated endorsement adds credibility to the stories you tell through paid and owned media.</p>
 									: blockText === 2 && locale === 'en'
