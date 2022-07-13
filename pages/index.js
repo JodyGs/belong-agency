@@ -45,7 +45,7 @@ export default function Home() {
 							/>
 						)}
 
-							{locale === 'fr' ? 	<p className='mx-auto text-[10px] md:text-[19px] mb-3'>
+							{locale === 'fr' ? 	<p className='mx-auto text-[10px] leading-6 md:text-[19px] mb-3'>
 							* nous élaborons des{' '}
 							<span className='txtstroke-thin text-transparent text-[10px] md:text-[19px]'>
 								stratégies
@@ -70,15 +70,15 @@ export default function Home() {
 					</div>
 					<div className='hidden lg:flex col-span-6 mx-auto space-x-10'>
 						<svg
-							ref={downAnim}
+							ref={upAnim}
 							className='fill-belorange h-[1000px] mt-[85px]'
 							viewBox='0 0 11.38 30.81'
 						>
 							<path d='M8.62 0L1.5.04C.67.04 0 .71 0 1.54v27.77c0 .83.67 1.5 1.5 1.5h6.86c.23 0 .48 0 .71-.02 1.09-.09 1.98-.83 2.22-1.89.07-.28.07-.58.07-.88 0-3.63-.02-7.27.02-10.88.02-1.36-.51-2.42-1.92-2.86-.02 0-.04-.04-.09-.11 1.48-.48 2.01-1.52 1.99-2.98-.04-2.82-.05-5.64 0-8.47C11.41.99 10.11-.03 8.62 0zM6.33 25.5c0 .39-.32.71-.71.71s-.71-.32-.71-.71V4.32c0-.39.32-.71.71-.71s.71.32.71.71V25.5z' />
 						</svg>
 						<svg
-							ref={upAnim}
-							className='fill-belviolet rotate-180 h-[1000px] mt-[260px]'
+							ref={downAnim}
+							className='fill-belviolet rotate-180 h-[1000px] mt-[240px]'
 							viewBox='0 0 11.38 30.81'
 						>
 							<path d='M8.62 0L1.5.04C.67.04 0 .71 0 1.54v27.77c0 .83.67 1.5 1.5 1.5h6.86c.23 0 .48 0 .71-.02 1.09-.09 1.98-.83 2.22-1.89.07-.28.07-.58.07-.88 0-3.63-.02-7.27.02-10.88.02-1.36-.51-2.42-1.92-2.86-.02 0-.04-.04-.09-.11 1.48-.48 2.01-1.52 1.99-2.98-.04-2.82-.05-5.64 0-8.47C11.41.99 10.11-.03 8.62 0zM6.33 25.5c0 .39-.32.71-.71.71s-.71-.32-.71-.71V4.32c0-.39.32-.71.71-.71s.71.32.71.71V25.5z' />

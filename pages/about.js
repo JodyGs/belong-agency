@@ -172,7 +172,7 @@ function About() {
 						</p>
 					) : (
 						<p className='  text-xs lg:text-sm mt-5 text-justify'>
-							Multi-faceted assistant, Karine joined Belong in February 2021. She is a student at Sup de Web and is finishing her studies in digital communication while working at Belong. She is also a freelancer and has launched her blog. She is like the GenZ, a slasher, committed to multiple causes (from crossbreeding to clean beauty).
+							Multi-faceted assistant, Karine joined Belong in February 2021. She is a student at Sup de Web and is finishing her studies in digital communication while working at Belong. She is also a freelancer and has launched her blog.<br /><br />She is like the GenZ, a slasher, committed to multiple causes (from crossbreeding to clean beauty).
 						</p>
 					)}
 				</div>
