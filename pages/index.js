@@ -45,7 +45,7 @@ export default function Home() {
 							/>
 						)}
 
-							{locale === 'fr' ? 	<p className='mx-auto text-[10px] leading-6 md:text-[19px] mb-3'>
+							{locale === 'fr' ? 	<p className='mx-auto text-[10px] leading-4 lg:leading-6 md:text-[19px] mb-3'>
 							* nous élaborons des{' '}
 							<span className='txtstroke-thin text-transparent text-[10px] md:text-[19px]'>
 								stratégies
