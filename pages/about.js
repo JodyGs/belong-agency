@@ -52,10 +52,9 @@ function About() {
 						<p>
 							we’re a <span className='font-bold'>pr agency</span> of{' '}
 							<span className='italic'>interdisciplinary</span> experts who
-							craft brand stories and build communities through media, social
-							and
-							<span className='font-bold'> experiential</span>.<br /><br />
-							Well-connected to beauty and lifestyle influencers and media, we get people talking and build brands through creative thinking, teamwork and hard work.
+							craft brand stories and build communities through<span className='font-bold'> media, social
+							and experiential</span>.<br /><br />
+							Well-connected to beauty and lifestyle influencers and media, we get people talking and build brands through <span className='font-bold'>creative thinking</span>, teamwork and hard work.
 						</p>
 					)}
 				</div>
@@ -95,7 +94,7 @@ function About() {
 							entrepreneurship in New York where she moved 3 years ago. She
 							started her consulting business there, first with Twice, an
 							American start-up co-founded by Lenny Kravitz specialized in oral
-							wellness. She is the co-founder of Belong along with Magali. They
+							wellness.<br /><br /> She is the co-founder of Belong along with Magali. They
 							both started Belong in 2019 as a one-of-a-kind PR agency
 							specializing in working with sustainable, clean beauty brands.
 						</p>
@@ -173,18 +172,7 @@ function About() {
 						</p>
 					) : (
 						<p className='  text-xs lg:text-sm mt-5 text-justify'>
-							after 7 years working as a fashion editor with the french press,
-							magali moved into pr.
-							<br />
-							<br />
-							she spent 13 years as a beauty pr, 8 of which were as head of pr
-							for sisley paris, where she met margaux.
-							<br />
-							<br />
-							she then worked as a pr consultant for brands like google, calvi
-							on the rocks festival, pr agencies like magna presse (ernest
-							leoty, pigalle hotel...) before co-founding belong in 2019 with
-							margaux.
+							Multi-faceted assistant, Karine joined Belong in February 2021. She is a student at Sup de Web and is finishing her studies in digital communication while working at Belong. She is also a freelancer and has launched her blog. She is like the GenZ, a slasher, committed to multiple causes (from crossbreeding to clean beauty).
 						</p>
 					)}
 				</div>

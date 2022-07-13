@@ -60,11 +60,11 @@ export default function Home() {
 							<span className='txtstroke-thin text-transparent text-[10px] md:text-[19px]'>
 							communication strategies
 							</span>{' '}
-							that strengthens{' '}
+							that strengthen{' '}
 							<span className='txtstroke-thin text-transparent text-[10px] md:text-[19px]'>
 							brand awareness 
 							</span>{' '}
-							and creates demand.
+							and create demand.
 						</p>}
 					
 					</div>
@@ -78,7 +78,7 @@ export default function Home() {
 						</svg>
 						<svg
 							ref={upAnim}
-							className='fill-belviolet rotate-180 h-[1000px] mt-[400px]'
+							className='fill-belviolet rotate-180 h-[1000px] mt-[260px]'
 							viewBox='0 0 11.38 30.81'
 						>
 							<path d='M8.62 0L1.5.04C.67.04 0 .71 0 1.54v27.77c0 .83.67 1.5 1.5 1.5h6.86c.23 0 .48 0 .71-.02 1.09-.09 1.98-.83 2.22-1.89.07-.28.07-.58.07-.88 0-3.63-.02-7.27.02-10.88.02-1.36-.51-2.42-1.92-2.86-.02 0-.04-.04-.09-.11 1.48-.48 2.01-1.52 1.99-2.98-.04-2.82-.05-5.64 0-8.47C11.41.99 10.11-.03 8.62 0zM6.33 25.5c0 .39-.32.71-.71.71s-.71-.32-.71-.71V4.32c0-.39.32-.71.71-.71s.71.32.71.71V25.5z' />
@@ -108,7 +108,7 @@ export default function Home() {
 							</h2>
 							<p className='text-xs max-w-xs text-center mx-auto w-full lg:hidden '>
 								{locale === 'fr'
-									? "créer une communauté par le biais des médias, des réseaux sociaux et de l&apos;influence, générer de l&apos;engagement et gagner en notoriété. Nous nous concentrons sur la meilleure façon de relier l&apos;histoire de votre marque à vos consommateurs."
+									? "créer une communauté par le biais des médias, des réseaux sociaux et de l\'influence, générer de l\nengagement et gagner en notoriété. Nous nous concentrons sur la meilleure façon de relier l\'histoire de votre marque à vos consommateurs."
 									: `we offer traditional pr & media outreach, online visibility, and event pr & production. We focus on how to best connect your brand story with your consumers.`}
 							</p>
 								<div className={`text-sm max-w-xs lg:max-w-lg lg:px-7 lg:text-left lg:text-sm text-center mx-auto w-full hidden lg:block`}>
@@ -263,10 +263,9 @@ export default function Home() {
 						<p className='font-sweet-sans-pro text-xs md:text-sm text-center md:text-right px-3 lg:px-0'>
 							we’re a <span className='font-bold'>pr agency</span> of{' '}
 							<span className='italic'>interdisciplinary</span> experts who
-							craft brand stories and build communities through media, social
-							and
-							<span className='font-bold'> experiential</span>.<br /><br />
-							Well-connected to beauty and lifestyle influencers and media, we get people talking and build brands through creative thinking, teamwork and hard work.
+							craft brand stories and build communities through<span className='font-bold'> media, social
+							and experiential</span>.<br /><br />
+							Well-connected to beauty and lifestyle influencers and media, we get people talking and build brands through <span className='font-bold'>creative thinking</span>, teamwork and hard work.
 						</p>
 					)}
 						<button
