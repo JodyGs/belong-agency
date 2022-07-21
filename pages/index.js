@@ -106,11 +106,11 @@ export default function Home() {
 							<h2 className='font-agrandir-grand text-[33px] lg:text-5xl font-extrabold w-full text-center md:mt-14 lg:mt-0'>
 								What we do
 							</h2>
-							<p className='text-xs max-w-xs text-center mx-auto w-full lg:hidden '>
+							
 								{locale === 'fr'
-									? "créer une communauté par le biais des médias, des réseaux sociaux et de l\'influence, générer de l\nengagement et gagner en notoriété. Nous nous concentrons sur la meilleure façon de relier l\'histoire de votre marque à vos consommateurs."
-									: `we offer traditional pr & media outreach, online visibility, and event pr & production. We focus on how to best connect your brand story with your consumers.`}
-							</p>
+									? <p className='text-xs max-w-xs text-center mx-auto w-full lg:hidden '>créer une communauté par le biais des médias, des réseaux sociaux et de l&apos;influence, générer de l&apos;engagement et gagner en notoriété. Nous nous concentrons sur la meilleure façon de <span className='italic'>relier</span> l&apos;histoire de votre marque à vos consommateurs.</p>
+									: <p className='text-xs max-w-xs text-center mx-auto w-full lg:hidden'>we offer traditional <span className='font-bold'>pr & media outreach</span>, online <span className='font-bold'>visibility</span>, and event pr & production. We focus on how to best <span className='italic'>connect</span> your brand story with your consumers.</p>}
+						
 								<div className={`text-sm max-w-xs lg:max-w-lg lg:px-7 lg:text-left lg:text-sm text-center mx-auto w-full hidden lg:block`}>
 								{blockText === 1 && locale === 'fr'
 									? <p>Nous maximisons la visibilité de votre marque dans les médias tout au long de l&apos;année à travers un éventail d&apos;actions et de rendez-vous réguliers avec cette cible prescriptrice.</p>
@@ -138,7 +138,7 @@ export default function Home() {
 									? <p>Whether live or virtual, physical or digital, we offer a range of opportunities for your brand to connect with your audience, establish deep connections and make a meaningful impression.</p>
 									: blockText === 6 && locale === 'en'
 									? <p>Distinctive, beautiful, and imbued with meaning. Thanks to our global network of artists (MUA, photographer, videographer, stylist, etc), we create memorable and meaningful content for all your communication tools.</p>
-									: <p>we offer traditional pr & media outreach, online visibility, and event pr & production.<br /><br/>we focus on how to best connect your brand story with your consumers.</p>}
+									: <p>we offer traditional  <span className='font-bold'>pr & media outreach</span>, online <span className='font-bold'>visibility</span>, and event pr & production.<br /><br/>we focus on how to best <span className='italic'>connect</span> your brand story with your consumers.</p>}
 							</div>
 
 							<button

@@ -234,7 +234,7 @@ function About() {
 						</h2>
 					</div>
 					<div className='mx-auto min-w-[370px] md:min-w-none p-3 w-2/3 text-center lg:text-right mt-10 text-xs lg:text-sm flex flex-col space-y-5 lg:pr-0 lg:h-[200px] lg:max-w-lg'>
-						{locale === 'fr' ? <p className='lg:hidden'>créer une communauté par le biais des médias, des réseaux sociaux et de l&apos;influence, générer de l&apos;engagement et gagner en notoriété.<br /><br />nous nous concentrons sur la meilleure façon de relier l&apos;histoire de votre marque à vos consommateurs.</p> : <p className='lg:hidden'>we offer traditional pr & media outreach, online visibility, and event pr & production.<br /><br/>we focus on how to best connect your brand story with your consumers.</p>}
+						{locale === 'fr' ? <p className='lg:hidden'>créer une communauté par le biais des médias, des réseaux sociaux et de l&apos;influence, générer de l&apos;engagement et gagner en notoriété.<br /><br />nous nous concentrons sur la meilleure façon de relier l&apos;histoire de votre marque à vos consommateurs.</p> : <p className='lg:hidden'>we offer traditional  <span className='font-bold'>pr & media outreach</span>, online <span className='font-bold'>visibility</span>, and event pr & production.<br /><br/>we focus on how to best <span className='italic'>connect</span> your brand story with your consumers.</p>}
 						<div className='hidden lg:block'>
 					{blockText === 1 && locale === 'fr'
 									? <p>Nous maximisons la visibilité de votre marque dans les médias tout au long de l&apos;année à travers un éventail d&apos;actions et de rendez-vous réguliers avec cette cible prescriptrice.</p>
@@ -262,7 +262,7 @@ function About() {
 									? <p>Whether live or virtual, physical or digital, we offer a range of opportunities for your brand to connect with your audience, establish deep connections and make a meaningful impression.</p>
 									: blockText === 6 && locale === 'en'
 									? <p>Distinctive, beautiful, and imbued with meaning. Thanks to our global network of artists (MUA, photographer, videographer, stylist, etc), we create memorable and meaningful content for all your communication tools.</p>
-									: <p>we offer traditional pr & media outreach, online visibility, and event pr & production.<br /><br/>we focus on how to best connect your brand story with your consumers.</p>}
+									: <p>we offer traditional  <span className='font-bold'>pr & media outreach</span>, online <span className='font-bold'>visibility</span>, and event pr & production.<br /><br/>we focus on how to best <span className='italic'>connect</span> your brand story with your consumers.</p>}
 									</div>
 					</div>
 				</div>
